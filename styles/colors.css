@@ -1,0 +1,11 @@
+:root{
+    --pink-color: #e43c5a;
+    --dark-blue-color: #3E3E63;
+    --light-blue-color: #6DC2C4;
+    --yellow-color: #E9DF67;
+    --purple-color: #744593;
+    --dark-text-color: #1C1C34;
+    --card-fill: #F9F9FA;
+    --card-fill-dark:#424265;
+    --rounded-border: 8px;
+}
