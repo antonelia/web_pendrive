@@ -44,7 +44,7 @@ body{
     float: left;
     width: 202px;
     height: 202px;
-    background-color: var(--yellow-color);
+    background-color: var(--dark-blue-color);
 }
 
 #puzzle-modal #imagenes {
@@ -53,7 +53,8 @@ body{
     flex-direction: column;
     height: 605px;
     max-width: 122px !important;
-    border:1px solid var(--dark-blue-color);
+    border:1px solid;
+    border-color: var(--dark-blue-color);
     text-align:center;
     margin-left: 55px;
     border-radius: 5px;
@@ -66,7 +67,7 @@ body{
 }
 
 #puzzle-modal .over {
-    background-color:#CEF608;
+    background-color:#545483;
     opacity: 0.5;
 }
 
@@ -74,13 +75,16 @@ body{
     font-size:1.5em;
     position: absolute;
     top: 40%;
-    background: var(--pink-color);
+    background: var(--dark-blue-color);
     color: white;
     text-align: center;
     width: 80%;
     left: 10%;
     padding: 0.5em;
     border-radius: 10px;
+}
+#puzzle-modal #resultado p{
+    color: white;
 }
 #puzzle-modal .hide {
     display:none;
