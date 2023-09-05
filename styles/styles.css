@@ -1,6 +1,8 @@
 @import url(../assets/fonts/font.css);
 @import url(colors.css);
 
+/* General styles */
+
 *{
     font-family: Lato-Regular, Arial, sans-serif;
     color: var(--dark-text-color);
@@ -26,6 +28,30 @@ body{
 h2{
     font-size: xx-large;
     font-family: Lato-Bold, Arial, sans-serif;
+}
+.text-left{
+    text-align: left;
+}
+
+.ml-auto{
+    margin-left: auto;
+}
+.btn{
+    border: none;
+    font-family: Lato-Regular, Arial, sans-serif;
+    padding: 0.5rem 2rem;
+    border-radius: 25px;
+}
+.btn-primary{
+    background: var(--pink-color);
+}
+.h-100{
+    height: 100%;
+}
+
+.section{
+    min-height: 100vh;
+    width: 100%;
 }
 
 /* Miscelaneas */
@@ -67,36 +93,7 @@ h2{
 }
 /* end miscenaleas */
 
-/* HEADER */
-:root{
-    --icon-size: 28px;
-}
-header{
-    padding: 0 5vw;
-    position: fixed;
-    top: 0;
-    width: 100vw;
-    z-index: 100;
-    background-color: rgba(255, 255, 255, 0.655);
-    backdrop-filter: blur(20px);
-}
-
-header .navbar-brand{
-    font-size: xx-large;
-    font-weight: bold;
-    color: var(--dark-text-color);
-}
-
-header .nav-link{
-    font-size:large;
-    color: var(--dark-text-color);
-    font-weight: 500;
-}
-
-header .nav-item{
-    padding: 0 1rem;
-}
-
+/* Dark mode button */
 .toggle-checkbox {
     position: absolute;
     opacity: 0;
@@ -187,441 +184,12 @@ header .nav-item{
   .sun-icon-wrapper circle{
     color: #ffbb52;
   }
-
-/* end header */
-.text-left{
-    text-align: left;
-}
-
-.ml-auto{
-    margin-left: auto;
-}
-.btn{
-    border: none;
-    font-family: Lato-Regular, Arial, sans-serif;
-    padding: 0.5rem 2rem;
-    border-radius: 25px;
-}
-.btn-primary{
-    background: var(--pink-color);
-}
-.h-100{
-    height: 100%;
-}
-
-.section{
-    min-height: 100vh;
-    width: 100%;
-}
-
-#section1{
-    background: white;
-    background: url("../assets/img/fondo-violeta-seccion-uno.png");
-    background-size: contain;
-    background-position-x: right;
-    background-repeat: no-repeat;
-}
-
-#section1 h2{
-    font-size: 60px;
-    color: var(--dark-blue-color);
-}
-
-#section1 h2 span{
-    font-size: 80px;
-    color: var(--pink-color);
-    font-family: Lato-bold, Arial, sans-serif;
-}
-
-.columna-titulo{
-    display: flex;
-    align-items: center;
-    padding-left: 5vw;
-}
-.columna-titulo,
-.columna-fondo-violeta{
-    width: 50%;
-
-}
-.columna-fondo-violeta{
-    height: 100vh;
-
-}
-.fondo-rotar{
-    background: url("../assets/img/elementos-seccion-1.png");
-    background-size: contain;
-    position: relative;
-    left: 300px;
-    top: -100px;
-    background-repeat: no-repeat;
-    animation:spin 75s linear infinite;
-    transform-origin: center;
-    height: 120vh;
-    width: 120vh;
-
-}
-.fondo-rotar:hover{
-    -webkit-animation-play-state: paused;
-    -moz-animation-play-state: paused;
-    animation-play-state: paused;
-}
-@keyframes spin{
-	from{transform:rotate(360deg)}
-	to{transform:rotate(0deg)}	
-}
-/* Cookies message */
-.cookies-overlay{
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 100vw;
-    position: fixed;
-    top: 0;
-    overflow:-moz-hidden-unscrollable;
-}
-.cookies-alert{
-    background: white;
-    padding: 20px;
-    position: absolute;
-    bottom: 6vh;
-    left: 10vw;
-    width: 80vw;
-    border-radius: var(--rounded-border);
-    text-align: center;
-    /* z-index: 100; */
-}
-
-/* Emoji rain */
-@keyframes emoji-fall {
-    0% {
-        transform: translateY(-100%);
-    }
-    100% {
-        transform: translateY(100vh);
-    }
-}
-
-
-
-.slide-section{
-    height: 700px;
-    justify-content: space-around;
-    align-items: flex-end;
-}
-
-
-.slick-slide:hover{
-    cursor: pointer;
-    transform: scale(1.05);
-    transition: .3s;
-}
-
-
-/* end seccion 2 */
-
-/* Manifiesto styles */
-
-#section-manifiesto h2{
-    /* width: 90%; */
-    margin: auto;
-    line-height: 1.5;
-}
-
-#section-manifiesto .container-fluid{
-    display: flex;
-    height: 100%;
-    align-items: center;
-}
-
-.video-responsive {
-	height: 0;
-	overflow: hidden;
-	padding-bottom: 56.25%;
-	padding-top: 30px;
-	position: relative;
-}
-
-.video-responsive iframe, .video-responsive object, .video-responsive embed {
-	height: 60%;
-	left: 20%;
-	position: absolute;
-	top: 10%;
-	width: 60%;
-}
-
-#ver-manifiesto {
-    position: relative;
-    transition: .5s;
-}
-#section-manifiesto .btn{
-    font-size: x-large;
-}
-
-#section-manifiesto .lightblue-waves{
-    right: 10vw;
-    top: 210vh;
-    transform: rotate(90deg);
-}
-
-#section-manifiesto .yellow-waves{
-    right: -50px;
-    top: 280vh;
-}
-
-#section-manifiesto .cubo-3d{
-    right: 20px;
-    top: 205vh;
-}
-
-#section-manifiesto .cubo-3d.abajo{
-    top: 280vh;
-    left: 100px;
-}
-/* Seccion 3D */
-
-#seccion-3d{
-    background: url("../assets/img/fondo-violeta-seccion-3d.png");
-    background-position-x: 151%;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-#seccion-3d .container{
-    display: flex;
-    height: 100%;
-    align-items: center;
-}
-
-#seccion-3d .rotado{
-    transition: transform 0.5s ease;
-    transform: rotate(180deg);
-}
-.rotado.rotated{
-    /* transform: rotate(270deg); */
-}
-#seccion-3d i{
-    font-size: 50px;
-    height: 50px;
-    width: 50px;
-    padding: 30px;
-    border-radius: 50px;
-    background: #e43c5a;
-    color: white;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 100;
-}
-
-
-
-.prueba-fade img{
-    position: absolute;
-}
-
-/* Seccion Nike antes y después*/
-#page{
-    width: 50%;
-    height: 100%;
-    position:absolute;
-}
-  
-/* Our normalize css */
-*{
-    margin:0;
-    box-sizing: border-box;
-}
-  
-/* Our wrapper */
-.wrapper{
-    width: 424px;
-    height: 600px;
-    position: absolute;
-    left:50%;
-    top:50%;
-    transform:translate3d(-50%,-50%,0);
-    overflow:hidden;
-}
-  
-/* Our image information */
-.before,
-.after {
-    width:100%;
-    height:100%;
-    background-repeat:no-repeat;
-    background-color: white;
-    background-size: cover;
-    background-position: center;
-    position: absolute;
-    top:0;
-    left:0;
-    pointer-events:none;
-    overflow: hidden;
-}
-  
-.content-image{
-    height:100%;
-}
-  
-.after{
-    width:125px;
-}
-  
-.scroller{
-    width: 50px;
-    height:50px;
-    position: absolute;
-    left:100px;
-    top:50%;
-    transform:translateY(-50%);
-    border-radius:50%;
-    background-color: transparent;
-    opacity:0.9;
-    pointer-events:auto;
-    cursor: pointer;
-}
-  
-.scroller:hover{
-    opacity:1;
-}
-  
-.scrolling{
-    pointer-events:none;
-    opacity:1;
-    z-index: 1;
-}
-  
-.scroller__thumb{
-    width:100%;
-    height:100%;
-    padding:5px;
-}
-  
-.scroller:before,
-.scroller:after{
-    content:" ";
-    display: block;
-    width: 3px;
-    height: 9999px;
-    position: absolute;
-    left: 50%;
-    margin-left: -1.5px;
-    z-index: 30;
-    transition:0.1s;
-}
-.scroller:before{
-    top:100%;
-}
-.scroller:after{
-    bottom:100%;
-}
-  
-/* If you want to cahnge the colors, make sure you change the fill in the svgs to match */
-.scroller{
-border: 2px solid #fff;
-}
-.scroller:before,
-.scroller:after{
-background: #fff;
-}
-
-#seccion-antes-y-despues .col{
-    width: 50%;
-    height: 100%;
-    position: absolute;
-    left: 50%;
-}
-
-#seccion-layers-fade h3{
-    margin-top: 50%;
-}
-
-/* puzzle */
-
-#seccion-puzzle{
-    display: flex;
-    align-items: center;
-    /* background-color: var(--yellow-color); */
-    color: white;
-}
-
-#seccion-puzzle h2 {
-    padding: 1em;
-    margin: 0em;
-}
-#seccion-puzzle article {
-    
-    border-radius: 1em;
-    text-align: center;
-    max-width: 715px;
-    margin: auto;
-}
-
-#seccion-puzzle #contenedor {
-    display: inline-block;
-    margin: 1em;
-    width: 525px;
-}
-#seccion-puzzle #contenedor>div {
-    float: left;
-    width: 202px;
-    height: 202px;
-    background-color: var(--yellow-color);
-}
-
-#seccion-puzzle #imagenes {
-    display: inline-block;
-    display: flex;
-    flex-direction: column;
-    height: 605px;
-    max-width: 122px !important;
-    border:1px solid var(--dark-blue-color);
-    text-align:center;
-    margin-left: 55px;
-    border-radius: 5px;
-    margin-top: 10px;
-}
-#seccion-puzzle #imagenes>img {
-    height: 80px;
-    width: 80px;
-    margin: 10px;
-}
-
-#seccion-puzzle .over {
-    background-color:#CEF608;
-    opacity: 0.5;
-}
-
-#seccion-puzzle #resultado {
-    font-size:2em;
-}
-#seccion-puzzle .hide {
-    display:none;
-}
+/* end dark mode button */
 
 @media screen and (min-width: 768px) {
     .card{
         width: 30%;
     }
-}
-
-/*Campaña McDonalds*/
-#seccion-mcdonalds{
-    background-image: url(/assets/img/section-bg-lightblue.svg);
-    background-position: center;
-    height: 100%;
-}
-
-#seccion-mcdonalds h2, #seccion-mcdonalds h3{
-    color: white;
-}
-
-#seccion-mcdonalds article{
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
 }
 
 .password{
@@ -647,15 +215,4 @@ background: #fff;
 
 .video{
     width: 65%
-}
-
-/*Branding*/
-
-.logo-indar{
-    filter: brightness(0) saturate(100%);
-}
-
-.logo-indar:hover{
-    filter: none;
-    transition: .3s;
 }

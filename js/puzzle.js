@@ -14,7 +14,7 @@ function init() {
  
     // ponemos las imagenes aleatoriamente
     random(6).forEach(el => {
-        document.getElementById("imagenes").innerHTML+="<img id='i"+el+"' draggable='true' src='"+el+".jpg'>";
+        document.getElementById("imagenes").innerHTML+="<img id='i"+el+"' draggable='true' src='assets/img/"+el+".jpg'>";
     });
  
     puzzle();
@@ -110,6 +110,8 @@ function puzzle() {
         console.log("chequeando si se completo");
         const resultado=document.getElementById("resultado");
         resultado.classList.add("hide");
+        const overlay=document.getElementById("blur-overlay");
+        overlay.classList.add("hide");
  
         const imgs=document.querySelectorAll("#contenedor img");
         if (imgs.length!=6) {
@@ -119,6 +121,7 @@ function puzzle() {
  
         if ([...imgs].every((el, index) => el.id=="i"+index)) {
             console.log("entro en segundo if");
+            overlay.classList.remove("hide");
             resultado.classList.remove("hide");
             
         }

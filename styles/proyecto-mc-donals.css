@@ -1,0 +1,18 @@
+/*Campaña McDonalds*/
+#seccion-mcdonalds{
+    background-image: url(/assets/img/section-bg-lightblue.svg);
+    background-position: center;
+    height: 100%;
+}
+
+#seccion-mcdonalds h2, #seccion-mcdonalds h3{
+    color: white;
+}
+
+#seccion-mcdonalds article{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}

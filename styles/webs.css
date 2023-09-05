@@ -1,0 +1,122 @@
+body{
+    background-color:bisque;
+}
+.slick-slide:hover{
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: .3s;
+}
+.slider-webs img{
+    margin: auto;
+}
+.slick-arrow{
+    height: 40px;
+    width: 40px;
+}
+.slick-arrow::before{
+    font-size: 40px;
+}
+.slick-prev{
+    left: 95px;
+}
+.slick-next{
+    right: 95px;
+}
+
+#puzzle-modal h2 {
+    padding: 1em;
+    margin: 0em;
+}
+#puzzle-modal article {
+    
+    border-radius: 1em;
+    text-align: center;
+    max-width: 715px;
+    margin: auto;
+}
+
+#puzzle-modal #contenedor {
+    display: inline-block;
+    margin: 1em;
+    width: 525px;
+}
+#puzzle-modal #contenedor>div {
+    float: left;
+    width: 202px;
+    height: 202px;
+    background-color: var(--yellow-color);
+}
+
+#puzzle-modal #imagenes {
+    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    height: 605px;
+    max-width: 122px !important;
+    border:1px solid var(--dark-blue-color);
+    text-align:center;
+    margin-left: 55px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+#puzzle-modal #imagenes>img {
+    height: 80px;
+    width: 80px;
+    margin: 10px;
+}
+
+#puzzle-modal .over {
+    background-color:#CEF608;
+    opacity: 0.5;
+}
+
+#puzzle-modal #resultado {
+    font-size:1.5em;
+    position: absolute;
+    top: 40%;
+    background: var(--pink-color);
+    color: white;
+    text-align: center;
+    width: 80%;
+    left: 10%;
+    padding: 0.5em;
+    border-radius: 10px;
+}
+#puzzle-modal .hide {
+    display:none;
+}
+@media(max-width: 1366px){
+    #puzzle-modal #imagenes {
+        height: 488px;
+    }
+    #puzzle-modal #imagenes>img {
+        height: 65px;
+        width: 65px;
+        margin: 8px;
+    }
+    #puzzle-modal #contenedor{
+        max-width: 350px;
+    }
+    #puzzle-modal #contenedor>div {
+        width: 156px;
+        height: 156px;
+    }
+    #puzzle-modal #contenedor>div img {
+        width: 156;
+        height: 156px;
+    }
+    #puzzle-modal #contenedor>div>div {
+        width: 156;
+        height: 156px;
+    }
+}
+#blur-overlay{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.155);
+    backdrop-filter: blur(4px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: var(--bs-modal-border-radius);
+}

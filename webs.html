@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap lib -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="lib/bootstrap-5.2.3/dist/css/bootstrap.css">
+    <!-- Animaciones lib - for wow library -->
+    <link rel="stylesheet" href="lib/animate.css/animate.css">
+    <!-- Font awesome lib -->
+    <script src="https://kit.fontawesome.com/a1c6ec28f2.js" crossorigin="anonymous"></script>
+
+    <!-- Slick slider lib -->
+    <link rel="stylesheet" href="lib/slick/slick.css">
+    <link rel="stylesheet" href="lib/slick/slick-theme.css">
+    
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/theme-toggles@4.10.1/css/{toggle name}.min.css"> -->
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/webs.css">
+</head>
+<body>
+    <section class="section d-flex align-items-center">
+        <article class="container-fluid text-center my-auto">
+            <div class="slider-webs single-item">
+                <div id="web-indar">
+                    <img src="https://placehold.co/700x500?text=Web+Indar" alt="">
+                </div>
+                <div id="web-renueva-tus-ventanas">
+                    <img src="https://placehold.co/700x500?text=Web+Renueva+tus+Ventanas" alt="">
+                </div>
+                <div id="web-sonrisanas">
+                    <img src="https://placehold.co/700x500?text=Web+Sonrisanas" alt="">
+                </div>
+                <div id="web-puzzle">
+                    <img src="https://placehold.co/700x500?text=Web+Drag+and+drop" alt="" id="puzzle-image">
+                </div>
+              </div>
+        </article>
+    </section>
+    <!-- Modal puzzle-->
+    <div class="modal fade" id="puzzle-modal" tabindex="1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h4 class="text-center">Antes de continuar tenés que superar un reto</h4>
+                    <h5 class="text-center">En las cartas que te enviamos vas a encontrar un comodín, para seguir tenes que armarlo</h5>
+                <div class="row">
+                    <div class="col" id="imagenes"></div>
+                    <div class="col" id="contenedor">
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
+                </div>
+         
+                
+                <div id="blur-overlay" class="hide"></div>
+                <div id="resultado" class="hide">
+                    <p>Felicitaciones, completaste el rompecabezas, ya podés ver nuestras webs!</p>
+                    <a class="wow fadeInDown btn btn-primary mt-5" id="navegar-manifiesto"  data-wow-delay="2s" role="button" href="webs.html">Avanzar</a>
+                </div>
+                
+    
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <!--JS-->
+    <script src="lib/bootstrap-5.2.3/dist/js/bootstrap.bundle.js"></script>
+    <script src="lib/jQuery-3.6.4/jquery-3.6.4.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <!-- Inicializar wow library -->
+    <script>
+        new WOW().init();
+    </script>
+    <script src="lib/slick/slick.min.js"></script>
+    <script src="js/webs.js"></script>
+    <script src="js/puzzle.js"></script>
+</body>
+</html>

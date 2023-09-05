@@ -24,8 +24,8 @@
     </section>
     <section class="section d-flex align-items-center">
         <article class="container-fluid text-center my-auto" >
-            <div class="row justify-content-evenly">
-                <div class="card col-md-3 wow fadeInUp" data-wow-delay=".2s">
+            <div class="row justify-content-evenly" id="fila-juegos">
+                <div class="card col-md-3 wow fadeInUp" data-wow-delay=".2s" id="juego-reciclar">
                     <img class="card-img-top" src="/assets/img/330x264.png" alt="Card image cap">
                     <div class="card-body">
                       <h5 class="card-title">BA Recicla</h5>
@@ -33,7 +33,7 @@
                       <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
                     </div>
                 </div>
-                <div class="card col-md-3 wow fadeInUp" data-wow-delay=".4s">
+                <div class="card col-md-3 wow fadeInUp" data-wow-delay=".4s" id="juego-dia">
                     <img class="card-img-top" src="/assets/img/330x264.png" alt="Card image cap">
                     <div class="card-body">
                       <h5 class="card-title">Comprá en supermercados DIA</h5>
@@ -41,7 +41,7 @@
                       <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
                     </div>
                 </div>
-                <div class="card col-md-3 wow fadeInUp" data-wow-delay=".6s">
+                <div class="card col-md-3 wow fadeInUp" data-wow-delay=".6s" id="juego-wallet">
                     <img class="card-img-top" src="/assets/img/330x264.png" alt="Card image cap">
                     <div class="card-body">
                       <h5 class="card-title">My wallet</h5>
@@ -50,52 +50,21 @@
                     </div>
                 </div>
             </div>
+            <div class="row justify-content-evenly" id="no-abrir">
+                <div class="card col-md-3">
+                    <img class="card-img-top" src="/assets/img/330x264.png" alt="Card image cap">
+                    <div class="card-body">
+                      <h5 class="card-title">No me abras!</h5>
+                      <p class="card-text">Nah mentira, podes abrirme pero bajo tu responsabilidad (emoji ojos?)</p>
+                      <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
+                    </div>
+                </div>
+            </div>
             
         </article>
     </section>
-    <!-- Password -->
-    <section class="section" id="seccion-mcdonalds">
-        <article class="text-center my-auto" id="password-container">
-            <h2>¡Alto ahí!</h2>
-            <h3>Para poder continuar, tenes que ingresar la contraseña</h3>
-
-            <div class="password mx-auto">
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Ingresa la password" aria-describedby="password-button" id="password-input">
-                    <button class="btn btn-outline-secondary btn-form" type="button" id="password-button"><i class="fa-solid fa-arrow-right"></i></button>
-                </div>
-            </div>
-        </article>
-    </section>
-
-        <!-- Puzzle -->
-        <section class="section" id="seccion-puzzle">
-            <article>
-                <!-- <h2>PUZZLE</h2> -->
-                <h2>Antes de continuar tenés que superar un reto</h2>
-                <h3>En las cartas que te enviamos vas a encontrar un comodín, para seguir tenes que armarlo</h3>
-                <div class="row">
-                    <div class="col" id="imagenes"></div>
-                    <div class="col" id="contenedor">
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                    </div>
-                </div>
-         
-                
-         
-                <div id="resultado" class="hide">Felicitaciones, completaste el rompecabezas, ya podés ver nuestras webs!</div>
-         
-                
-            </article>
-        </section>
     
-        <!--JS-->
-
+    <!--JS-->
     <script src="lib/bootstrap-5.2.3/dist/js/bootstrap.bundle.js"></script>
     <script src="lib/jQuery-3.6.4/jquery-3.6.4.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
@@ -104,29 +73,9 @@
         new WOW().init();
     </script>
 
-    <!-- Password -->
-    <script>
-        var password = 'pass';
-        var input = $('#password-input');
-
-        $('#password-button').click(function(){
-            if(input.val()==password){
-            $('#password-container').addClass('d-none');
-            $('#mcdonalds-container').removeClass('d-none');
-            }else if(input.val()==""){
-                alert('Ingresa una contraseña');
-            }else{
-                alert('Contraseña incorrecta');
-            }
-        });
-
-    </script>
-
-    <script src="js/puzzle.js"></script>
-
     <script src="https://code.iconify.design/1/1.0.4/iconify.min.js">   </script>
     
-   
     <script src="js/custom.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>
