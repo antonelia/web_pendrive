@@ -1,5 +1,5 @@
 // Script password
-var password = 'pass';
+var password = 'hola mundo';
 var input = $('#password-input');
 
 $(document).ready(function(){
@@ -7,7 +7,7 @@ $(document).ready(function(){
 });
 
 $('#password-button').click(function(){
-    if(input.val()==password){
+    if(input.val().toLowerCase()==password){
     $('#password-container').addClass('d-none');
     $('#mcdonalds-container').fadeIn(1500);
     $('#siguiente').removeClass('d-none');
@@ -16,4 +16,21 @@ $('#password-button').click(function(){
     }else{
         alert('Contraseña incorrecta');
     }
+});
+
+$('#password-input').keyup(function(e) {
+
+    if (event.key === "Enter"){
+        if(input.val().toLowerCase()==password){
+            $('#password-container').addClass('d-none');
+            $('#mcdonalds-container').fadeIn(1500);
+            $('#siguiente').removeClass('d-none');
+            }else if(input.val()==""){
+                alert('Ingresa una contraseña');
+            }else{
+                alert('Contraseña incorrecta');
+            }
+    }
+
+    
 });

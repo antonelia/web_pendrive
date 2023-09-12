@@ -1,17 +1,19 @@
 body{
     background-color:bisque;
 }
-.slick-slide:hover{
+/* .slick-slide:hover{
     cursor: pointer;
     transform: scale(1.05);
     transition: .3s;
-}
+} */
 .slider-webs img{
     margin: auto;
+    border-radius: 5px;
 }
 .slick-arrow{
     height: 40px;
     width: 40px;
+    z-index: 100;
 }
 .slick-arrow::before{
     font-size: 40px;

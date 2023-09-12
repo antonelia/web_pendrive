@@ -3,58 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap lib -->
     <link rel="stylesheet" href="lib/bootstrap-5.2.3/dist/css/bootstrap.css">
-    <link rel="stylesheet" href="lib/animate.css/animate.css">
-    <script src="https://kit.fontawesome.com/a1c6ec28f2.js" crossorigin="anonymous"></script>
-    
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/theme-toggles@4.10.1/css/{toggle name}.min.css">
-
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
+    <!-- Animaciones lib - for wow library -->
+    <link rel="stylesheet" href="lib/animate.css/animate.css">
+    <!-- Font awesome lib -->
+    <script src="https://kit.fontawesome.com/a1c6ec28f2.js" crossorigin="anonymous"></script>
+    
+    <!-- Custom styles -->
     <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/index.css">
     
     <title>Document</title>
 </head>
 <body>
+    <!-- Precarga -->
+    <div id="loader">
+        <div id="pacman">
+            <div class="circles">
+                <span class="one"></span>
+                <span class="two"></span>
+                <span class="three"></span>
+              </div>
+              <div class="pacman">
+                <span class="top"></span>
+                <span class="bottom"></span>
+                <span class="left"></span>
+                <div class="eye"></div>
+              </div>
+        </div>
+    </div> <!-- end precarga -->
+
     <section class="section d-flex align-items-center">
         <article class="container-fluid text-center my-auto" >
-            <h2>¡Hora de jugar!</h2>
-            <h3>Ahora te damos un tiempo para que pruebes algunos de nuestros juegos y aplicaciones</h3>
+            <h2 class="wow fadeInDown" data-wow-delay="1s">¡Hora de jugar!</h2>
+            <h3 class="wow fadeInDown mb-5" data-wow-delay="2s">Ahora te damos un tiempo para que pruebes algunos de nuestros juegos y aplicaciones</h3>
+            <span class="small-text mt-5 wow fadeInDown" data-wow-delay="3s">flechita para abajo</span>
         </article>
     </section>
     <section class="section d-flex align-items-center">
+        <div class="dots-bg"></div>
         <article class="container-fluid text-center my-auto" >
             <div class="row justify-content-evenly" id="fila-juegos">
                 <div class="card col-md-3 wow fadeInUp" data-wow-delay=".2s" id="juego-reciclar">
-                    <img class="card-img-top" src="/assets/img/330x264.png" alt="Card image cap">
+                    <img class="card-img-top" src="assets/img/juego_reciclar-03-04.jpg" alt="Card image cap">
                     <div class="card-body">
-                      <h5 class="card-title">BA Recicla</h5>
-                      <p class="card-text">Aprendé como reciclar los distintos residuos</p>
+                      <h3 class="card-title">BA Recicla</h5>
+                      <p class="card-text">Aprendé como reciclar tus residuos</p>
                       <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
                     </div>
                 </div>
                 <div class="card col-md-3 wow fadeInUp" data-wow-delay=".4s" id="juego-dia">
-                    <img class="card-img-top" src="/assets/img/330x264.png" alt="Card image cap">
+                    <img class="card-img-top" src="assets/img/juego-dia.jpg" alt="Card image cap">
                     <div class="card-body">
-                      <h5 class="card-title">Comprá en supermercados DIA</h5>
-                      <p class="card-text">Bla bla bla bla</p>
+                      <h3 class="card-title">Supermercados DIA</h3>
+                      <p class="card-text">Atrapá productos y ganá descuentos</p>
                       <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
                     </div>
                 </div>
                 <div class="card col-md-3 wow fadeInUp" data-wow-delay=".6s" id="juego-wallet">
-                    <img class="card-img-top" src="/assets/img/330x264.png" alt="Card image cap">
+                    <img class="card-img-top" src="assets/img/my-wallet.jpg" alt="Card image cap">
                     <div class="card-body">
-                      <h5 class="card-title">My wallet</h5>
-                      <p class="card-text">Llevá el control de todos tus gastos</p>
+                      <h3 class="card-title">My wallet</h3>
+                      <p class="card-text">Llevá el control de tus gastos</p>
                       <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
                     </div>
                 </div>
             </div>
             <div class="row justify-content-evenly" id="no-abrir">
                 <div class="card col-md-3">
-                    <img class="card-img-top" src="/assets/img/330x264.png" alt="Card image cap">
+                    <img class="card-img-top" src="assets/img/no-abrir.jpg" alt="Card image cap">
                     <div class="card-body">
-                      <h5 class="card-title">No me abras!</h5>
+                      <h3 class="card-title">No me abras!</h3>
                       <p class="card-text">Nah mentira, podes abrirme pero bajo tu responsabilidad (emoji ojos?)</p>
                       <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
                     </div>
@@ -77,5 +99,12 @@
     
     <script src="js/custom.js"></script>
     <script src="js/index.js"></script>
+    <script>
+        $(window).on('load', function(){
+    setTimeout(function() {
+          $('#loader').fadeOut();
+    }, 1500);
+});
+    </script>
 </body>
 </html>

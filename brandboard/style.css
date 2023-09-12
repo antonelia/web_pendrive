@@ -1,5 +1,6 @@
 body{
   font-family:arial!important;
+  overflow-x: scroll;
  
 }
 * {
@@ -60,6 +61,7 @@ textarea {
 body {
 	height: 100%;
 	background: #fff;
+	overflow-y: hidden;
 }
 
 a {
@@ -1125,4 +1127,14 @@ body.page .entry-header,
 }
 #post-1 img{
 	max-height: 100%;
+}
+#post-2{
+	width: 100vw;
+}
+article{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
