@@ -30,7 +30,7 @@ $('#web-sonrisanas').click(function () {
 $(document).ready(function(){
     // Inicializar slick library
     $('.slider-webs').slick({
-        dots: true,
+        dots: false,
         slidesToShow: 1,
         slidesToScroll: 1,
         speed: 2000,
@@ -59,5 +59,5 @@ $(document).ready(function(){
 
 // Mostrar el modal con el puzzle cuando se clickea la imagen
 $('#puzzle-image').click(function () {
-    $('#puzzle-modal').modal('show');
+    $('#puzzle-modal').modal('toggle');
 });

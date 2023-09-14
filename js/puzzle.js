@@ -121,8 +121,12 @@ function puzzle() {
  
         if ([...imgs].every((el, index) => el.id=="i"+index)) {
             console.log("entro en segundo if");
-            overlay.classList.remove("hide");
-            resultado.classList.remove("hide");
+            setTimeout(function() {
+                $("#blur-overlay").fadeIn();
+                $("#resultado").fadeIn();
+            }, 1000);
+            
+            
             
         }
     }
