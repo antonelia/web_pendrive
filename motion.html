@@ -15,16 +15,61 @@
     <script src="https://kit.fontawesome.com/a1c6ec28f2.js" crossorigin="anonymous"></script>
     
     <!-- Custom styles -->
-    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="/styles/motion.css">
 
 </head>
-<body>
+<body class="overflow-h">
     <!-- Precarga -->
     <div id="loader">
         <div class="lds-heart"><div></div></div>
     </div> <!-- end precarga -->
+    <section class="section d-flex align-items-center">
+        <div class="container" class="text-center my-auto">
+            <div class="row justify-content-evenly">
+                <div class="col text-center">
+                    <video muted loop preload="auto">
+                        <source src="./assets/vid/bici.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="col text-center">
+                    <video muted loop preload="auto">
+                        <source src="./assets/vid/skate.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="col text-center">
+                    <video muted loop preload="auto">
+                        <source src="./assets/vid/bici.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col text-center">
+                    <video muted loop preload="auto">
+                        <source src="./assets/vid/skate.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="col text-center">
+                    <video muted loop preload="auto">
+                        <source src="./assets/vid/bici.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="col text-center">
+                    <video muted loop preload="auto">
+                        <source src="./assets/vid/skate.mp4" type="video/mp4">
+                    </video>
+                </div>
+            </div>
+        </div>
 
-    <a class="wow fadeInDown btn btn-primary mt-2" id="navegar-manifiesto" role="button" href="brandboard/">Avanzar</a>
+    </section>
+    <section class="section">
+        <div>
+            <a class="wow fadeInDown btn btn-primary mt-2" id="navegar-manifiesto" role="button" href="brandboard/">Avanzar</a>
+        </div>
+    </section>
+
+    
     <!--JS-->
     <script src="lib/bootstrap-5.2.3/dist/js/bootstrap.bundle.js"></script>
     <script src="lib/jQuery-3.6.4/jquery-3.6.4.min.js"></script>
@@ -33,6 +78,7 @@
     <script>
         new WOW().init();
     </script>
-    <script src="js/loader.js"></script>
+    <script src="/js/loader.js"></script>
+    <script src="/js/motion.js"></script>
 </body>
 </html>
