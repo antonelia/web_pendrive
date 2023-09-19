@@ -25,6 +25,10 @@ body{
     overflow-x: hidden;
 }
 
+.overflow-h{
+  overflow: hidden;
+}
+
 h2{
     font-size: xx-large;
     font-family: Lato-Bold, Arial, sans-serif;
