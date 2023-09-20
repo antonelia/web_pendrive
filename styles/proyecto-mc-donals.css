@@ -16,3 +16,16 @@
     flex-direction: column;
     justify-content: center;
 }
+.form-control:focus{
+    border: none;
+    box-shadow: 0 0 0 0 rgba(13, 110, 253, 0.25);
+}
+.input-group{
+    border-radius: 25px;
+}
+#siguiente{
+    position: absolute;
+    top: 0;
+    background: white;
+    display: flex;
+}

@@ -4,6 +4,7 @@ var input = $('#password-input');
 
 $(document).ready(function(){
     $('#mcdonalds-container').hide();
+    $('#siguiente').hide();
 });
 
 $('#password-button').click(function(){
@@ -25,12 +26,30 @@ $('#password-input').keyup(function(e) {
             $('#password-container').addClass('d-none');
             $('#mcdonalds-container').fadeIn(1500);
             $('#siguiente').removeClass('d-none');
-            }else if(input.val()==""){
+        }else if(input.val()==""){
                 alert('Ingresa una contraseña');
-            }else{
+        }else{
                 alert('Contraseña incorrecta');
-            }
+        }
     }
 
-    
+});
+
+$("#password-input").on( "focus", function() {
+    $( ".input-group").css("box-shadow", "0 0 0 0.2rem var(--purple-color)");
+});
+
+$("#password-input").focusout(function(){
+    $( ".input-group").css("box-shadow", "0 0 0 0");
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const player = new Plyr('#player', {
+        title: 'Example Title',
+        fullscreen:{ enabled: true}
+    }); 
+   
+    player.on('ended', function(){
+        $('#siguiente').fadeIn();
+    });
 });
