@@ -10,6 +10,48 @@ body{
     transition: .3s;
 } */
 
+/* Loader */
+
+#loader{
+    background: var(--light-blue-color);
+}
+
+#loader div{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: calc(50vh - 50px);
+    left: calc(50vw - 50px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#loader span{
+  color: #fff;
+  
+  font-family: Consolas, Menlo, Monaco, monospace;
+  font-weight: bold;
+  font-size: 80px;
+
+}
+#loader span {
+    display: inline-block;
+    animation: pulse 0.8s alternate infinite ease-in-out;
+}
+#loader span:nth-child(odd) {
+    animation-delay: 0.8s;
+  }
+
+@keyframes pulse {
+  to {
+    transform: scale(0.8);
+    opacity: 0.5;
+  }
+}
+/* end loader */
+
 #web-sonrisanas{
     padding: 20px 0;
 }

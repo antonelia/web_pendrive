@@ -122,6 +122,74 @@
         -webkit-transform:rotate(-45deg);transform:rotate(-45deg)
     }
     }
-.pacman .bottom{-webkit-animation:animbottom 1s infinite;animation:animbottom 1s infinite}
-@-webkit-keyframes animbottom{0%,100%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}50%{-webkit-transform:rotate(45deg);transform:rotate(45deg)}}
-@keyframes animbottom{0%,100%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}50%{-webkit-transform:rotate(45deg);transform:rotate(45deg)}}
+.pacman .bottom{
+    -webkit-animation:animbottom 1s infinite;
+    animation:animbottom 1s infinite
+}
+@-webkit-keyframes animbottom{
+    0%,100%{
+        -webkit-transform:rotate(0deg);
+        transform:rotate(0deg)
+    }
+    50%{
+        -webkit-transform:rotate(45deg);
+        transform:rotate(45deg)
+        }
+}
+@keyframes animbottom{
+    0%,100%{
+        -webkit-transform:rotate(0deg);
+        transform:rotate(0deg)
+    }
+    50%{
+        -webkit-transform:rotate(45deg);
+        transform:rotate(45deg)
+    }
+}
+
+/* Scroll animation */
+.scroll {
+	width: 60px;
+	height: 60px;
+	border: 2px solid var(--pink-color);
+	border-radius: 50%;
+	position: relative;
+	animation: down 1.5s infinite;
+	-webkit-animation: down 1.5s infinite;
+    background: var(--pink-color);
+	&::before {
+		content: '';
+		position: absolute;
+		top: 15px;
+		left: 18px;
+		width: 18px;
+		height: 18px;
+		border-left: 3px solid white;
+  	    border-bottom: 3px solid white;
+		transform: rotate(-45deg);
+	}
+}
+
+@keyframes down {
+	0% {
+		transform: translate(0);
+	}
+	20% {
+		transform: translateY(15px);
+	}
+	40% {
+		transform: translate(0);
+	}
+}
+
+@-webkit-keyframes down {
+	0% {
+		transform: translate(0);
+	}
+	20% {
+		transform: translateY(15px);
+	}
+	40% {
+		transform: translate(0);
+	}
+}

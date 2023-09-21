@@ -5,6 +5,7 @@ var input = $('#password-input');
 $(document).ready(function(){
     $('#mcdonalds-container').hide();
     $('#siguiente').hide();
+    $("#bajar").hide();
 });
 
 $('#password-button').click(function(){
@@ -50,6 +51,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }); 
    
     player.on('ended', function(){
-        $('#siguiente').fadeIn();
+        setTimeout(function() {
+            $("#bajar").fadeIn();
+            $('#siguiente').fadeIn();
+        }, 1500);    
     });
 });

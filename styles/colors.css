@@ -8,4 +8,5 @@
     --card-fill: #F9F9FA;
     --card-fill-dark:#424265;
     --rounded-border: 8px;
+    --plyr-color-main: var(--pink-color);
 }

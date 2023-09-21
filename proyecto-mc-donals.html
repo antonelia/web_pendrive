@@ -24,7 +24,12 @@
 <body>
     <!-- Precarga -->
     <div id="loader">
-        <div class="lds-heart"><div></div></div>
+        <div id="spinner" class="spinner">
+            <div class="spinWrap">
+                <p class="spinnerImage"></p>
+                <p class="loader"></p>
+            </div>
+        </div>
     </div> <!-- end precarga -->
     <!-- Password -->
     <section class="section" id="seccion-mcdonalds">
@@ -40,13 +45,10 @@
             </div>
         </article>
         <article class="container-fluid text-center my-auto" id="mcdonalds-container">
-            <div style="width: 70%;" class="plyr__video-embed" id="player">
-                <iframe src="https://www.youtube.com/embed/UHuAyVLKvbc"
-                    allowfullscreen
-                    allowtransparency
-                    allow="autoplay">
-                </iframe>
-            </div>
+            <video id="player" playsinline controls data-poster="/assets/img/videocaso-thumbnail.png">
+                <source src="/assets/vid/videocaso_mcdonalds.mp4" type="video/mp4" />
+            </video>
+            <span class="mt-3" id="bajar"><div class="scroll"></div></span>
         </article>
     </section>
     <section class="section align-items-center d-none" id="siguiente">
@@ -68,7 +70,7 @@
     </script>
 
     <!-- Plyr lib -->
-		<script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
+	<script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
 
     <script src="js/proyecto-mc-donals.js"></script>
     <script src="js/loader.js"></script>

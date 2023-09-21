@@ -2,3 +2,13 @@ video{
     width: 250px;
     height: 250px;
 }
+#loader{
+    background: var(--yellow-color);
+}
+#loader img{
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    top: calc(50vh - 40px);
+    left: calc(50vw - 40px);;
+}

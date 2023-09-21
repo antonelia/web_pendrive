@@ -58,6 +58,13 @@ h2{
     width: 100%;
 }
 
+.plyr svg{
+  color: white;
+}
+.plyr button{
+  border-radius: 50%;
+}
+
 /* Miscelaneas */
 .purple-waves{
     background: url("../assets/img/waves-violetas.png") no-repeat;
