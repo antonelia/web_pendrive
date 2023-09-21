@@ -18,7 +18,7 @@ $('#juego-dia').click(function () {
     }
 
     window.open(
-        '/Juego-Dia', '_blank'
+        './Juego-Dia', '_blank'
     );
 });
 
@@ -33,7 +33,7 @@ $('#juego-reciclar').click(function () {
     }
 
     window.open(
-        '/BA-Recicla', '_blank'
+        './BA-Recicla', '_blank'
     );
 });
 
