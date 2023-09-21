@@ -1,5 +1,5 @@
 body{
-    background: url(/assets/img/fondo-rosa.png);
+    background: url(../assets/img/fondo-rosa.png);
     background-size: contain;
     background-position: left;
     background-repeat: no-repeat;
