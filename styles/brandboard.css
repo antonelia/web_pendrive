@@ -131,3 +131,10 @@ g{
 		stroke-dashoffset: -351.86;
 	}
 }
+
+#qr-reel{
+	position: absolute;
+	top: 0;
+	background-color: white;
+	display: flex;
+}

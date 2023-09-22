@@ -1,3 +1,6 @@
+
+    $("#qr-reel").hide();
+
 document.addEventListener('DOMContentLoaded', () => {
     const player = new Plyr('#player', {
         title: 'Example Title',
@@ -5,9 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }); 
    
     player.on('ended', function(){
-        // setTimeout(function() {
-        //     $("#bajar").fadeIn();
-        //     $('#siguiente').fadeIn();
-        // }, 1500);    
+         setTimeout(function() {
+             $("#qr-reel").fadeIn();
+         }, 1500);    
     });
 });
