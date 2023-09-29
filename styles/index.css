@@ -3,6 +3,29 @@
     left: 0;
     top: 120vh;
 }
+/* Miscelaneas */
+.cubo-3d{
+    top: -20px;
+    left: -20px;
+    height: 30vh;
+    width: 30vh;
+}
+.yellow-waves{
+    top: 85vh;
+    right: -10px;
+}
+/* Cruz */
+.cruz-azul{
+    background: url(../assets/img/cruz-azul-grande.png) no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: 105vh;
+    right: -100px;
+    width: 100vh;
+    height: 100vh;
+    transform: rotate(105deg);
+}
+/* General styles */
 .card{
     padding-top: calc(var(--bs-gutter-x) * 0.5);
     cursor: pointer;
@@ -22,8 +45,12 @@
     color: var(--dark-blue-color);
 }
 
+#games-section .container-fluid{
+    padding-left: 9rem;
+    padding-right: 9rem;
+}
 
-/* pac man */
+/* pac man loader */
 #pacman{
     position: absolute;
     top: calc(50vh - 30px);
