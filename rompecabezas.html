@@ -24,7 +24,7 @@
     
     <!-- Custom styles -->
     <link rel="stylesheet" href="styles/styles.css">
-    <link rel="stylesheet" href="styles/webs.css">
+    <link rel="stylesheet" href="styles/rompecabezas.css">
 </head>
 <body class="overflow-h">
     <!-- Precarga -->
@@ -33,25 +33,42 @@
             <span>{</span><span>}</span>
         </div>
     </div> <!-- end precarga -->
-    <section class="section d-flex align-items-center">
-        <article class="container-fluid text-center my-auto">
-            <div class="slider-webs single-item">
-                <div id="web-indar">
-                    <img src="./assets/img/web-indar.png" alt="">
+    <section id="puzzle-modal" class="section">
+        <div>
+            <h2 class="text-center wow fadeInDown" data-wow-delay="2s">Rompecabezas Rabanito</h2>
+            <h5 class="text-center wow fadeInDown" data-wow-delay="3s">Buscá el comodín de nuestras cartas y armá la imagen para continuar</h5>
+        </div>
+        <div class="row wow fadeInDown" data-wow-delay="4s">
+            <div class="col" id="imagenes"></div>
+            <div class="col" id="contenedor">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+
+    </section>
+    
+    <!-- Resultado -->
+    <div class="modal fade" id="resultado-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
                 </div>
-                <div id="web-renueva-tus-ventanas">
-                    <img src="./assets/img/web-renueva-tus-ventanas.png" alt="">
+                <div class="modal-body text-center">
+                    <h3><b>¡Muy bien!</b></h3>
+                    <p class="mt-3">Completaste el rompecabezas, ya podés ver nuestros trabajos en motion graphics!</p>
                 </div>
-                <div id="web-sonrisanas">
-                    <img src="./assets/img/web-sonrisanas.png" alt="">
+                <div class="modal-footer">
+                    <a type="button" class="btn btn-primary" id="continuar-cookies" href="motion.html"><span>Continuar</span></a>
                 </div>
-                <div id="web-puzzle">
-                    <img src="./assets/img/web-rompecabezas.png" alt="" id="puzzle-image">
-                </div>
-              </div>
-        </article>
-    </section>>
-    </div>
+            </div>
+        </div>
+    </div> 
 
     <!--JS-->
     <script src="lib/bootstrap-5.2.3/dist/js/bootstrap.bundle.js"></script>
@@ -62,7 +79,7 @@
         new WOW().init();
     </script>
     <script src="lib/slick/slick.min.js"></script>
-    <script src="js/webs.js"></script>
+    <script src="js/puzzle.js"></script>
     <script src="js/loader.js"></script>
 </body>
 </html>

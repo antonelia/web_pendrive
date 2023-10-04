@@ -108,10 +108,6 @@ function puzzle() {
      */
     function completado() {
         console.log("chequeando si se completo");
-        const resultado=document.getElementById("resultado");
-        resultado.classList.add("hide");
-        const overlay=document.getElementById("blur-overlay");
-        overlay.classList.add("hide");
  
         const imgs=document.querySelectorAll("#contenedor img");
         if (imgs.length!=6) {
@@ -122,8 +118,7 @@ function puzzle() {
         if ([...imgs].every((el, index) => el.id=="i"+index)) {
             console.log("entro en segundo if");
             setTimeout(function() {
-                $("#blur-overlay").fadeIn();
-                $("#resultado").fadeIn();
+                $('#resultado-modal').modal('toggle');
             }, 1000);
             
             

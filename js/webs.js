@@ -59,5 +59,5 @@ $(document).ready(function(){
 
 // Mostrar el modal con el puzzle cuando se clickea la imagen
 $('#puzzle-image').click(function () {
-    $('#puzzle-modal').modal('toggle');
+    window.location.href="./rompecabezas.html";
 });
