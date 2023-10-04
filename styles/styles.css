@@ -304,3 +304,61 @@ h2{
 .video{
     width: 65%
 }
+/*Modales*/
+body.modal-open section{
+  -webkit-filter: blur(4px);
+  -moz-filter: blur(4px);
+  -o-filter: blur(4px);
+  -ms-filter: blur(4px);
+  filter: blur(4px);
+}
+
+.modal-header{
+  border-bottom: none;
+}
+
+.modal-content{
+    box-shadow: 0 2px 10px 0 rgba( 255, 255, 255, 0.37 );
+    border-radius: 18px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.modal-footer button span{
+  font-size: medium;
+}
+/*btn hover animation*/
+span{
+  position:relative;
+  transition: 0.5s;
+  color: #fff;
+  font-size: x-large;
+}
+.btn span::after{
+  content:"\003E";
+  position:absolute;
+  right:-20px; 
+  opacity:0;
+  transition: 0.5s;
+  padding-left: 2px;
+}
+.btn:hover span{
+  padding-right:25px  
+}
+
+.btn:hover{
+  background-color: var(--dark-text-color);
+}
+.btn:hover span:after{
+  right:0;
+  opacity:1
+}
+
+.btn:active{
+  background-color: var(--dark-blue-color)!important;
+}
+
+.btn span{
+  font-size: medium;
+}
+
+/*Hover animation end*/
