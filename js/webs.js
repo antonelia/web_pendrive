@@ -25,37 +25,62 @@ $('#web-sonrisanas').click(function () {
     }
 });
 
+class Example {
+    constructor(options) {
+        this.root = options.root;
 
+        this.init();
 
-$(document).ready(function(){
-    // Inicializar slick library
-    $('.slider-webs').slick({
-        dots: false,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        speed: 2000,
-        responsive: [
-            {
-                breakpoint: 768,
-                settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 3
-                }
+        setTimeout(this.showImages.bind(this), 1000);
+    }
+
+    init() {
+        this.scroll = new LocomotiveScroll({
+            el: this.root,
+            direction: 'horizontal',
+            smooth: true,
+            lerp: 0.05,
+            tablet: {
+                smooth: true
             },
-            {
-                breakpoint: 480,
-                settings: {
-                    arrows: false,
-                    centerMode: true,
-                    centerPadding: '40px',
-                    slidesToShow: 1
-                }
+            smartphone: {
+                smooth: true
             }
-        ]
+        });
+
+        this.images = this.root.querySelectorAll('.image');
+
+        [].forEach.call(this.images, (image) => {
+            image.addEventListener('click', () => {
+                image.classList.add('-clicked');
+                this.hideImages();
+            });
+        });
+    }
+
+    showImages() {
+        [].forEach.call(this.images, (image) => {
+            image.classList.remove('-clicked');
+            image.classList.add('-active');
+        });
+    }
+
+    hideImages() {
+        [].forEach.call(this.images, (image) => {
+            image.classList.remove('-active');
+        });
+
+        setTimeout(this.showImages.bind(this), 2000);
+    }
+}
+
+
+window.addEventListener('DOMContentLoaded', (event) => {
+    const example = new Example({
+        root: document.querySelector('.scroll-animations-example')
     });
 });
+
 
 // Mostrar el modal con el puzzle cuando se clickea la imagen
 $('#puzzle-image').click(function () {
