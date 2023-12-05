@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="lib/animate.css/animate.css">
     <!-- Font awesome lib -->
     <script src="https://kit.fontawesome.com/a1c6ec28f2.js" crossorigin="anonymous"></script>
+
+    <!-- Cubes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     
     <!-- Custom styles -->
     <link rel="stylesheet" href="styles/styles.css">
@@ -19,31 +22,59 @@
     <title>Document</title>
 </head>
 <body class="overflow-h">
-    <!-- Precarga -->
-    <div id="loader">
-        <div id="pacman">
-            <div class="circles">
-                <span class="one"></span>
-                <span class="two"></span>
-                <span class="three"></span>
-              </div>
-              <div class="pacman">
-                <span class="top"></span>
-                <span class="bottom"></span>
-                <span class="left"></span>
-                <div class="eye"></div>
-              </div>
+    <!-- partial:index.partial.html -->
+    <!-- https://youtu.be/w2ft7JhAkQQ?t=65 -->
+    
+    <script type="text/x-template" id="cube-template">
+      <div class="cube-wrapper">
+        <div :class="{ 'cube--solid': solid }" class="cube">
+          <div
+            v-for="side of Object.keys(Array(4).fill())"
+            class="cube__side"
+            :key="`side-${side}`"
+          >
+            <debug v-if="debugNum" :text="debug" />
+          </div>
+          <div
+            v-for="side of Object.keys(Array(2).fill())"
+            class="cube__face"
+            :key="`face-${side}`"
+          >
+            <debug v-if="debugNum" :text="debug" />
+          </div>
         </div>
-    </div> <!-- end precarga -->
+      </div>
+    </script>
+    
+    <div @click="restart" class="scene" id="app">
+      <cube
+        v-for="(cube, i) of cubes"
+        :key="`cube-${i}`"
+        class="abs-center"
+        :solid="cube.solid"
+        :style="{
+          '--x': `${cube.x || 0}px`,
+          '--y': `${cube.y || 0}px`,
+          '--z': `${cube.z || 0}px`,
+          '--s': cube.s,
+          '--o': cube.o,
+          '--zi': cube.zi,
+          '--rx': '55deg',
+          '--ry': '0deg',
+          '--rz': '45deg'
+        }"
+        :id="`cube-${i}`"
+      ></cube>
+      
+      <ul class="pen-list">
+        <li class="inicio-animacion linea-1 text-center">Hola de nuevo, te estábamos empezando a extrañar.</li>
+        <li class="inicio-animacion linea-2 text-center">Nuestro mundo es más divertido con más personas.</li>
+        <li class="inicio-animacion linea-3 text-center">Ya que volvió a estar todo en orden, porque no exploramos planos más didácticos? </li>
+      </ul>
+    </div>
 
-    <section class="section d-flex align-items-center">
-        <article class="container-fluid text-center my-auto" >
-            <h2 class="wow fadeInDown" data-wow-delay="1s">¡Hora de jugar!</h2>
-            <h3 class="wow fadeInDown mb-5" data-wow-delay="2s">Ahora te damos un tiempo para que pruebes algunos de nuestros juegos y aplicaciones</h3>
-            <span class="small-text mt-5 wow fadeInDown" data-wow-delay="3s"  id="bajar"><div class="scroll m-auto"></div></span>
-        </article>
-    </section>
-    <section class="section d-flex align-items-center">
+    
+    <section class="section d-flex align-items-center d-none">
         <div class="dots-bg"></div>
         <article class="container-fluid text-center my-auto" >
             <div class="row justify-content-evenly" id="fila-juegos">
@@ -90,6 +121,11 @@
     <script src="lib/bootstrap-5.2.3/dist/js/bootstrap.bundle.js"></script>
     <script src="lib/jQuery-3.6.4/jquery-3.6.4.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
+
+     <!-- partial -->
+     <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js'></script>
+     <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js'></script><script  src="./script.js"></script>
+     
 
     <script>
         new WOW().init();
