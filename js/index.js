@@ -8,7 +8,7 @@ $(window).on('load', function(){
   setTimeout(function() {
       $('.linea-1').removeClass("inicio-animacion");
        $('.linea-1').addClass("empezar-animacion");
-   }, 1000);
+   }, 600);
 
    setTimeout(function() {
       $('.linea-1').fadeOut();
@@ -17,7 +17,7 @@ $(window).on('load', function(){
    setTimeout(function() {
       $('.linea-2').removeClass("inicio-animacion");
       $('.linea-2').addClass("empezar-animacion");
-  }, 6000);
+  }, 5000);
 
   setTimeout(function() {
       $('.linea-2').fadeOut();
@@ -26,11 +26,11 @@ $(window).on('load', function(){
   setTimeout(function() {
       $('.linea-3').removeClass("inicio-animacion");
       $('.linea-3').addClass("empezar-animacion");
-  }, 11000);
+  }, 10000);
   setTimeout(function() {
     $('#bajar').fadeIn();
     $("html").css("overflow", "auto");
-}, 15000);
+}, 11000);
 });
 
 $(document).ready(function(){

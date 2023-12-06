@@ -46,7 +46,7 @@
       </div>
     </script>
     
-    <div @click="restart" class="scene" id="app">
+    <div class="scene" id="app">
       <cube
         v-for="(cube, i) of cubes"
         :key="`cube-${i}`"
@@ -80,7 +80,7 @@
         </section>
         <section class="inicio-animacion linea-3 justify-content-center align-items-center">
             <div class="text-center">
-                <h1>Ya que volvió a estar todo en orden, porque no exploramos planos más didácticos?</h1>
+                <h1>Ya que volvió a estar todo en orden, por qué no exploramos planos más didácticos?</h1>
             </div>
             <span class="small-text mt-5 wow fadeInDown" data-wow-delay="3s"  id="bajar"><div class="scroll m-auto"></div></span>
         </section>
@@ -88,9 +88,8 @@
     </div>
 
     </div>
-
     
-    <section class="section d-flex align-items-center top-100" id="juegos">
+    <!--<section class="section d-flex align-items-center top-100" id="juegos">
         <div class="dots-bg"></div>
         <article class="container-fluid text-center my-auto" >
             <div class="row justify-content-evenly" id="fila-juegos">
@@ -99,7 +98,6 @@
                     <div class="card-body">
                       <h3 class="card-title">BA Recicla</h5>
                       <p class="card-text">Aprendé como reciclar tus residuos</p>
-                      <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
                     </div>
                 </div>
                 <div class="card col-md-3 wow fadeInUp" data-wow-delay=".4s" id="juego-dia">
@@ -107,7 +105,6 @@
                     <div class="card-body">
                       <h3 class="card-title">Supermercados DIA</h3>
                       <p class="card-text">Atrapá productos y ganá descuentos</p>
-                      <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
                     </div>
                 </div>
                 <div class="card col-md-3 wow fadeInUp" data-wow-delay=".6s" id="juego-wallet">
@@ -115,7 +112,6 @@
                     <div class="card-body">
                       <h3 class="card-title">My wallet</h3>
                       <p class="card-text">Llevá el control de tus gastos</p>
-                      <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
                     </div>
                 </div>
             </div>
@@ -125,27 +121,26 @@
                     <div class="card-body">
                       <h3 class="card-title">No me abras!</h3>
                       <p class="card-text">Nah mentira, podes abrirme pero bajo tu responsabilidad (emoji ojos?)</p>
-                      <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
                     </div>
                 </div>
             </div>
             
         </article>
-    </section>
+    </section>-->
 
-    <section class="section">
-      <a href="https://es.wikipedia.org/wiki/The_Legend_of_Zelda:_The_Wind_Waker" alt="Zelda Wind Waker card" target="_blank">
+
+    <section class="section d-flex justify-content-center" id="juegos">
+      <a id="juego-reciclar" alt="" target="_blank" class="">
         <div class="card-zelda">
           <div class="wrapper">
-            <img src="https://assets.codepen.io/527512/zelda_cover-image.webp" class="cover-image" />
+            <img src="./assets/img/juego-ba-cover.jpg" class="cover-image" />
           </div>
-          <img src="https://assets.codepen.io/527512/zelda_title.webp" class="title" />
-          <img src="https://assets.codepen.io/527512/zelda_character.webp" class="character" />
+          <img src="./assets/img/juego-ba-title.png" class="title" />
+          <img src="./assets/img/juego-ba-personaje.png" class="character" />
         </div>
       </a>
-    </section>
-    <section class="section">
-      <a href="https://es.wikipedia.org/wiki/The_Legend_of_Zelda:_The_Wind_Waker" alt="Zelda Wind Waker card" target="_blank">
+
+      <a id="juego-dia" alt="" target="_blank"  class="">
         <div class="card-zelda">
           <div class="wrapper">
             <img src="./assets/img/juego-dia-cover.jpg" class="cover-image" />
@@ -154,6 +149,27 @@
           <img src="./assets/img/juego-dia-carrito.png" class="character" />
         </div>
       </a>
+
+      <a id="juego-wallet" alt="" target="_blank"  class="">
+        <div class="card-zelda">
+          <div class="wrapper">
+            <img src="./assets/img/juego-wallet-cover.jpg" class="cover-image" />
+          </div>
+          <img src="./assets/img/juego-wallet-title.png" class="title" />
+          <img src="./assets/img/juego-wallet-personaje.png" class="character" />
+        </div>
+      </a>
+
+      <a id="no-abrir" alt="" target="_blank"  class="fadeInUp">
+        <div class="card-zelda">
+          <div class="wrapper">
+            <img src="./assets/img/no-abrir-cover.jpg" class="cover-image" />
+          </div>
+          <img src="./assets/img/no-abrir-title.png" class="title" />
+          <img src="./assets/img/no-abrir-personaje.png" class="character" />
+        </div>
+      </a>
+
     </section>
     
     <!--JS-->

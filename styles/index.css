@@ -217,6 +217,7 @@
   opacity: var(--o);
   transform: translateZ(var(--z));
   will-change: transform, opacity;
+  
 }
 .cube__side, .cube__face {
   width: var(--size);
@@ -259,6 +260,7 @@
   transform: rotatex(calc(var(--rotation) * -1));
 }
 
+
 * {
   box-sizing: border-box;
 }
@@ -287,6 +289,7 @@ body {
   transform-style: preserve-3d;
   transform: translateZ(0);
   will-change: transform;
+  margin-top: 10vh;
 }
 
 .pen-list {
@@ -308,10 +311,13 @@ body {
     background: transparent;
     display: flex;
     font-size: 2rem;
+    margin-top: -10vh;
 }
 #intro h1{
     color: white;
 }
+
+/*End cubos*/
 
 .inicio-animacion{
     top: 100vh !important;
@@ -334,6 +340,7 @@ body {
       opacity: 1;
     }
 }
+
 
 .start-btn{
     text-align: center;
@@ -363,7 +370,8 @@ body {
 }
 
 #juegos{
-    margin-top: 100vh;
+    margin-top: 120vh;
+    min-height: 85vh;
 }
 #bajar{
     position: absolute;
@@ -391,6 +399,7 @@ body {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
+    border-radius: 13px;
 }
 
 .wrapper {
@@ -398,13 +407,14 @@ body {
 	position: absolute;
 	width: 100%;
 	z-index: -1;
+    border-radius: 13px;
 }
 
 .card-zelda:hover .wrapper {
 	transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
-	box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
-	-webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
-	-moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+	box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.30);
+	-webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.30);
+	-moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.30);
 }
 
 .wrapper::before,
@@ -420,22 +430,12 @@ body {
 .wrapper::before {
 	top: 0;
 	height: 100%;
-	background-image: linear-gradient(
-		to top,
-		transparent 46%,
-		rgba(12, 13, 19, 0.5) 68%,
-		rgba(12, 13, 19) 97%
-	);
+    background-image: linear-gradient(158deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%);
+    border-radius: 13px;
 }
 .wrapper::after {
 	bottom: 0;
 	opacity: 1;
-	background-image: linear-gradient(
-		to bottom,
-		transparent 46%,
-		rgba(12, 13, 19, 0.5) 68%,
-		rgba(12, 13, 19) 97%
-	);
 }
 
 .card-zelda:hover .wrapper::before,
@@ -460,9 +460,14 @@ body {
 	transition: all 0.5s;
 	position: absolute;
 	z-index: -1;
+    box-shadow: 1px 1px 1px #0000;
 }
 
 .card-zelda:hover .character {
 	opacity: 1;
 	transform: translate3d(0%, -30%, 100px);
+}
+
+#juego-dia, #juego-wallet, #juego-reciclar, #no-abrir{
+    height: 500px;
 }
