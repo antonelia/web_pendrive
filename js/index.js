@@ -3,7 +3,8 @@ var juegoDia = false;
 var juegoWallet = false;
 var noAbrir = false;
 $(window).on('load', function(){
-  $('.start-btn').hide();
+  $("html").css("overflow", "hidden");
+  $('#bajar').hide();
   setTimeout(function() {
       $('.linea-1').removeClass("inicio-animacion");
        $('.linea-1').addClass("empezar-animacion");
@@ -27,7 +28,8 @@ $(window).on('load', function(){
       $('.linea-3').addClass("empezar-animacion");
   }, 11000);
   setTimeout(function() {
-    $('.start-btn').fadeIn();
+    $('#bajar').fadeIn();
+    $("html").css("overflow", "auto");
 }, 15000);
 });
 
