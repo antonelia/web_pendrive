@@ -21,7 +21,7 @@
     
     <title>Document</title>
 </head>
-<body class="overflow-h">
+<body>
     <!-- partial:index.partial.html -->
     <!-- https://youtu.be/w2ft7JhAkQQ?t=65 -->
     
@@ -66,15 +66,31 @@
         :id="`cube-${i}`"
       ></cube>
       
-      <ul class="pen-list">
-        <li class="inicio-animacion linea-1 text-center">Hola de nuevo, te estábamos empezando a extrañar.</li>
-        <li class="inicio-animacion linea-2 text-center">Nuestro mundo es más divertido con más personas.</li>
-        <li class="inicio-animacion linea-3 text-center">Ya que volvió a estar todo en orden, porque no exploramos planos más didácticos? </li>
-      </ul>
+      <div id="intro">
+        <section class="inicio-animacion linea-1 justify-content-center align-items-center">
+            <div class="text-center">
+                <h1>Hola de nuevo, te estábamos empezando a extrañar.</h1>
+            </div>
+
+        </section>
+        <section class="inicio-animacion linea-2 justify-content-center align-items-center">
+            <div class="text-center">
+                <h1>Nuestro mundo es más divertido con más personas.</h1>
+            </div>
+        </section>
+        <section class="inicio-animacion linea-3 justify-content-center align-items-center">
+            <div class="text-center">
+                <h1>Ya que volvió a estar todo en orden, porque no exploramos planos más didácticos?</h1>
+            </div>
+            <span class="small-text mt-5 wow fadeInDown" data-wow-delay="3s"  id="bajar"><div class="scroll m-auto"></div></span>
+        </section>
+
+    </div>
+
     </div>
 
     
-    <section class="section d-flex align-items-center d-none">
+    <section class="section d-flex align-items-center top-100" id="juegos">
         <div class="dots-bg"></div>
         <article class="container-fluid text-center my-auto" >
             <div class="row justify-content-evenly" id="fila-juegos">
@@ -116,6 +132,29 @@
             
         </article>
     </section>
+
+    <section class="section">
+      <a href="https://es.wikipedia.org/wiki/The_Legend_of_Zelda:_The_Wind_Waker" alt="Zelda Wind Waker card" target="_blank">
+        <div class="card-zelda">
+          <div class="wrapper">
+            <img src="https://assets.codepen.io/527512/zelda_cover-image.webp" class="cover-image" />
+          </div>
+          <img src="https://assets.codepen.io/527512/zelda_title.webp" class="title" />
+          <img src="https://assets.codepen.io/527512/zelda_character.webp" class="character" />
+        </div>
+      </a>
+    </section>
+    <section class="section">
+      <a href="https://es.wikipedia.org/wiki/The_Legend_of_Zelda:_The_Wind_Waker" alt="Zelda Wind Waker card" target="_blank">
+        <div class="card-zelda">
+          <div class="wrapper">
+            <img src="./assets/img/juego-dia-cover.jpg" class="cover-image" />
+          </div>
+          <img src="./assets/img/juego-dia-title.png" class="title" />
+          <img src="./assets/img/juego-dia-carrito.png" class="character" />
+        </div>
+      </a>
+    </section>
     
     <!--JS-->
     <script src="lib/bootstrap-5.2.3/dist/js/bootstrap.bundle.js"></script>
@@ -124,8 +163,7 @@
 
      <!-- partial -->
      <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js'></script>
-     <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js'></script><script  src="./script.js"></script>
-     
+     <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js'></script>     
 
     <script>
         new WOW().init();
@@ -137,11 +175,11 @@
     <script src="js/index.js"></script>
     <script>
         $(window).on('load', function(){
-    setTimeout(function() {
-          $('#loader').fadeOut();
-          $("body").removeClass("overflow-h");
-    }, 1500);
-});
+          setTimeout(function() {
+              $('#loader').fadeOut();
+              $("body").removeClass("overflow-h");
+          }, 1500);
+        });
     </script>
 </body>
 </html>

@@ -2,6 +2,36 @@ var juegoReciclar = false;
 var juegoDia = false;
 var juegoWallet = false;
 var noAbrir = false;
+$(window).on('load', function(){
+  $("html").css("overflow", "hidden");
+  $('#bajar').hide();
+  setTimeout(function() {
+      $('.linea-1').removeClass("inicio-animacion");
+       $('.linea-1').addClass("empezar-animacion");
+   }, 1000);
+
+   setTimeout(function() {
+      $('.linea-1').fadeOut();
+   }, 5000);
+
+   setTimeout(function() {
+      $('.linea-2').removeClass("inicio-animacion");
+      $('.linea-2').addClass("empezar-animacion");
+  }, 6000);
+
+  setTimeout(function() {
+      $('.linea-2').fadeOut();
+   }, 10000);
+
+  setTimeout(function() {
+      $('.linea-3').removeClass("inicio-animacion");
+      $('.linea-3').addClass("empezar-animacion");
+  }, 11000);
+  setTimeout(function() {
+    $('#bajar').fadeIn();
+    $("html").css("overflow", "auto");
+}, 15000);
+});
 
 $(document).ready(function(){
     $('#no-abrir').hide();
@@ -52,9 +82,6 @@ $('#no-abrir').click(function () {
     window.location.href='no-abrir.html'
 });
 
-
-
-
 /*Cubes*/
 
 Vue.component('debug', {
@@ -67,7 +94,6 @@ Vue.component('debug', {
       }">{{text}}</h2>
     ` });
   
-  
   Vue.component('cube', {
     template: '#cube-template',
     name: 'Cube',
@@ -76,8 +102,6 @@ Vue.component('debug', {
       debugNum() {
         return typeof this.debug !== 'undefined';
       } } });
-  
-  
   
   new Vue({
     el: '#app',
@@ -186,30 +210,5 @@ Vue.component('debug', {
         delay: 1 },
       0.05);*/
     } });
-    
-    $(window).on('load', function(){
-        setTimeout(function() {
-            $('.linea-1').removeClass("inicio-animacion");
-             $('.linea-1').addClass("empezar-animacion");
-         }, 1000);
-    
-         setTimeout(function() {
-            $('.linea-1').fadeOut();
-         }, 5000);
-    
-         setTimeout(function() {
-            $('.linea-2').removeClass("inicio-animacion");
-            $('.linea-2').addClass("empezar-animacion");
-        }, 6000);
-    
-        setTimeout(function() {
-            $('.linea-2').fadeOut();
-         }, 10000);
-    
-        setTimeout(function() {
-            $('.linea-3').removeClass("inicio-animacion");
-            $('.linea-3').addClass("empezar-animacion");
-        }, 11000);
-    });
     
     
