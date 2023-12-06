@@ -66,11 +66,27 @@
         :id="`cube-${i}`"
       ></cube>
       
-      <ul class="pen-list">
-        <li class="inicio-animacion linea-1 text-center">Hola de nuevo, te estábamos empezando a extrañar.</li>
-        <li class="inicio-animacion linea-2 text-center">Nuestro mundo es más divertido con más personas.</li>
-        <li class="inicio-animacion linea-3 text-center">Ya que volvió a estar todo en orden, porque no exploramos planos más didácticos? </li>
-      </ul>
+      <div id="intro">
+        <section class="inicio-animacion linea-1 justify-content-center align-items-center">
+            <div class="text-center">
+                <h1>Hola de nuevo, te estábamos empezando a extrañar.</h1>
+            </div>
+
+        </section>
+        <section class="inicio-animacion linea-2 justify-content-center align-items-center">
+            <div class="text-center">
+                <h1>Nuestro mundo es más divertido con más personas.</h1>
+            </div>
+        </section>
+        <section class="inicio-animacion linea-3 justify-content-center align-items-center">
+            <div class="text-center">
+                <h1>Ya que volvió a estar todo en orden, porque no exploramos planos más didácticos?</h1>
+            </div>
+            <span class='start-btn'>START</span>
+        </section>
+
+    </div>
+
     </div>
 
     
@@ -124,8 +140,7 @@
 
      <!-- partial -->
      <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js'></script>
-     <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js'></script><script  src="./script.js"></script>
-     
+     <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js'></script>     
 
     <script>
         new WOW().init();
@@ -137,11 +152,11 @@
     <script src="js/index.js"></script>
     <script>
         $(window).on('load', function(){
-    setTimeout(function() {
-          $('#loader').fadeOut();
-          $("body").removeClass("overflow-h");
-    }, 1500);
-});
+          setTimeout(function() {
+              $('#loader').fadeOut();
+              $("body").removeClass("overflow-h");
+          }, 1500);
+        });
     </script>
 </body>
 </html>

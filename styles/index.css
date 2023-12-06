@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+
 /* Dots background */
 .dots-bg {
     left: 0;
@@ -299,8 +301,20 @@
     font-size: 2.1rem;
     color: white;
     padding: 0.5rem;
+    position: absolute;
   }
-
+#intro section{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background: transparent;
+    display: flex;
+    font-size: 2rem;
+}
+#intro h1{
+    color: white;
+}
 
 .inicio-animacion{
     top: 100vh !important;
@@ -310,4 +324,43 @@
     animation-name: slideinup;
     animation-duration: 2s;
     animation-timing-function: ease-in-out;
+}
+
+@keyframes slideinup {
+    from {
+      top:100vh;
+      opacity: 0;
+    }
+  
+    to {
+      top: 0;
+      opacity: 1;
+    }
+}
+
+.start-btn{
+    text-align: center;
+	display: inline-block;
+	margin:5px;
+    font-weight: bold;
+    padding: 10px 0 10px 10px ;
+    background-color: lightgray;
+    text-shadow: -1px -1px black, 1px 1px white;
+    color: gray;
+    -webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	-o-border-radius: 7px;
+	border-radius: 7px;
+    box-shadow: 0 .2em gray; 
+    cursor: pointer;
+    font-family: 'Press Start 2p';
+    position: absolute;
+    bottom: 70px;
+    font-size: 22px;
+
+}
+.start-btn:active {
+	box-shadow: none;
+	position: relative;
+	top: .2em;
 }
