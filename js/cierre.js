@@ -2,7 +2,7 @@ const btn = document.querySelector("#btn");
 const img = document.querySelector("#img");
 const input = document.querySelector("#input");
 
-const OPENAI_API_KEY = "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";
+const OPENAI_API_KEY = "OPENAI_API_KEY";
 
 btn.addEventListener("click", async () => {
   if (input.value === "") {
@@ -38,4 +38,17 @@ btn.addEventListener("click", async () => {
 //quiz
 
 
- 
+function nextStep2(){
+  $("#pregunta1").addClass("d-none");
+  $("#pregunta2").removeClass("d-none");
+}
+
+function nextStep3(){
+  $("#pregunta2").addClass("d-none");
+  $("#pregunta3").removeClass("d-none");
+}
+
+function nextStep4(){
+  $("#pregunta3").addClass("d-none");
+  $("#section2").removeClass("d-none");
+}

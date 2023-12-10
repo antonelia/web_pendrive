@@ -27,32 +27,30 @@
   <div class="container">
 
 
-    <section>
-
-      <h1><b>Antes de irnos...</b></h1>
+    <section id="section1">
 
       <!--Pregunta 1-->
       <div id="pregunta1" class="">
         <h3 class="mb-5">¿Qué color del branding de Rabaito te representa mejor?</h3>
         <div class="row" style="justify-content: space-around;">
 
-          <div class="card-color col-2">
+          <div class="card-color col-2" onclick="nextStep2()">
             <div class="color magenta-pink"></div>
           </div>
 
-          <div class="card-color col-2">
+          <div class="card-color col-2" onclick="nextStep2()">
             <div class="color dark-purple"></div>
           </div>
 
-          <div class="card-color col-2">
+          <div class="card-color col-2" onclick="nextStep2()">
             <div class="color bluish-green"></div>
           </div>
 
-          <div class="card-color col-2">
+          <div class="card-color col-2" onclick="nextStep2()">
             <div class="color mint-green"></div>
           </div>
 
-          <div class="card-color col-2">
+          <div class="card-color col-2" onclick="nextStep2()">
             <div class="color light-yellow"></div>
           </div>
 
@@ -65,19 +63,19 @@
         <h3 class="mb-5">¿Que figura te llama más la atención?</h3>
         <div class="row" style="justify-content: space-around;">
 
-          <div class="card-color col-2">
+          <div class="card-color col-2"  onclick="nextStep3()">
             <img class="img-fluid" src="assets/img/cube.png" alt="">
           </div>
 
-          <div class="card-color col-2">
+          <div class="card-color col-2"  onclick="nextStep3()">
             <img class="img-fluid" src="assets/img/sphere.png" alt="">
           </div>
 
-          <div class="card-color col-2">
+          <div class="card-color col-2"  onclick="nextStep3()">
             <img class="img-fluid" src="assets/img/cilinder.png" alt="">
           </div>
 
-          <div class="card-color col-2">
+          <div class="card-color col-2"  onclick="nextStep3()">
             <img class="img-fluid" src="assets/img/pyramid.png" alt="">
           </div>
 
@@ -86,15 +84,15 @@
       </div>
 
        <!--Pregunta 3-->
-       <div class="d-none">
+       <div id="pregunta3" class="d-none">
         <h3 class="mb-5">¿Que figura te llama más la atención?</h3>
         <div class="row" style="justify-content: space-around;">
 
-          <div class="card-color col-4">
+          <div class="card-color col-4"  onclick="nextStep4()">
             <img class="img-fluid" src="assets/img/dia.png" alt="" style="border-radius: 7px;">
           </div>
 
-          <div class="card-color col-4">
+          <div class="card-color col-4"  onclick="nextStep4()">
             <img class="img-fluid" src="assets/img/noche.png" alt="" style="border-radius: 7px;">
           </div>
 
@@ -106,9 +104,8 @@
 
     </section>
 
-  </div>
-  <!--<section class="container">
-      <div class="card">
+    <section id="section2" class="d-none">
+      <div>
         <h1>Image Generator</h1>
         <input
           type="text"
@@ -119,7 +116,10 @@
         <button class="btn" id="btn">Generate</button>
         <img class="img" src="" id="img" />
       </div>
-    </section>-->
+    </section>
+
+  </div>
+
 
 
   <!--JS-->
