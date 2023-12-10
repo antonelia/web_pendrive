@@ -24,6 +24,9 @@ function nextStep4(selectedTimeOfDay) {
   $("#pregunta3").addClass("d-none");
   $("#section2").removeClass("d-none");
 
+  // Mostrar el spinner mientras se carga la imagen
+  $("#spinner").removeClass("d-none");
+
   // Llamar a la función de generación de imágenes
   generateImage();
 }
@@ -42,16 +45,23 @@ function generateImage() {
     }),
     headers: {
       "Content-Type": "application/json",
-      Authorization: "copiaraca",
+      Authorization: "apikey",
     },
   })
     .then((res) => res.json())
     .then((data) => {
       console.log(data);
+
+      // Ocultar el spinner una vez que la imagen se ha cargado
+      $("#spinner").addClass("d-none");
+
       img.src = data.data[0].url;
     })
     .catch((error) => {
       console.error("Error generating image:", error);
+
+      // En caso de error, también ocultar el spinner
+      $("#spinner").addClass("d-none");
     });
 }
 

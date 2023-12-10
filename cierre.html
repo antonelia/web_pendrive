@@ -31,26 +31,26 @@
 
       <!--Pregunta 1-->
       <div id="pregunta1" class="">
-        <h3 class="mb-5">¿Qué color del branding de Rabaito te representa mejor?</h3>
+        <h3 class="mb-5 wow fadeInUp" data-wow-delay="1s">¿Qué color del branding de Rabaito te representa mejor?</h3>
         <div class="row" style="justify-content: space-around;">
 
-          <div class="card-color col-2" onclick="nextStep2('magenta pink (E43C5A)')">
+          <div class="card-color col-2 wow fadeInUp" data-wow-delay="2s" onclick="nextStep2('magenta pink (E43C5A)')">
             <div class="color magenta-pink"></div>
           </div>
 
-          <div class="card-color col-2" onclick="nextStep2('dark purple (744593)')">
+          <div class="card-color col-2 wow fadeInUp" data-wow-delay="2s" onclick="nextStep2('dark purple (744593)')">
             <div class="color dark-purple"></div>
           </div>
 
-          <div class="card-color col-2" onclick="nextStep2('bluish-green (3E3E63)')">
+          <div class="card-color col-2 wow fadeInUp" data-wow-delay="2s" onclick="nextStep2('bluish-green (3E3E63)')">
             <div class="color bluish-green"></div>
           </div>
 
-          <div class="card-color col-2" onclick="nextStep2('mint green (6DC2C4)')">
+          <div class="card-color col-2 wow fadeInUp" data-wow-delay="2s" onclick="nextStep2('mint green (6DC2C4)')">
             <div class="color mint-green"></div>
           </div>
 
-          <div class="card-color col-2" onclick="nextStep2('light yellow (E9DF67)')">
+          <div class="card-color col-2 wow fadeInUp" data-wow-delay="2s" onclick="nextStep2('light yellow (E9DF67)')">
             <div class="color light-yellow"></div>
           </div>
 
@@ -104,16 +104,11 @@
 
     </section>
 
-    <section id="section2" class="d-none">
+    <section id="section2" class="d-none cierreIA">
       <div>
-        <!--<h1>Image Generator</h1>
-        <input
-          type="text"
-          placeholder="Generacion de Imagenes"
-          class="input"
-          id="input"
-        />
-        <button class="btn" id="btn">Generate</button>-->
+        <div id="spinner" class="spinner-border text-primary" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
         <img class="img" src="" id="img" />
       </div>
     </section>
