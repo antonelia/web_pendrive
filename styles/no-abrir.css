@@ -1,7 +1,11 @@
+/*Misc*/
+
+
 img{
-    max-width: 50%;
+    width: 500px;
     margin-top: 2rem;
     margin-bottom: 2rem;
+    border-radius: 10px;
 }
 .yellow-bg{
     position: absolute;
@@ -88,24 +92,25 @@ img{
 
 
 /*Message*/
-body {
+
+.body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh; /* Opcional: esto asegura que el cuerpo ocupe toda la altura de la ventana */
-  margin: 0; /* Opcional: elimina el margen predeterminado del cuerpo */
+  height: 100vh;
+  margin: 0;
 }
 
 .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   height: auto;
 }
 
 .text {
-  font-size: 10vw;
+  font-size: 6vw;
   letter-spacing: -.01em;
   line-height: 100%;
   margin: 0;
@@ -128,7 +133,7 @@ body {
 }
 
 span {
-  font-size: 10vw;
+  font-size: 6vw;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -150,9 +155,53 @@ span {
 
 a {
   text-decoration: none;
-  color: inherit;
+  color: white!important;
 }
 
 .btn-next{
   cursor: pointer;
+  color: #E43C5A;
+}
+
+#usar-lupa{
+  text-align: center;
+  
+}
+
+#mensaje-oculto{
+  margin-right: 100px;
+}
+
+/* Miscelaneas */
+.purple-waves{
+  top: 5vh;
+  right: -10px;
+  width: 250px;
+}
+
+.lightblue-waves{
+  top: 80vh;
+  right: -10px;
+}
+
+.yellow-waves{
+  top: 5vh;
+  left: -10px;
+  width: 200px;
+}
+
+.cubo-3d{
+  top: 75vh;
+  left: -6px;
+}
+
+.r{
+  background: url("../assets/img/sticker-4.png") no-repeat;
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 120px;
+  height: 120px;
+  position: absolute;
+  top: 45vh;
+  right: 9px;
 }

@@ -292,7 +292,7 @@ for(var i=0; i<width/pixel; i++){
 //Siguiente sección
 
 
-function openNextPart() {
-    $("#mensaje-oculto").addClass("d-none");
-    $("#usar-lupa").removeClass("d-none");
-  }
+//function openNextPart() {
+   // $("#mensaje-oculto").addClass("d-none");
+   // $("#usar-lupa").removeClass("d-none");
+  //}
