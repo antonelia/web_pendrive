@@ -78,8 +78,15 @@ $('#juego-wallet').click(function () {
     }
 });
 
+
 $('#no-abrir').click(function () {
-    window.location.href='no-abrir.html'
+  $("#app").addClass("d-none");
+  $("#juegos").addClass("d-none");
+  $("body").addClass("bg-white");
+
+    setTimeout(function () {
+      $("#web-break").removeClass("d-none");
+  }, 500);
 });
 
 /*Cubes*/

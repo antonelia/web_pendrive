@@ -471,3 +471,38 @@ body {
 #juego-dia, #juego-wallet, #juego-reciclar, #no-abrir{
     height: 500px;
 }
+
+
+#web-break{
+    background-color: white;
+    text-align: center;
+    height: 100vh;
+    padding-top: 10rem;
+}
+
+#web-break h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 800;
+    font-size: 2.3rem;
+    margin-top: 1rem;
+}
+
+#web-break a, #web-break img{
+    color: blue !important;
+    pointer-events: none; 
+    cursor: default; 
+}
+
+#web-break hr{
+    border: 1px solid black;
+    color: black;
+    opacity: 1;
+}
+
+#web-break button{
+    font-size: 1.4rem;
+}
+
+.bg-white{
+    background-color: white;
+}

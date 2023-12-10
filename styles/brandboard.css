@@ -138,3 +138,22 @@ g{
 	background-color: white;
 	display: flex;
 }
+
+/*Drag & Drop*/
+
+[draggable] {
+  cursor: move;
+}
+
+.box-container{
+	background-color: white;
+	min-width: 350px;
+	min-height: 500px;
+	position: absolute; 
+	left: 354px; 
+	top: 250px; 
+	z-index: 100;
+	display: flex;
+    justify-content: center;
+    align-items: center;
+}
