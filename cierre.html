@@ -31,28 +31,24 @@
 
       <!--Pregunta 1-->
       <div id="pregunta1" class="">
-        <h3 class="mb-5 wow fadeInUp" data-wow-delay="1s">¿Qué color del branding de Rabaito te representa mejor?</h3>
-        <div class="row" style="justify-content: space-around;">
 
-          <div class="card-color col-2 wow fadeInUp" data-wow-delay="2s" onclick="nextStep2('magenta pink (E43C5A)')">
-            <div class="color magenta-pink"></div>
-          </div>
+        <h1 class="bold">Aca va el cierre</h1>
+        <h1 class="bold">En en cual</h1>
+        <h1 class="bold">Comentamos</h1>
+        <h1 class="bold">acerca del plano de ellos</h1>
 
-          <div class="card-color col-2 wow fadeInUp" data-wow-delay="2s" onclick="nextStep2('dark purple (744593)')">
-            <div class="color dark-purple"></div>
-          </div>
+        <h3 class="mb-5 wow fadeInUp bold" data-wow-delay="0.5s">¿Con qué color te sentis mas identificado?</h3>
+        <div class="row" style="justify-content: center;">
 
-          <div class="card-color col-2 wow fadeInUp" data-wow-delay="2s" onclick="nextStep2('bluish-green (3E3E63)')">
-            <div class="color bluish-green"></div>
-          </div>
+          <div class="box card-color col-2 col-2 wow fadeInUp magenta-pink" data-wow-delay="1s"  onclick="nextStep2('magenta pink (E43C5A)')"></div>
 
-          <div class="card-color col-2 wow fadeInUp" data-wow-delay="2s" onclick="nextStep2('mint green (6DC2C4)')">
-            <div class="color mint-green"></div>
-          </div>
+          <div class="card-color col-2 wow fadeInUp dark-purple" data-wow-delay="1.1s" onclick="nextStep2('dark purple (744593)')"></div>
 
-          <div class="card-color col-2 wow fadeInUp" data-wow-delay="2s" onclick="nextStep2('light yellow (E9DF67)')">
-            <div class="color light-yellow"></div>
-          </div>
+          <div class="card-color col-2 wow fadeInUp bluish-green" data-wow-delay="1.2s" onclick="nextStep2('bluish-green (3E3E63)')"></div>
+
+          <div class="card-color col-2 wow fadeInUp mint-green" data-wow-delay="1.3s" onclick="nextStep2('mint green (6DC2C4)')"></div>
+
+          <div class="card-color col-2 wow fadeInUp light-yellow" data-wow-delay="1.4s" onclick="nextStep2('light yellow (E9DF67)')"></div>
 
         </div>
       </div>
@@ -60,22 +56,22 @@
        <!--Pregunta 2-->
        <div id="pregunta2" class="d-none">
         
-        <h3 class="mb-5">¿Que figura te llama más la atención?</h3>
-        <div class="row" style="justify-content: space-around;">
+        <h3 class="mb-5 wow fadeInUp bold" data-wow-delay="0.5s">¿Qué figura te llama más la atención?</h3>
+        <div class="row" style="justify-content: center;">
 
-          <div class="card-color col-2"  onclick="nextStep3('cubes')">
+          <div class="card-color col-2 border wow fadeInUp" data-wow-delay="1s"  onclick="nextStep3('cubes')">
             <img class="img-fluid" src="assets/img/cube.png" alt="">
           </div>
 
-          <div class="card-color col-2"  onclick="nextStep3('spheres')">
+          <div class="card-color col-2 border wow fadeInUp" data-wow-delay="1.1s"  onclick="nextStep3('spheres')">
             <img class="img-fluid" src="assets/img/sphere.png" alt="">
           </div>
 
-          <div class="card-color col-2"  onclick="nextStep3('cilinders')">
+          <div class="card-color col-2 border wow fadeInUp" data-wow-delay="1.2s"  onclick="nextStep3('cilinders')">
             <img class="img-fluid" src="assets/img/cilinder.png" alt="">
           </div>
 
-          <div class="card-color col-2"  onclick="nextStep3('pyramids')">
+          <div class="card-color col-2 border wow fadeInUp" data-wow-delay="1.3s"  onclick="nextStep3('pyramids')">
             <img class="img-fluid" src="assets/img/pyramid.png" alt="">
           </div>
 
@@ -85,14 +81,14 @@
 
        <!--Pregunta 3-->
        <div id="pregunta3" class="d-none">
-        <h3 class="mb-5">¿Que figura te llama más la atención?</h3>
-        <div class="row" style="justify-content: space-around;">
+        <h3 class="mb-5 wow fadeInUp bold" data-wow-delay="0.5s">¿Qué momento del dia preferis?</h3>
+        <div class="row" style="justify-content: center;">
 
-          <div class="card-color col-4" id="dia" onclick="nextStep4('day')">
+          <div class="card-color col-4 wow fadeInUp" data-wow-delay="1s"  id="dia" onclick="nextStep4('day')">
             <img class="img-fluid" src="assets/img/dia.png" alt="" style="border-radius: 7px;">
           </div>
 
-          <div class="card-color col-4" id="noche" onclick="nextStep4('night')">
+          <div class="card-color col-4 wow fadeInUp" data-wow-delay="1.1s" id="noche" onclick="nextStep4('night')">
             <img class="img-fluid" src="assets/img/noche.png" alt="" style="border-radius: 7px;">
           </div>
 
@@ -106,6 +102,7 @@
 
     <section id="section2" class="d-none cierreIA">
       <div>
+        <h3 class="mb-5 wow fadeInUp bold" data-wow-delay="0.5s">Estamos preparando tu plano</h3>
         <div id="spinner" class="spinner-border text-primary" role="status">
           <span class="visually-hidden">Loading...</span>
         </div>
