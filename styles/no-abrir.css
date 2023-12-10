@@ -1,5 +1,5 @@
 img{
-    max-width: 25%;
+    max-width: 50%;
     margin-top: 2rem;
     margin-bottom: 2rem;
 }
@@ -151,4 +151,8 @@ span {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+.btn-next{
+  cursor: pointer;
 }
