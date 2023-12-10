@@ -1,0 +1,83 @@
+body {
+  background: white;
+  color: var(--dark-text-color);
+}
+
+.container{
+  vertical-align: middle;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.card-color {
+  cursor: pointer;
+  background: white;
+  border-radius: 7px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all .2s ease-in-out;
+  align-items: center;
+}
+
+.card-color:hover{
+  transform: scale(1.01);
+}
+
+.input {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.btn-primary {
+  background: none;
+}
+.btn {
+  border: var(--pink-color);
+  color:  var(--pink-color);
+  border: solid 1px;
+  font-family: Lato-Regular, Arial, sans-serif;
+  padding: 0.5rem;
+  border-radius: 25px;
+  font-weight: bold;
+}
+
+.btn:disabled {
+    opacity: 0.5;
+}
+
+.img {
+  margin-top: 10px;
+  width: 70%;
+}
+
+/*Colors*/
+
+.color{
+  width: 100%;
+  height: 100px;
+  border-radius: 8px;
+}
+
+.magenta-pink{
+  background-color: var(--pink-color);
+}
+
+.dark-purple{
+  background-color: var(--purple-color);
+}
+
+.bluish-green{
+  background-color: var(--dark-blue-color);
+}
+
+.mint-green{
+  background-color: var(--light-blue-color);
+}
+
+.light-yellow{
+  background-color: var(--yellow-color);
+}
