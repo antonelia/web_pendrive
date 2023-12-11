@@ -1,3 +1,7 @@
+$(window).on('load', function(){
+    $('#loader').fadeOut();
+});
+
 // Type YOUR MESSAGE (capitals and numbers only)
 var message="HOLA MUNDO";
 

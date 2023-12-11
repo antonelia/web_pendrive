@@ -533,3 +533,9 @@ body {
 .bg-white{
     background-color: white;
 }
+#juegos a{
+    cursor: pointer;
+}
+#fila-juegos{
+    display: flex;
+}

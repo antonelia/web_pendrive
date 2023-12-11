@@ -2,6 +2,8 @@ var juegoReciclar = false;
 var juegoDia = false;
 var juegoWallet = false;
 var noAbrir = false;
+
+//Intro
 $(window).on('load', function(){
   $("html").css("overflow", "hidden");
   $('#bajar').hide();
@@ -78,7 +80,6 @@ $('#juego-wallet').click(function () {
     }
 });
 
-
 $('#no-abrir').click(function () {
   $("#app").addClass("d-none");
   $("#juegos").addClass("d-none");
@@ -90,7 +91,6 @@ $('#no-abrir').click(function () {
 });
 
 /*Cubes*/
-
 Vue.component('debug', {
     name: 'Debug',
     props: ['text'],
