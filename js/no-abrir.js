@@ -288,3 +288,11 @@ for(var i=0; i<width/pixel; i++){
         rect(pixel*i,pixel*j,pixel,pixel);
     }
 }
+
+//Siguiente sección
+
+
+//function openNextPart() {
+   // $("#mensaje-oculto").addClass("d-none");
+   // $("#usar-lupa").removeClass("d-none");
+  //}
