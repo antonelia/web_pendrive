@@ -113,3 +113,48 @@ section{
   font-weight: bold;
 }
 
+#loader{
+  background: white;
+}
+
+#intro{
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  background-color: white;
+}
+
+#intro section{
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  background: transparent;
+  display: flex;
+  font-size: 2rem;
+  background-color: white;
+}
+
+.inicio-animacion{
+  top: 100vh !important;
+}
+
+.empezar-animacion{
+  animation-name: slideinup;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes slideinup {
+  from {
+    top:100vh;
+    opacity: 0;
+  }
+
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+
