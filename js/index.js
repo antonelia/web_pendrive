@@ -217,5 +217,9 @@ Vue.component('debug', {
         delay: 1 },
       0.05);*/
     } });
+
+    $('#soy-boton').click(function () {
+      window.location.href="no-abrir.html";
+    })
     
     
