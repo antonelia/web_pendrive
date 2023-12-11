@@ -26,42 +26,79 @@
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/webs.css">
 </head>
-<body class="overflow-h">
-    <!-- Precarga -->
-    <div id="loader">
-        <div>
-            <span>{</span><span>}</span>
-        </div>
-    </div> <!-- end precarga -->
-    <section class="section d-flex align-items-center">
-        <article class="container-fluid text-center my-auto">
-            <div class="slider-webs single-item">
-                <div id="web-indar">
-                    <img src="./assets/img/web-indar.png" alt="">
-                </div>
-                <div id="web-renueva-tus-ventanas">
-                    <img src="./assets/img/web-renueva-tus-ventanas.png" alt="">
-                </div>
-                <div id="web-sonrisanas">
-                    <img src="./assets/img/web-sonrisanas.png" alt="">
-                </div>
-                <div id="web-puzzle">
-                    <img src="./assets/img/web-rompecabezas.png" alt="" id="puzzle-image">
-                </div>
-              </div>
-        </article>
-    </section>>
-    </div>
+<body>
+    <link rel='stylesheet' href='https://unpkg.com/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.css' />
+<script src='https://unpkg.com/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.js'></script>
 
+<div class='scroll-animations-example' data-scroll-container>
+    <div class='scrollsection' data-scroll-section>
+        <div class='item -big indar' data-scroll data-scroll-speed="2">
+            <img class='image' src='assets/img/web-indar.png'>
+        </div>
+        <div class='item -big sonrisanas' data-scroll data-scroll-speed="1">
+            <img class='image' src='assets/img/web-sonrisanas.png'>
+        </div>
+        <div class='item -big ventanas' data-scroll data-scroll-speed="4">
+            <img class='image' src='assets/img/web-renueva-tus-ventanas.png'>
+        </div>
+        <div class='item -big rompecabezas' data-scroll data-scroll-speed="2" id="puzzle-image">
+            <img class='image' src='assets/img/web-rompecabezas.png'>
+        </div>
+        <!-- Miscelaneas -->
+        <div class='item -normal -horizontal miscelanea-puntos-amarillos' data-scroll data-scroll-speed="1">
+            <div class="dots-bg"></div>
+        </div>
+        <div class='item -small -horizontal miscelanea-onda-violeta' data-scroll data-scroll-speed="3">
+            <div class="purple-waves"></div>
+        </div>
+        <div class='item -big miscelanea-onda-amarilla' data-scroll data-scroll-speed="1">
+            <div class="yellow-waves"></div>
+        </div>
+        <div class='item -normal -horizontal miscelanea-cubo' data-scroll data-scroll-speed="2">
+            <div class="cubo-3d"></div>
+        </div>
+        <div class='item -normal -horizontal miscelanea-onda-celeste' data-scroll data-scroll-speed="1">
+            <div class="lightblue-waves"></div>
+        </div>
+        <div class='item -big miscelanea-grilla-celeste' data-scroll data-scroll-speed="4">
+            <div class="lightblue-grid"></div>
+        </div>
+        <div class='item -small miscelanea-cruz-violeta' data-scroll data-scroll-speed="3">
+            <div class="purple-cross-90"></div>
+        </div>
+        <div class='item -horizontal miscelanea-circulo-rosa' data-scroll data-scroll-speed="2">
+            <div class="pink-circle"></div>
+        </div>
+        <div class='item -horizontal miscelanea-grilla-amarilla' data-scroll data-scroll-speed="4">
+            <div class="yellow-grid"></div>
+        </div>
+        <div class='item miscelanea-semicirculo-violeta' data-scroll data-scroll-speed="2">
+            <div class="purple-semicircle"></div>
+        </div>
+        <div class='item -normal -horizontal' data-scroll data-scroll-speed="1">
+            <img class='image' src='https://picsum.photos/id/141/300/400'>
+        </div>
+        <div class='item -small -horizontal' data-scroll data-scroll-speed="3">
+            <img class='image' src='https://picsum.photos/id/145/400/300'>
+        </div>
+        <div class='item -normal' data-scroll data-scroll-speed="1">
+            <img class='image' src='https://picsum.photos/id/147/300/400'>
+        </div>
+    </div>
+</div>
+    
     <!--JS-->
     <script src="lib/bootstrap-5.2.3/dist/js/bootstrap.bundle.js"></script>
     <script src="lib/jQuery-3.6.4/jquery-3.6.4.min.js"></script>
+    <!-- Wow - para animaciones -->
     <script src="lib/wow/wow.min.js"></script>
     <!-- Inicializar wow library -->
     <script>
         new WOW().init();
     </script>
+    <!-- Galeria slider -->
     <script src="lib/slick/slick.min.js"></script>
+    <!-- Custom -->
     <script src="js/webs.js"></script>
     <script src="js/loader.js"></script>
 </body>
