@@ -18,87 +18,154 @@
     <link rel="stylesheet" href="lib/animate.css/animate.css">
     <!-- Font awesome lib -->
     <script src="https://kit.fontawesome.com/a1c6ec28f2.js" crossorigin="anonymous"></script>
+
+    <!-- Cubes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
     
     <!-- Custom styles -->
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/index.css">
     
+    <title>Experiencia Rabanito | Juegos</title>
 </head>
-<body class="overflow-h">
-    <!-- Precarga -->
-    <div id="loader">
-        <div id="pacman">
-            <div class="circles">
-                <span class="one"></span>
-                <span class="two"></span>
-                <span class="three"></span>
-              </div>
-              <div class="pacman">
-                <span class="top"></span>
-                <span class="bottom"></span>
-                <span class="left"></span>
-                <div class="eye"></div>
-              </div>
+<body>
+    <!-- partial:index.partial.html -->
+    <!-- https://youtu.be/w2ft7JhAkQQ?t=65 -->
+    
+    <script type="text/x-template" id="cube-template">
+      <div class="cube-wrapper">
+        <div :class="{ 'cube--solid': solid }" class="cube">
+          <div
+            v-for="side of Object.keys(Array(4).fill())"
+            class="cube__side"
+            :key="`side-${side}`"
+          >
+            <debug v-if="debugNum" :text="debug" />
+          </div>
+          <div
+            v-for="side of Object.keys(Array(2).fill())"
+            class="cube__face"
+            :key="`face-${side}`"
+          >
+            <debug v-if="debugNum" :text="debug" />
+          </div>
         </div>
-    </div> <!-- end precarga -->
+      </div>
+    </script>
+    
+    <div class="scene" id="app">
+      <cube
+        v-for="(cube, i) of cubes"
+        :key="`cube-${i}`"
+        class="abs-center"
+        :solid="cube.solid"
+        :style="{
+          '--x': `${cube.x || 0}px`,
+          '--y': `${cube.y || 0}px`,
+          '--z': `${cube.z || 0}px`,
+          '--s': cube.s,
+          '--o': cube.o,
+          '--zi': cube.zi,
+          '--rx': '55deg',
+          '--ry': '0deg',
+          '--rz': '45deg'
+        }"
+        :id="`cube-${i}`"
+      ></cube>
+      
+      <div id="intro">
+        <section class="inicio-animacion linea-1 justify-content-center align-items-center">
+            <div class="text-center">
+                <h1>Hola de nuevo, te estábamos empezando a extrañar.</h1>
+            </div>
 
-    <section class="section d-flex align-items-center">
-        <div class="cubo-3d"></div>
-        <div class="yellow-waves"></div>
-        <article class="container-fluid text-center my-auto" >
-            <h2 class="wow fadeInDown" data-wow-delay="2s">¡Hora de jugar!</h2>
-            <h3 class="wow fadeInDown mb-5" data-wow-delay="3s">Ahora te damos un tiempo para que pruebes algunos de nuestros juegos y aplicaciones</h3>
-            <span class="small-text mt-5 wow fadeInDown" data-wow-delay="4s"  id="bajar"><div class="scroll m-auto"></div></span>
-        </article>
+        </section>
+        <section class="inicio-animacion linea-2 justify-content-center align-items-center">
+            <div class="text-center">
+                <h1>Nuestro mundo es más divertido con más personas.</h1>
+            </div>
+        </section>
+        <section class="inicio-animacion linea-3 justify-content-center align-items-center">
+            <div class="text-center">
+                <h1>Ya que volvió a estar todo en orden, por qué no exploramos planos más didácticos?</h1>
+            </div>
+            <span class="small-text mt-5 wow fadeInDown" data-wow-delay="3s"  id="bajar"><div class="scroll m-auto"></div></span>
+        </section>
+
+    </div>
+
+    </div>
+    
+
+    <section class="section d-flex justify-content-center" id="juegos">
+      <a id="juego-reciclar" alt="" target="_blank" class="">
+        <div class="card-zelda">
+          <div class="wrapper">
+            <img src="./assets/img/juego-ba-cover.jpg" class="cover-image" />
+          </div>
+          <img src="./assets/img/juego-ba-title.png" class="title" />
+          <img src="./assets/img/juego-ba-personaje.png" class="character" />
+        </div>
+      </a>
+
+      <a id="juego-dia" alt="" target="_blank"  class="">
+        <div class="card-zelda">
+          <div class="wrapper">
+            <img src="./assets/img/juego-dia-cover.jpg" class="cover-image" />
+          </div>
+          <img src="./assets/img/juego-dia-title.png" class="title" />
+          <img src="./assets/img/juego-dia-carrito.png" class="character" />
+        </div>
+      </a>
+
+      <a id="juego-wallet" alt="" target="_blank"  class="">
+        <div class="card-zelda">
+          <div class="wrapper">
+            <img src="./assets/img/juego-wallet-cover.jpg" class="cover-image" />
+          </div>
+          <img src="./assets/img/juego-wallet-title.png" class="title" />
+          <img src="./assets/img/juego-wallet-personaje.png" class="character" />
+        </div>
+      </a>
+
+      <a id="no-abrir" alt="" class="fadeInUp">
+        <div class="card-zelda">
+          <div class="wrapper">
+            <img src="./assets/img/no-abrir-cover.jpg" class="cover-image" />
+          </div>
+          <img src="./assets/img/no-abrir-title.png" class="title" />
+          <img src="./assets/img/no-abrir-personaje.png" class="character" />
+        </div>
+      </a>
+
     </section>
-    <section class="section d-flex align-items-center" id="games-section">
-        <div class="cruz-azul wow fadeIn" data-wow-delay="1s"></div>
-        <div class="dots-bg wow fadeIn" data-wow-delay=".5s"></div>
-        <article class="container-fluid text-center my-auto" >
-            <div class="row justify-content-evenly" id="fila-juegos">
-                <div class="card col-md-3 wow fadeInUp" data-wow-delay=".2s" id="juego-reciclar">
-                    <img class="card-img-top" src="./assets/img/juego_reciclar-03-04.jpg" alt="Card image cap">
-                    <div class="card-body">
-                      <h3 class="card-title">BA Recicla</h5>
-                      <p class="card-text">Aprendé como reciclar tus residuos</p>
-                      <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
-                    </div>
-                </div>
-                <div class="card col-md-3 wow fadeInUp" data-wow-delay=".4s" id="juego-dia">
-                    <img class="card-img-top" src="./assets/img/juego-dia.jpg" alt="Card image cap">
-                    <div class="card-body">
-                      <h3 class="card-title">Supermercados DIA</h3>
-                      <p class="card-text">Atrapá productos y ganá descuentos</p>
-                      <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
-                    </div>
-                </div>
-                <div class="card col-md-3 wow fadeInUp" data-wow-delay=".6s" id="juego-wallet">
-                    <img class="card-img-top" src="./assets/img/my-wallet.jpg" alt="Card image cap">
-                    <div class="card-body">
-                      <h3 class="card-title">My wallet</h3>
-                      <p class="card-text">Llevá el control de tus gastos</p>
-                      <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
-                    </div>
-                </div>
-            </div>
-            <div class="row justify-content-evenly" id="no-abrir">
-                <div class="card col-md-3">
-                    <img class="card-img-top" src="./assets/img/no-abrir.jpg" alt="Card image cap">
-                    <div class="card-body">
-                      <h3 class="card-title">No me abras!</h3>
-                      <p class="card-text">Nah mentira, podes abrirme pero bajo tu responsabilidad (emoji ojos?)</p>
-                      <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
-                    </div>
-                </div>
-            </div>
-            
-        </article>
+
+    <section class="d-none" id="web-break">
+      
+      <h1 class="mb-3">No de nuevo yo decía…</h1>
+      <p class="mb-3">nah mentira, esta vez sí fue intencional.</p>
+      <p class="mb-3">Ir de plano en plano no es divertido</p>
+
+      <hr class="my-4">
+
+      <div class="d-flex justify-content-center">
+        <a href="" class="me-3"><img src=".//img/.jpg" alt="Imagen Juego BA Recicla"/></a>
+        <a href="" class="me-3"><img src=".//img/.jpg" alt="Imagen Juego Día"/></a>
+        <a href="" class="me-3"><img src=".//img/.jpg" alt="Imagen App Mywallet"/></a>
+      </div>
+      
+      <button class="mt-5">Soy un boton</button>
+
     </section>
     
     <!--JS-->
     <script src="lib/bootstrap-5.2.3/dist/js/bootstrap.bundle.js"></script>
     <script src="lib/jQuery-3.6.4/jquery-3.6.4.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
+
+     <!-- partial -->
+     <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js'></script>
+     <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js'></script>     
 
     <script>
         new WOW().init();
@@ -110,11 +177,11 @@
     <script src="js/index.js"></script>
     <script>
         $(window).on('load', function(){
-    setTimeout(function() {
-          $('#loader').fadeOut();
-          $("body").removeClass("overflow-h");
-    }, 1500);
-});
+          setTimeout(function() {
+              $('#loader').fadeOut();
+              $("body").removeClass("overflow-h");
+          }, 1500);
+        });
     </script>
 </body>
 </html>

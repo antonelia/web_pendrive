@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+
 /* Dots background */
 .dots-bg {
     left: 0;
@@ -219,4 +221,315 @@
 	40% {
 		transform: translate(0);
 	}
+}
+
+/* Cubes */
+.cube {
+    --size: 8rem;
+    --rotation: 90deg;
+    --green: $--cube-green;
+    width: var(--size);
+    height: var(--size);
+    margin-top: calc(var(--y) - var(--size) / 2);
+    margin-left: calc(var(--x) - var(--size) / 2);
+    position: relative;
+    transform-origin: 50% 50% calc(var(--size) * -0.5);
+    transform: scale(var(--s, 1)) rotatex(var(--rx, 55deg)) rotatey(var(--ry, 0deg)) rotatez(var(--rz, 45deg));
+    transform-style: preserve-3d;
+    z-index: var(--zi, 0);
+    background: var(--green);
+}
+.cube-wrapper {
+  transform-style: preserve-3d;
+  opacity: var(--o);
+  transform: translateZ(var(--z));
+  will-change: transform, opacity;
+  
+}
+.cube__side, .cube__face {
+  width: var(--size);
+  height: var(--size);
+  position: absolute;
+  background: inherit;
+  background: #3E3E63;
+}
+.cube__face:last-of-type {
+  transform: translatez(calc(var(--size) * -1));
+}
+
+.cube:not(.cube--solid) .cube__side:nth-child(1) {
+  background: #E43C5A;
+}
+.cube:not(.cube--solid) .cube__side:nth-child(2) {
+  background: #744593;
+}
+.cube:not(.cube--solid) .cube__side:nth-child(3) {
+  background: #E9DF67;
+}
+.cube:not(.cube--solid) .cube__side:nth-child(4) {
+  background: #E43C5A;
+}
+
+.cube__side:nth-child(1) {
+  transform-origin: 50% 100%;
+  transform: rotatex(var(--rotation));
+}
+.cube__side:nth-child(2) {
+  transform-origin: 100% 50%;
+  transform: rotatey(calc(var(--rotation) * -1));
+}
+.cube__side:nth-child(3) {
+  transform-origin: 0% 50%;
+  transform: rotatey(var(--rotation));
+}
+.cube__side:nth-child(4) {
+  transform-origin: 50% 0%;
+  transform: rotatex(calc(var(--rotation) * -1));
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+    display: grid;
+    /* height: 100vh; */
+    background: #6DC2C4;
+    font-family: Helvetica, sans-serif;
+}
+  
+.abs-center {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+  margin: auto;
+}
+
+.scene {
+  display: flex;
+  transform-style: preserve-3d;
+  transform: translateZ(0);
+  will-change: transform;
+  margin-top: 10vh;
+}
+
+.pen-list {
+  padding: 0;
+  margin: auto;
+}
+
+.pen-list li {
+  font-size: 2.1rem;
+  color: white;
+  padding: 0.5rem;
+  position: absolute;
+}
+#intro section{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    background: transparent;
+    display: flex;
+    font-size: 2rem;
+    margin-top: -10vh;
+}
+#intro h1{
+    color: white;
+}
+
+/*End cubos*/
+
+.inicio-animacion{
+    top: 100vh !important;
+}
+
+.empezar-animacion{
+    animation-name: slideinup;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes slideinup {
+    from {
+      top:100vh;
+      opacity: 0;
+    }
+  
+    to {
+      top: 0;
+      opacity: 1;
+    }
+}
+
+
+.start-btn{
+    text-align: center;
+	display: inline-block;
+	margin:5px;
+    font-weight: bold;
+    padding: 10px 0 10px 10px ;
+    background-color: lightgray;
+    text-shadow: -1px -1px black, 1px 1px white;
+    color: gray;
+    -webkit-border-radius: 7px;
+	-moz-border-radius: 7px;
+	-o-border-radius: 7px;
+	border-radius: 7px;
+    box-shadow: 0 .2em gray; 
+    cursor: pointer;
+    font-family: 'Press Start 2p';
+    position: absolute;
+    bottom: 70px;
+    font-size: 22px;
+
+}
+.start-btn:active {
+	box-shadow: none;
+	position: relative;
+	top: .2em;
+}
+
+#juegos{
+    margin-top: 120vh;
+    min-height: 85vh;
+}
+#bajar{
+    position: absolute;
+    bottom: 70px;
+}
+
+:root {
+	--card-height: 400px;
+	--card-width: calc(var(--card-height) / 1.5);
+}
+
+.card-zelda {
+	width: var(--card-width);
+	height: var(--card-height);
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	padding: 0 36px;
+	perspective: 2500px;
+	margin: 0 50px;
+}
+
+.cover-image {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+    border-radius: 13px;
+}
+
+.wrapper {
+	transition: all 0.5s;
+	position: absolute;
+	width: 100%;
+	z-index: -1;
+    border-radius: 13px;
+}
+
+.card-zelda:hover .wrapper {
+	transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+	box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.30);
+	-webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.30);
+	-moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.30);
+}
+
+.wrapper::before,
+.wrapper::after {
+	content: "";
+	opacity: 0;
+	width: 100%;
+	height: 80px;
+	transition: all 0.5s;
+	position: absolute;
+	left: 0;
+}
+.wrapper::before {
+	top: 0;
+	height: 100%;
+    background-image: linear-gradient(158deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.3) 100%);
+    border-radius: 13px;
+}
+.wrapper::after {
+	bottom: 0;
+	opacity: 1;
+}
+
+.card-zelda:hover .wrapper::before,
+.wrapper::after {
+	opacity: 1;
+}
+
+.card-zelda:hover .wrapper::after {
+	height: 120px;
+}
+.title {
+	width: 100%;
+	transition: transform 0.5s;
+}
+.card-zelda:hover .title {
+	transform: translate3d(0%, -50px, 100px);
+}
+
+.character {
+	width: 100%;
+	opacity: 0;
+	transition: all 0.5s;
+	position: absolute;
+	z-index: -1;
+    box-shadow: 1px 1px 1px #0000;
+}
+
+.card-zelda:hover .character {
+	opacity: 1;
+	transform: translate3d(0%, -30%, 100px);
+}
+
+#juego-dia, #juego-wallet, #juego-reciclar, #no-abrir{
+    height: 500px;
+}
+
+
+#web-break{
+    background-color: white;
+    text-align: center;
+    height: 100vh;
+    padding-top: 10rem;
+}
+
+#web-break h1{
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 800;
+    font-size: 2.3rem;
+    margin-top: 1rem;
+}
+
+#web-break a, #web-break img{
+    color: blue !important;
+    pointer-events: none; 
+    cursor: default; 
+}
+
+#web-break hr{
+    border: 1px solid black;
+    color: black;
+    opacity: 1;
+}
+
+#web-break button{
+    font-size: 1.4rem;
+}
+
+.bg-white{
+    background-color: white;
 }

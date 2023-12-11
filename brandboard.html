@@ -22,57 +22,61 @@
 
     <!-- Plyr lib -->
 	<link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+    
 
     <!-- Custom styles -->
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="stylesheet" href="styles/brandboard.css">
 </head>
 <body>
-    <!-- Precarga -->
-    <div id="loader">
-        <svg role="img" aria-label="Mouth and eyes come from 9:00 and rotate clockwise into position, right eye blinks, then all parts rotate and merge into 3:00" class="smiley" viewBox="0 0 128 128" width="128px" height="128px">
-            <defs>
-                <clipPath id="smiley-eyes">
-                    <circle class="smiley__eye1" cx="64" cy="64" r="8" transform="rotate(-40,64,64) translate(0,-56)" />
-                    <circle class="smiley__eye2" cx="64" cy="64" r="8" transform="rotate(40,64,64) translate(0,-56)" />
-                </clipPath>
-                <linearGradient id="smiley-grad" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stop-color="#000" />
-                    <stop offset="100%" stop-color="#fff" />
-                </linearGradient>
-                <mask id="smiley-mask">
-                    <rect x="0" y="0" width="128" height="128" fill="url(#smiley-grad)" />
-                </mask>
-            </defs>
-            <g stroke-linecap="round" stroke-width="12" stroke-dasharray="175.93 351.86">
-                <g>
-                    <rect fill="hsl(193,90%,50%)" width="128" height="64" clip-path="url(#smiley-eyes)" />
-                    <g fill="none" stroke="hsl(193,90%,50%)">
-                        <circle class="smiley__mouth1" cx="64" cy="64" r="56" transform="rotate(180,64,64)" />
-                        <circle class="smiley__mouth2" cx="64" cy="64" r="56" transform="rotate(0,64,64)" />
-                    </g>
-                </g>
-                <g mask="url(#smiley-mask)">
-                    <rect fill="hsl(223,90%,50%)" width="128" height="64" clip-path="url(#smiley-eyes)" />
-                    <g fill="none" stroke="hsl(223,90%,50%)">
-                        <circle class="smiley__mouth1" cx="64" cy="64" r="56" transform="rotate(180,64,64)" />
-                        <circle class="smiley__mouth2" cx="64" cy="64" r="56" transform="rotate(0,64,64)" />
-                    </g>
-                </g>
-            </g>
-        </svg>
-    </div> <!-- end precarga -->
-    <section class="section d-flex justify-content-center">
+    <section class="section d-flex justify-content-center" id="drag-drop">
+
+            <div class="box-container" id="box">
+                <img draggable="false" src="assets/img/cube-open-01.svg" width="230">
+            </div>
+    
+            <img draggable="true" src="assets/img/letter-a.png" class="element" id="element1" style="position: absolute; left: 91px; top: 100px;" width="90">
+            <img draggable="true" src="assets/img/square-darkblue.png" class="element" id="element2" style="position: absolute; left: 84px; top: 240px;" width="90">
+            <img draggable="true" src="assets/img/triangle-lightblue.png" class="element" id="element3" style="position: absolute; left: 95px; top: 400px;" width="90">
+            <img draggable="true" src="assets/img/letter-b.png" class="element" id="element4" style="position: absolute; left: 81px; top: 600px;" width="90">
+            <img draggable="true" src="assets/img/letter-n.png" class="element" id="element5" style="position: absolute; left: 300px; top: 60px;" width="90">
+            <img draggable="true" src="assets/img/triangle-yellow.png" class="element" id="element6" style="position: absolute; left: 500px; top: 60px;" width="90">
+            <img draggable="true" src="assets/img/letter-r.png" class="element" id="element7" style="position: absolute; left: 700px; top: 60px;" width="90">
+            <!--<img draggable="true" src="/assets/img/letter-o.png" alt="mouth5" id="mouth5" style="position: absolute; left: 869px; top: 158px;" width="90">
+            <img draggable="true" src="/assets/img/letter-i.png" alt="mouth3" id="mouth3" style="position: absolute; left: 832px; top: 300px;" height="90">
+            <img draggable="true" src="/assets/img/square-pink.png" alt="mouth4" id="mouth4" style="position: absolute; left: 900px; top: 400px;" width="90">
+            <img draggable="true" src="/assets/img/wave.svg" alt="mouth1" id="mouth1" style="position: absolute; left: 1000px; top: 537px;" width="200">
+            <img draggable="true" src="/assets/img/letter-t.png" alt="nose3" id="nose3" style="position: absolute; left: 700px; top: 500px;" width="90">   
+            <img draggable="true" src="/assets/img/cube-purple.png" alt="nose2" id="nose2" style="position: absolute; left: 800px; top: 595px;" width="90"> --> 
+
+        <p>Colliding? <span id="result">false</span>
+
+        <!--<div class="container">
+
+            <div id="items">
+                <div id="card" draggable="true">
+                    <img src="./assets/img/letter-a.png" alt="eyes1" width="90">
+                </div>
+                
+            </div>
+            
+            <div id="drop-zone"></div>
+        </div>-->
+
+    </section>
+
+    <section class="section d-flex justify-content-center d-none" id="brandboard">
         <article class="container-fluid text-center m-auto">
             <video id="player" playsinline controls data-poster="" class="m-auto">
                 <source src= "./assets/vid/brandboard.mp4" type="video/mp4" />
             </video>
         </article>
     </section>
-    <section class="section justify-content-center" id="qr-reel">
+
+    <section class="section justify-content-center d-none" id="qr-reel">
         <div class="m-auto text-center">
-            <h2 class="wow fadeInDown" data-wow-delay="2s">Obvio que dejamos lo mejor para el final!</h2>
-            <h4 class="wow fadeInDown" data-wow-delay="4s">Ahora buscá el cardboard que te mandamos en la caja, escanea el qr y sumergite en nuestro reel</h4>
+            <h2 class="wow fadeInDown" data-wow-delay="2s">Es hora del último plano, el mejor para el final</h2>
+            <h4 class="wow fadeInDown" data-wow-delay="4s">Buscá el cardboard que te mandamos en la caja, escaneá el qr y sumergite en el último plano</h4>
             <img src= "./assets/img/qr-code.png" alt="" class="wow fadeInDown" data-wow-delay="8s">
         </div>
     </section>
