@@ -27,66 +27,108 @@
     <link rel="stylesheet" href="styles/webs.css">
 </head>
 <body>
+    <div id="loader"></div>
     <link rel='stylesheet' href='https://unpkg.com/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.css' />
-<script src='https://unpkg.com/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.js'></script>
+    <script src='https://unpkg.com/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.js'></script>
 
-<div class='scroll-animations-example' data-scroll-container>
-    <div class='scrollsection' data-scroll-section>
-        <div class='item -big indar' data-scroll data-scroll-speed="2">
-            <img class='image' src='assets/img/web-indar.png'>
-        </div>
-        <div class='item -big sonrisanas' data-scroll data-scroll-speed="1">
-            <img class='image' src='assets/img/web-sonrisanas.png'>
-        </div>
-        <div class='item -big ventanas' data-scroll data-scroll-speed="4">
-            <img class='image' src='assets/img/web-renueva-tus-ventanas.png'>
-        </div>
-        <div class='item -big rompecabezas' data-scroll data-scroll-speed="2" id="puzzle-image">
-            <img class='image' src='assets/img/web-rompecabezas.png'>
-        </div>
-        <!-- Miscelaneas -->
-        <div class='item -normal -horizontal miscelanea-puntos-amarillos' data-scroll data-scroll-speed="1">
-            <div class="dots-bg"></div>
-        </div>
-        <div class='item -small -horizontal miscelanea-onda-violeta' data-scroll data-scroll-speed="3">
-            <div class="purple-waves"></div>
-        </div>
-        <div class='item -big miscelanea-onda-amarilla' data-scroll data-scroll-speed="1">
-            <div class="yellow-waves"></div>
-        </div>
-        <div class='item -normal -horizontal miscelanea-cubo' data-scroll data-scroll-speed="2">
-            <div class="cubo-3d"></div>
-        </div>
-        <div class='item -normal -horizontal miscelanea-onda-celeste' data-scroll data-scroll-speed="1">
-            <div class="lightblue-waves"></div>
-        </div>
-        <div class='item -big miscelanea-grilla-celeste' data-scroll data-scroll-speed="4">
-            <div class="lightblue-grid"></div>
-        </div>
-        <div class='item -small miscelanea-cruz-violeta' data-scroll data-scroll-speed="3">
-            <div class="purple-cross-90"></div>
-        </div>
-        <div class='item -horizontal miscelanea-circulo-rosa' data-scroll data-scroll-speed="2">
-            <div class="pink-circle"></div>
-        </div>
-        <div class='item -horizontal miscelanea-grilla-amarilla' data-scroll data-scroll-speed="4">
-            <div class="yellow-grid"></div>
-        </div>
-        <div class='item miscelanea-semicirculo-violeta' data-scroll data-scroll-speed="2">
-            <div class="purple-semicircle"></div>
-        </div>
-        <div class='item -normal -horizontal' data-scroll data-scroll-speed="1">
-            <img class='image' src='https://picsum.photos/id/141/300/400'>
-        </div>
-        <div class='item -small -horizontal' data-scroll data-scroll-speed="3">
-            <img class='image' src='https://picsum.photos/id/145/400/300'>
-        </div>
-        <div class='item -normal' data-scroll data-scroll-speed="1">
-            <img class='image' src='https://picsum.photos/id/147/300/400'>
+    <div class='scroll-animations-example' data-scroll-container>
+        <div class='scrollsection' data-scroll-section>
+            <div class='item -big indar' data-scroll data-scroll-speed="2" >
+                <img class='image' src='assets/img/web-indar.png' id="web-indar">
+            </div>
+            <div class='item -big sonrisanas' data-scroll data-scroll-speed="1">
+                <img class='image' src='assets/img/web-sonrisanas.png' id="web-sonrisanas">
+            </div>
+            <div class='item -big ventanas' data-scroll data-scroll-speed="4">
+                <img class='image' src='assets/img/web-renueva-tus-ventanas.png' id="web-ventanas">
+            </div>
+            <div class='item -big rompecabezas' data-scroll data-scroll-speed="2">
+                <img class='image' src='assets/img/web-rompecabezas.png'  id="puzzle-image">
+            </div>
+            <div class='item -big mensaje' data-scroll data-scroll-speed="2" id="mensaje">
+                <h2>Llegaste hasta acá sin navegar todas las webs?</h2>
+                <p>Bueno, ya dijimos que la curiosidad mató al gato<br>
+                    Pero por suerte sos humanx así que volve cuando las hayas probado</p>
+            </div>
+            <!-- Miscelaneas -->
+            <div class='item -normal -horizontal miscelanea-puntos-amarillos' data-scroll data-scroll-speed="1">
+                <div class="dots-bg"></div>
+            </div>
+            <div class='item -small -horizontal miscelanea-onda-violeta' data-scroll data-scroll-speed="3">
+                <div class="purple-waves"></div>
+            </div>
+            <div class='item -big miscelanea-onda-amarilla' data-scroll data-scroll-speed="1">
+                <div class="yellow-waves"></div>
+            </div>
+            <div class='item -normal -horizontal miscelanea-cubo' data-scroll data-scroll-speed="2">
+                <div class="cubo-3d"></div>
+            </div>
+            <div class='item -normal -horizontal miscelanea-onda-celeste' data-scroll data-scroll-speed="1">
+                <div class="lightblue-waves"></div>
+            </div>
+            <div class='item -big miscelanea-grilla-celeste' data-scroll data-scroll-speed="4">
+                <div class="lightblue-grid"></div>
+            </div>
+            <div class='item -small miscelanea-cruz-violeta' data-scroll data-scroll-speed="3">
+                <div class="purple-cross-90"></div>
+            </div>
+            <div class='item -horizontal miscelanea-circulo-rosa' data-scroll data-scroll-speed="2">
+                <div class="pink-circle"></div>
+            </div>
+            <div class='item -horizontal miscelanea-grilla-amarilla' data-scroll data-scroll-speed="4">
+                <div class="yellow-grid"></div>
+            </div>
+            <div class='item miscelanea-semicirculo-violeta' data-scroll data-scroll-speed="2">
+                <div class="purple-semicircle"></div>
+            </div>
+            <div class='item miscelanea-triangulo-celeste-fill' data-scroll data-scroll-speed="1">
+                <div class="lightblue-triangle-fill"></div>
+            </div>
+            <div class='item miscelanea-cruz-amarilla' data-scroll data-scroll-speed="3">
+                <div class="yellow-cross"></div>
+            </div>
+            <div class='item miscelanea-cubo-3d' data-scroll data-scroll-speed="1">
+                <div class="cubo-3d"></div>
+            </div>
         </div>
     </div>
-</div>
-    
+
+    <!-- Modal Indar-->
+    <div class="modal fade modal-xl" id="modal-indar" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <button id="close-indar" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-body">
+                <iframe src="https://www.indarsrl.com.ar"></iframe>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- Modal Sonrisanas-->
+    <div class="modal fade modal-xl" id="modal-sonrisanas" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <button id="close-sonrisanas" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-body">
+                <iframe src="https://www.sonrisanas.com/"></iframe>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- Modal Renueva tus ventanas-->
+    <div class="modal fade modal-xl" id="modal-ventanas" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <button id="close-ventanas" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-body">
+                <iframe src="https://rabanito.online/renuevatusventanas"></iframe>
+            </div>
+          </div>
+        </div>
+    </div>
+
     <!--JS-->
     <script src="lib/bootstrap-5.2.3/dist/js/bootstrap.bundle.js"></script>
     <script src="lib/jQuery-3.6.4/jquery-3.6.4.min.js"></script>
@@ -98,6 +140,12 @@
     </script>
     <!-- Galeria slider -->
     <script src="lib/slick/slick.min.js"></script>
+
+    <!-- Mock iframe lib -->
+    <script src="lib/mockframe-js/script.js"></script>
+    <script>
+        newMockFrame();
+    </script>
     <!-- Custom -->
     <script src="js/webs.js"></script>
     <script src="js/loader.js"></script>

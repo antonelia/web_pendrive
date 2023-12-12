@@ -3,25 +3,36 @@ var webVentanas = false;
 var webSonrisanas = false;
 var webPuzzle = false;
 
+$(window).on('load', function(){
+    $("#puzzle-image").hide();
+    $('#loader').fadeOut();
+
+});
+
 $('#web-indar').click(function () {
+    $("#modal-indar").modal('toggle');
     webIndar = true;
-
     if(webIndar==true & webVentanas==true & webSonrisanas==true){
-
+        $("#mensaje").hide();
+        $("#puzzle-image").fadeIn();
     }
 });
 
-$('#web-renueva-tus-ventanas').click(function () {
+$('#web-ventanas').click(function () {
+    $("#modal-ventanas").modal('toggle');
     webVentanas = true;
     if(webIndar==true & webVentanas==true & webSonrisanas==true){
-
+        $("#mensaje").hide();
+        $("#puzzle-image").fadeIn();
     }
 });
 
 $('#web-sonrisanas').click(function () {
+    $("#modal-sonrisanas").modal('toggle');
     webSonrisanas = true;
     if(webIndar==true & webVentanas==true & webSonrisanas==true){
- 
+        $("#mensaje").hide();
+        $("#puzzle-image").fadeIn();
     }
 });
 
@@ -74,6 +85,17 @@ class Example {
     }
 }
 
+$("#close-indar").click(function () {
+    $("#modal-indar").modal('toggle');
+});
+
+$("#close-sonrisanas").click(function () {
+    $("#modal-sonrisanas").modal('toggle');
+});
+
+$("#close-ventanas").click(function () {
+    $("#modal-ventanas").modal('toggle');
+});
 
 window.addEventListener('DOMContentLoaded', (event) => {
     const example = new Example({

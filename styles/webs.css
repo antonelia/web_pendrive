@@ -1,3 +1,7 @@
+:root{
+    --bs-modal-width: 80vw;
+}
+
 html, body {
     height: 100%;
     background: #eee;
@@ -5,6 +9,10 @@ html, body {
 
 body {
     overflow: hidden;
+}
+
+#loader{
+    background: white;
 }
 
 .scroll-animations-example {
@@ -131,6 +139,15 @@ body {
 .sonrisanas img{
     margin-top: 12vh;
 }
+
+.mensaje{
+    position: absolute;
+    top: -35vh;
+    left: 450vh;
+    text-align: center;
+}
+
+/* Miscelaneas fondo */
 .miscelanea-onda-violeta{
     position: absolute;
     left: 130vh;
@@ -163,6 +180,17 @@ body {
 }
 .yellow-waves{
     transform: rotate(90deg);
+}
+.miscelanea-onda-celeste{
+    position: absolute;
+    left: 413vh;
+    top: 38vh;
+}
+
+.miscelanea-cubo{
+    position: absolute;
+    left: 455vh;
+    top: -15vh;
 }
 
 .miscelanea-grilla-celeste{
@@ -220,14 +248,116 @@ body {
 .miscelanea-semicirculo-violeta{
     position: absolute;
     top: 71vh;
-    left: 210vh;
+    left: 262vh;
     z-index: -10000;
 }
 .purple-semicircle{
     background: url("../assets/img/semicircle_outline_purple.png") no-repeat;
     background-size: contain;
-    height: 60px;
-    width: 120px;
-    
+    height: 120px;
+    width: 240px;
+}
+.miscelanea-triangulo-celeste-fill{
+    position: absolute;
+    top: 5vh;
+    left: 210vh;
 }
 
+.lightblue-triangle-fill{
+    background: url("../assets/img/triangle-lightblue-fill.svg") no-repeat;
+    background-size: contain;
+    height: 80px;
+    width: 80px;
+}
+.miscelanea-cruz-amarilla{
+    position: absolute;
+    top: 5vh;
+    left: 215vh;
+}
+
+.yellow-cross{
+    background: url("../assets/img/yellow-cross.svg") no-repeat;
+    background-size: contain;
+    height: 80px;
+    width: 80px;
+}
+
+.miscelanea-cubo-3d{
+    position: absolute;
+    top: 45vh;
+    left: 315vh;
+}
+
+.modal-body{
+    height: 90vh;
+    padding: 0;
+}
+.modal-dialog{
+    max-width: 96%;
+}
+.modal-xl{
+    width: 100vw;
+}
+
+.btn-close{
+    position: absolute;
+    top: -24px;
+    right: -24px;
+    background-color: white;
+    opacity: 1;
+    padding: 1em;
+    border-radius: 50%;
+    z-index: 100;
+}
+
+/*Iframe lib*/
+iframe {
+    width: 100%;
+    height: calc(80vh - 34px) !important;
+    border: none;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+    display: block;
+}
+  
+.window {
+    border-radius: 9px;
+    background-color: white;
+    width: 100%;
+    min-height: 100%;
+    box-shadow: 0 0px 1.2px rgba(0, 0, 0, 0.021), 0 0px 2.7px rgba(0, 0, 0, 0.031),
+      0 0px 4.6px rgba(0, 0, 0, 0.038), 0 0px 6.9px rgba(0, 0, 0, 0.044),
+      0 0px 10px rgba(0, 0, 0, 0.05), 0 0px 14.2px rgba(0, 0, 0, 0.056),
+      0 0px 20.1px rgba(0, 0, 0, 0.062), 0 0px 29.2px rgba(0, 0, 0, 0.069),
+      0 0px 45px rgba(0, 0, 0, 0.079), 0 0px 80px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    margin: 0px !important;
+    background: #e8e8e8 !important;
+    border-top-left-radius: 9px !important;
+    border-top-right-radius: 9px !important;
+    height: 34px !important;
+    padding: 12px !important;
+  }
+  
+  .mockup-button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  
+  .red {
+    background-color: #ff5f56;
+  }
+  
+  .yellow {
+    background-color: #ffc343;
+    margin-left: 3px;
+  }
+  
+  .green {
+    background-color: #32a852;
+    margin-left: 3px;
+  }
