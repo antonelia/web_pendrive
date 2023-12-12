@@ -10,6 +10,25 @@
     left: calc(50vw - 40px);;
 }
 
+.btn-varita {
+  text-decoration: none;
+  font-size: 3rem;
+  transition: font-size 0.3s ease; /* Agregamos una transición suave al tamaño de la fuente */
+}
+
+.btn-varita:hover {
+  font-size: 4rem;
+  transform: scale(1.2); /* Ajusta el valor de escala según tu preferencia */
+}
+
+h2{
+  color: var(--dark-blue-color);
+}
+
+h3{
+  color: var(--purple-color);
+}
+
 /*Gallery*/
 .gallery {
     display: flex;
@@ -57,4 +76,15 @@
     opacity: 0;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
     transition: 0.3s;
+  }
+
+
+  #poof{
+    position: absolute;
+    top: 100vh;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    z-index: 1000;
   }
