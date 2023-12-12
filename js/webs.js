@@ -7,7 +7,7 @@ $(window).on('load', function(){
     $(".lamparita").hide();
     $(".scroll-animations-example").hide();
 
-    $("#puzzle-image").hide();
+    $(".rompecabezas").hide();
     $('#loader').fadeOut();
     
     setTimeout(function() {
@@ -24,7 +24,7 @@ $('#web-indar').click(function () {
     webIndar = true;
     if(webIndar==true & webVentanas==true & webSonrisanas==true){
         $("#mensaje").hide();
-        $("#puzzle-image").fadeIn();
+        $(".rompecabezas").fadeIn();
     }
 });
 
@@ -33,7 +33,7 @@ $('#web-ventanas').click(function () {
     webVentanas = true;
     if(webIndar==true & webVentanas==true & webSonrisanas==true){
         $("#mensaje").hide();
-        $("#puzzle-image").fadeIn();
+        $(".rompecabezas").fadeIn();
     }
 });
 
@@ -42,7 +42,7 @@ $('#web-sonrisanas').click(function () {
     webSonrisanas = true;
     if(webIndar==true & webVentanas==true & webSonrisanas==true){
         $("#mensaje").hide();
-        $("#puzzle-image").fadeIn();
+        $(".rompecabezas").fadeIn();
     }
 });
 
