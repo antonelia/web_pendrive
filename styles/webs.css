@@ -1,5 +1,12 @@
 :root{
     --bs-modal-width: 80vw;
+    --on: 0;
+    --bg: hsl(calc(200 - (var(--on) * 160)), calc((20 + (var(--on) * 50)) * 1%), calc((20 + (var(--on) * 60)) * 1%));
+    --cord: hsl(0, 0%, calc((60 - (var(--on) * 50)) * 1%));
+    --stroke: hsl(0, 0%, calc((60 - (var(--on) * 50)) * 1%));
+    --shine: hsla(0, 0%, 100%, calc(0.75 - (var(--on) * 0.5)));
+    --cap: hsl(0, 0%, calc((40 + (var(--on) * 30)) * 1%));
+    --filament: hsl(45, calc(var(--on) * 80%), calc((25 + (var(--on) * 75)) * 1%));
 }
 
 html, body {
@@ -12,7 +19,7 @@ body {
 }
 
 #loader{
-    background: white;
+    background: var(--bg);
 }
 
 .scroll-animations-example {
@@ -339,25 +346,138 @@ iframe {
     border-top-right-radius: 9px !important;
     height: 34px !important;
     padding: 12px !important;
-  }
+}
   
-  .mockup-button {
+.mockup-button {
     width: 12px;
     height: 12px;
     border-radius: 50%;
     display: inline-block;
-  }
+}
   
-  .red {
+.red {
     background-color: #ff5f56;
-  }
+}
   
-  .yellow {
+.yellow {
     background-color: #ffc343;
     margin-left: 3px;
-  }
+}
   
-  .green {
+.green {
     background-color: #32a852;
     margin-left: 3px;
-  }
+}
+
+/*Lamparita*/
+#intro-text{
+    position: absolute;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--darl-blue-color);
+    z-index: 10;
+}
+#intro{
+    position: absolute;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg);
+    z-index: 10;
+}
+
+#intro-text h2{
+    color: white;
+}
+
+.toggle-scene {
+    overflow: visible !important;
+    height: 50vmin;
+    /* position: absolute; */
+}
+.toggle-scene__cord {
+    stroke: var(--cord);
+    cursor: move;
+}
+.toggle-scene__cord:nth-of-type(1) {
+    display: none;
+}
+.toggle-scene__cord:nth-of-type(2),
+.toggle-scene__cord:nth-of-type(3),
+.toggle-scene__cord:nth-of-type(4),
+.toggle-scene__cord:nth-of-type(5) {
+    display: none;
+}
+.toggle-scene__cord-end {
+    stroke: var(--cord);
+    fill: var(--cord);
+}
+.toggle-scene__dummy-cord {
+    stroke-width: 6;
+    stroke: var(--cord);
+}
+.bulb__filament {
+    stroke: var(--filament);
+}
+.bulb__shine {
+    stroke: var(--shine);
+}
+.bulb__flash {
+    stroke: #f5e0a3;
+    display: none;
+}
+.bulb__bulb {
+    stroke: var(--stroke);
+    fill: hsla(calc(180 - (95 * var(--on))), 80%, 80%, calc(0.1 + (0.4 * var(--on))));
+}
+.bulb__cap {
+    fill: var(--cap);
+}
+.bulb__cap-shine {
+    fill: var(--shine);
+}
+.bulb__cap-outline {
+    stroke: var(--stroke);
+}
+
+.slide{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: 100;
+}
+.l--100{
+    left: -100vw;
+}
+#slide-1{
+    background: var(--pink-color);
+}
+#slide-2{
+    background: var(--yellow-color)
+}
+#slide-3{
+    background: var(--purple-color)
+}
+#slide-4{
+    background: var(--light-blue-color)
+}
+
+.slideinright{
+    animation: slideinright 2s ease-in-out;
+}
+@keyframes slideinright {
+    from {
+      left: -100vw;
+    }
+  
+    to {
+      left: 100vw;
+    }
+}
