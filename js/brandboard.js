@@ -1,5 +1,15 @@
 $("#qr-reel").hide();
 
+$(document).ready(function() {
+  $("#intro-modal").modal('show');
+
+  setTimeout(function () {
+    $("#intro-modal").fadeOut();
+    $("#intro-modal").modal('hide');
+  }, 3500);
+});
+
+
 document.addEventListener('DOMContentLoaded', () => {
   const player = new Plyr('#player', {
     title: 'Example Title',
@@ -53,22 +63,32 @@ document.addEventListener('DOMContentLoaded', () => {
     $(".element").each(function () {
       if (collision($(this), box)) {
         collidedElements++;
+        // Ocultar el elemento que colisiona con la box
+        $(this).css('opacity', 0);
       }
     });
 
-    $('#result').text(collidedElements);
+    //$('#result').text(collidedElements);
 
     // Verificar si todos los elementos han colisionado
     if (collidedElements === totalElements) {
       // Cambiar la imagen
       document.querySelector("#box img").src = "assets/img/cube-01.svg";
 
+      $("#box").addClass("d-none-zoom-out");
+      
+      setTimeout(function () {
+          $("#drag-drop").fadeOut();
+          $("#drag-drop").addClass("d-none");
+      }, 1000);
+
       // Esperar 2 segundos antes de mostrar #brandboard
       setTimeout(function () {
         // Mostrar el elemento con ID brandboard y ocultar el elemento con ID drag-drop
+        $("#brandboard").fadeIn();
         $("#brandboard").removeClass("d-none");
-        $("#drag-drop").addClass("d-none");
-      }, 2000);
+      }, 1000);
+
     }
   }
 
