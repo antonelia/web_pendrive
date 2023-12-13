@@ -139,21 +139,96 @@ g{
 	display: flex;
 }
 
+.color-purple{
+	color: var(--purple-color);
+}
+
+.color-pink{
+	color: var(--pink-color);
+}
+
 /*Drag & Drop*/
 
 [draggable] {
   cursor: move;
 }
 
+#drag-drop{
+	background-image: url(../assets/img/dots.png), url(../assets/img/waves-violet.png) ;
+	background-size: 20%;
+	background-repeat: no-repeat;
+	background-position: left bottom, right top;
+}
+
+.element{
+	position: absolute;
+	width: 90px;
+	height: auto;
+}
+
+#element1, #element6{
+	animation: float 3s ease-in-out infinite;
+}
+
+#element2, #element3{
+	animation: float 4s ease-in-out infinite;
+}
+
+#element4, #element7{
+	animation: float 2s ease-in-out infinite;
+}
+
+#element5, #element8{
+	animation: float 5s ease-in-out infinite;
+}
+
+#element2{
+	transform: rotate(15deg);
+}
+
+#element8{
+	transform: rotate(-20deg);
+	width: 250px;
+}
+
+#element6{
+	width: 250px;
+}
+
+#element4{
+	width: 150px;
+}
+
 .box-container{
 	background-color: white;
 	min-width: 350px;
-	min-height: 500px;
 	position: absolute; 
-	left: 354px; 
-	top: 250px; 
+	left: 35vw; 
+	top: 33%; 
 	z-index: 100;
 	display: flex;
     justify-content: center;
     align-items: center;
 }
+
+@keyframes float {
+	50%{
+		transform: translateY(20px);
+	}
+}
+
+@keyframes zoomOut {
+	0% {
+	  transform: scale(1);
+	}
+	50% {
+	  transform: scale(1.1);
+	}
+	100% {
+	  transform: scale(0);
+	}
+  }
+  
+  .d-none-zoom-out {
+	animation: zoomOut 1s ease forwards;
+  }

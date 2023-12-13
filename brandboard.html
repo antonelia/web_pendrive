@@ -31,27 +31,22 @@
 <body>
     <section class="section d-flex justify-content-center" id="drag-drop">
 
-            <div class="box-container" id="box">
-                <img draggable="false" src="assets/img/cube-open-01.svg" width="230">
-            </div>
-    
-            <img draggable="true" src="assets/img/letter-a.png" class="element" id="element1" style="position: absolute; left: 91px; top: 100px;" width="90">
-            <img draggable="true" src="assets/img/square-darkblue.png" class="element" id="element2" style="position: absolute; left: 84px; top: 240px;" width="90">
-            <img draggable="true" src="assets/img/triangle-lightblue.png" class="element" id="element3" style="position: absolute; left: 95px; top: 400px;" width="90">
-            <img draggable="true" src="assets/img/letter-b.png" class="element" id="element4" style="position: absolute; left: 81px; top: 600px;" width="90">
-            <img draggable="true" src="assets/img/letter-n.png" class="element" id="element5" style="position: absolute; left: 300px; top: 60px;" width="90">
-            <img draggable="true" src="assets/img/triangle-yellow.png" class="element" id="element6" style="position: absolute; left: 500px; top: 60px;" width="90">
-            <img draggable="true" src="assets/img/letter-r.png" class="element" id="element7" style="position: absolute; left: 700px; top: 60px;" width="90">
-            <!--<img draggable="true" src="/assets/img/letter-o.png" alt="mouth5" id="mouth5" style="position: absolute; left: 869px; top: 158px;" width="90">
-            <img draggable="true" src="/assets/img/letter-i.png" alt="mouth3" id="mouth3" style="position: absolute; left: 832px; top: 300px;" height="90">
-            <img draggable="true" src="/assets/img/square-pink.png" alt="mouth4" id="mouth4" style="position: absolute; left: 900px; top: 400px;" width="90">
-            <img draggable="true" src="/assets/img/wave.svg" alt="mouth1" id="mouth1" style="position: absolute; left: 1000px; top: 537px;" width="200">
-            <img draggable="true" src="/assets/img/letter-t.png" alt="nose3" id="nose3" style="position: absolute; left: 700px; top: 500px;" width="90">   
-            <img draggable="true" src="/assets/img/cube-purple.png" alt="nose2" id="nose2" style="position: absolute; left: 800px; top: 595px;" width="90"> --> 
-
-        <p>Colliding? <span id="result">false</span>
-
+        <div class="box-container" id="box">
+            <img draggable="false" id="box-img" src="assets/img/cube-open-01.svg" width="230">
+        </div>
+        
+        <img draggable="true" src="assets/img/1-espada.png" class="element img-fluid" id="element2" style="left: 15%; top: 5%;">
+        <img draggable="true" src="assets/img/letter-a.png" class="element img-fluid" id="element1" style="left: 30%; top: 15%;">
+        <img draggable="true" src="assets/img/triangle-lightblue.png" class="element img-fluid" id="element3" style="left: 50%; top: 10%;">
+        <img draggable="true" src="assets/img/taza.png" class="element img-fluid" id="element4" style="left: 70%; top: 5%;">
+        <img draggable="true" src="assets/img/letter-n.png" class="element img-fluid" id="element5" style="left: 5%; top: 30%;">
+        <img draggable="true" src="assets/img/mazo_cartas.png" class="element img-fluid" id="element6" style="left: 10%; top: 60%;">
+        <img draggable="true" src="assets/img/letter-r.png" class="element img-fluid" id="element7" style="left: 80%; top: 30%;">
+        <img draggable="true" src="assets/img/remera_2.png" class="element img-fluid" id="element8" style="left: 70%; top: 60%;">
+        
+        
         <!--<div class="container">
+            <p>Colliding? <span id="result">false</span>
 
             <div id="items">
                 <div id="card" draggable="true">
@@ -67,9 +62,15 @@
 
     <section class="section d-flex justify-content-center d-none" id="brandboard">
         <article class="container-fluid text-center m-auto">
-            <video id="player" playsinline controls data-poster="" class="m-auto">
-                <source src= "./assets/vid/brandboard.mp4" type="video/mp4" />
-            </video>
+            <h2 class="wow fadeInDown color-purple" data-wow-delay="1s">Uff ahora sí, ya volvimos a ser Rabanito </h2>
+            <h4 class="wow fadeInDown color-pink" data-wow-delay="2s">Gracias por ayudarnos ❤️ Con todos esos elementos armamos este video de todo lo que nos representa:</h4>
+            
+            <div class="wow fadeInDown  mt-3" data-wow-delay="4s">
+
+                <video id="player" playsinline controls data-poster="" class="m-auto">
+                    <source src= "./assets/vid/brandboard.mp4" type="video/mp4" />
+                </video>
+            </div>
         </article>
     </section>
 
@@ -80,6 +81,17 @@
             <img src= "./assets/img/qr-code.png" alt="" class="wow fadeInDown" data-wow-delay="8s">
         </div>
     </section>
+
+
+    <div class="modal fade" id="intro-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center">
+                    <h3>Uh, parece que nos pasamos. <br> ¿Nos das una mano a guardar todos los elementos?</h3>
+                </div>
+            </div>
+        </div>
+    </div> 
 
     
     <!--JS-->
