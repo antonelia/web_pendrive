@@ -4,6 +4,13 @@
     justify-content: center;
 }
 
+#puzzle-modal h3{
+    font-family: Lato-Bold;
+    width: 75%;
+    margin: auto;
+
+}
+
 #puzzle-modal article {
     border-radius: 1em;
     text-align: center;
@@ -118,4 +125,67 @@
     top: 0;
     left: 0;
     border-radius: var(--bs-modal-border-radius);
+}
+
+.mensaje-completado{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    background: rgba(0, 0, 0, 0.329);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    background: url("../assets/img/confeti.gif");
+    background-size: contain;
+}
+
+.mensaje-completado img{
+    max-height: 70%;
+    margin: 15% auto;
+    position: absolute;
+}
+
+#img-carta{
+    -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: 10px;
+  box-shadow:  20px 20px 60px #414141,
+             -20px -20px 60px #595959;
+}
+
+.spin{
+    animation: spin 1s ease-in-out;
+}
+
+.spin-reverse{
+    animation: spin-reverse 1s ease-in-out
+}
+
+.reverso-carta{
+    
+    transform: rotateY(180deg);
+    -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+    /* transform: translateZ(-1px); */
+    z-index: -1;
+}
+
+@keyframes spin{
+	from{
+        transform:rotateY(0deg);
+    }
+	to{
+        transform:rotateY(720deg);
+    }	
+}
+
+@keyframes spin-reverse{
+	from{
+        transform:rotateY(180deg);
+    }
+	to{
+        transform:rotateY(900deg);
+    }	
 }

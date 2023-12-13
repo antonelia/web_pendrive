@@ -1,6 +1,8 @@
 window.onload = init();
  
 function init() {
+    
+    $(".mensaje-completado").hide();
     // funcion que devuelve n numeros aleatorios sin repetirse
     const random = (n) => {
         let elem=Array.from({length: n}, (v, i) => i);
@@ -118,8 +120,13 @@ function puzzle() {
         if ([...imgs].every((el, index) => el.id=="i"+index)) {
             console.log("entro en segundo if");
             setTimeout(function() {
-                $('#resultado-modal').modal('toggle');
-            }, 1000);
+                $('.mensaje-completado').fadeIn();
+                $("#img-carta").addClass("spin");
+                $(".reverso-carta").addClass("spin-reverse");
+            }, 500);
+            setTimeout(function() {
+                window.location.href="./motion.html";
+            }, 3500);
             
             
             
