@@ -1,6 +1,7 @@
 window.onload = init();
  
 function init() {
+    
     $(".mensaje-completado").hide();
     // funcion que devuelve n numeros aleatorios sin repetirse
     const random = (n) => {
@@ -121,7 +122,11 @@ function puzzle() {
             setTimeout(function() {
                 $('.mensaje-completado').fadeIn();
                 $("#img-carta").addClass("spin");
-            }, 1000);
+                $(".reverso-carta").addClass("spin-reverse");
+            }, 500);
+            setTimeout(function() {
+                window.location.href="./motion.html";
+            }, 3500);
             
             
             
