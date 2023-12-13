@@ -1,6 +1,7 @@
 window.onload = init();
  
 function init() {
+    $(".mensaje-completado").hide();
     // funcion que devuelve n numeros aleatorios sin repetirse
     const random = (n) => {
         let elem=Array.from({length: n}, (v, i) => i);
@@ -118,7 +119,8 @@ function puzzle() {
         if ([...imgs].every((el, index) => el.id=="i"+index)) {
             console.log("entro en segundo if");
             setTimeout(function() {
-                $('#resultado-modal').modal('toggle');
+                $('.mensaje-completado').fadeIn();
+                $("#img-carta").addClass("spin");
             }, 1000);
             
             

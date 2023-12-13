@@ -4,6 +4,13 @@
     justify-content: center;
 }
 
+#puzzle-modal h3{
+    font-family: Lato-Bold;
+    width: 75%;
+    margin: auto;
+
+}
+
 #puzzle-modal article {
     border-radius: 1em;
     text-align: center;
@@ -118,4 +125,35 @@
     top: 0;
     left: 0;
     border-radius: var(--bs-modal-border-radius);
+}
+
+.mensaje-completado{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    background: rgba(0, 0, 0, 0.329);
+    display: flex;
+    align-items: center;
+    backdrop-filter: blur(10px);
+}
+
+.mensaje-completado img{
+    max-height: 70%;
+    margin: auto;
+}
+
+.spin{
+    animation: spin 1s ease-in-out;
+}
+
+@keyframes spin{
+	from{
+        transform:rotateY(0deg);
+        opacity: 0;
+    }
+	to{
+        transform:rotateY(720deg);
+        opacity: 1;
+    }	
 }
