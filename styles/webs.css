@@ -1,16 +1,32 @@
+:root{
+    --bs-modal-width: 80vw;
+    --on: 0;
+    --bg: hsl(calc(200 - (var(--on) * 160)), calc((20 + (var(--on) * 50)) * 1%), calc((20 + (var(--on) * 60)) * 1%));
+    --cord: hsl(0, 0%, calc((60 - (var(--on) * 50)) * 1%));
+    --stroke: hsl(0, 0%, calc((60 - (var(--on) * 50)) * 1%));
+    --shine: hsla(0, 0%, 100%, calc(0.75 - (var(--on) * 0.5)));
+    --cap: hsl(0, 0%, calc((40 + (var(--on) * 30)) * 1%));
+    --filament: hsl(45, calc(var(--on) * 80%), calc((25 + (var(--on) * 75)) * 1%));
+}
+
 html, body {
     height: 100%;
-    background: #eee;
+    background: white;
+    /* background: #eee; */
 }
 
 body {
     overflow: hidden;
 }
 
+#loader{
+    background: var(--bg);
+}
+
 .scroll-animations-example {
     > .scrollsection {
         padding: 10vh 10vh 10vh 10vmax;
-        min-width: 550vh;
+        min-width: 650vh;
     }
 
     > .scrollsection > .item {
@@ -128,9 +144,42 @@ body {
 .rompecabezas img{
     z-index: 100;
 }
+.rompecabezas{
+    position: absolute;
+    top: -47vh;
+}
+.rompecabezas h2,
+.rompecabezas p{
+    width: 786px;
+    text-align: center;
+}
+.rompecabezas h2{
+    color: var(--pink-color);
+}
 .sonrisanas img{
     margin-top: 12vh;
 }
+
+.mensaje{
+    position: absolute;
+    top: -35vh;
+    left: 450vh;
+    text-align: center;
+}
+
+.mensaje h2{
+    font-size: 3rem;
+    color: var(--pink-color);
+}
+.mensaje p{
+    font-size: 2rem;
+}
+.mensaje img{
+    max-width: 180px;
+    margin: 3rem 0;
+}
+
+/* Miscelaneas fondo */
 .miscelanea-onda-violeta{
     position: absolute;
     left: 130vh;
@@ -163,6 +212,17 @@ body {
 }
 .yellow-waves{
     transform: rotate(90deg);
+}
+.miscelanea-onda-celeste{
+    position: absolute;
+    left: 413vh;
+    top: 38vh;
+}
+
+.miscelanea-cubo{
+    position: absolute;
+    left: 455vh;
+    top: -15vh;
 }
 
 .miscelanea-grilla-celeste{
@@ -220,14 +280,229 @@ body {
 .miscelanea-semicirculo-violeta{
     position: absolute;
     top: 71vh;
-    left: 210vh;
+    left: 262vh;
     z-index: -10000;
 }
 .purple-semicircle{
     background: url("../assets/img/semicircle_outline_purple.png") no-repeat;
     background-size: contain;
-    height: 60px;
-    width: 120px;
-    
+    height: 120px;
+    width: 240px;
+}
+.miscelanea-triangulo-celeste-fill{
+    position: absolute;
+    top: 5vh;
+    left: 210vh;
 }
 
+.lightblue-triangle-fill{
+    background: url("../assets/img/triangle-lightblue-fill.svg") no-repeat;
+    background-size: contain;
+    height: 80px;
+    width: 80px;
+}
+.miscelanea-cruz-amarilla{
+    position: absolute;
+    top: 5vh;
+    left: 215vh;
+}
+
+.yellow-cross{
+    background: url("../assets/img/yellow-cross.svg") no-repeat;
+    background-size: contain;
+    height: 80px;
+    width: 80px;
+}
+
+.miscelanea-cubo-3d{
+    position: absolute;
+    top: 45vh;
+    left: 315vh;
+}
+
+.modal-body{
+    height: 90vh;
+    padding: 0;
+}
+.modal-dialog{
+    max-width: 96%;
+}
+.modal-xl{
+    width: 100vw;
+}
+
+.btn-close{
+    position: absolute;
+    top: -24px;
+    right: -24px;
+    background-color: white;
+    opacity: 1;
+    padding: 1em;
+    border-radius: 50%;
+    z-index: 100;
+}
+
+/*Iframe lib*/
+iframe {
+    width: 100%;
+    height: calc(80vh - 34px) !important;
+    border: none;
+    border-bottom-left-radius: 9px;
+    border-bottom-right-radius: 9px;
+    display: block;
+}
+  
+.window {
+    border-radius: 9px;
+    background-color: white;
+    width: 100%;
+    min-height: 100%;
+    box-shadow: 0 0px 1.2px rgba(0, 0, 0, 0.021), 0 0px 2.7px rgba(0, 0, 0, 0.031),
+      0 0px 4.6px rgba(0, 0, 0, 0.038), 0 0px 6.9px rgba(0, 0, 0, 0.044),
+      0 0px 10px rgba(0, 0, 0, 0.05), 0 0px 14.2px rgba(0, 0, 0, 0.056),
+      0 0px 20.1px rgba(0, 0, 0, 0.062), 0 0px 29.2px rgba(0, 0, 0, 0.069),
+      0 0px 45px rgba(0, 0, 0, 0.079), 0 0px 80px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    margin: 0px !important;
+    background: #e8e8e8 !important;
+    border-top-left-radius: 9px !important;
+    border-top-right-radius: 9px !important;
+    height: 34px !important;
+    padding: 12px !important;
+}
+  
+.mockup-button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+  
+.red {
+    background-color: #ff5f56;
+}
+  
+.yellow {
+    background-color: #ffc343;
+    margin-left: 3px;
+}
+  
+.green {
+    background-color: #32a852;
+    margin-left: 3px;
+}
+
+/*Lamparita*/
+#intro-text{
+    position: absolute;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--darl-blue-color);
+    z-index: 10;
+}
+#intro{
+    position: absolute;
+    min-height: 100vh;
+    min-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg);
+    z-index: 10;
+}
+
+#intro-text h2{
+    color: white;
+}
+
+.toggle-scene {
+    overflow: visible !important;
+    height: 50vmin;
+    /* position: absolute; */
+}
+.toggle-scene__cord {
+    stroke: var(--cord);
+    cursor: move;
+}
+.toggle-scene__cord:nth-of-type(1) {
+    display: none;
+}
+.toggle-scene__cord:nth-of-type(2),
+.toggle-scene__cord:nth-of-type(3),
+.toggle-scene__cord:nth-of-type(4),
+.toggle-scene__cord:nth-of-type(5) {
+    display: none;
+}
+.toggle-scene__cord-end {
+    stroke: var(--cord);
+    fill: var(--cord);
+}
+.toggle-scene__dummy-cord {
+    stroke-width: 6;
+    stroke: var(--cord);
+}
+.bulb__filament {
+    stroke: var(--filament);
+}
+.bulb__shine {
+    stroke: var(--shine);
+}
+.bulb__flash {
+    stroke: #f5e0a3;
+    display: none;
+}
+.bulb__bulb {
+    stroke: var(--stroke);
+    fill: hsla(calc(180 - (95 * var(--on))), 80%, 80%, calc(0.1 + (0.4 * var(--on))));
+}
+.bulb__cap {
+    fill: var(--cap);
+}
+.bulb__cap-shine {
+    fill: var(--shine);
+}
+.bulb__cap-outline {
+    stroke: var(--stroke);
+}
+
+.slide{
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    z-index: 100;
+}
+.l--100{
+    left: -100vw;
+}
+#slide-1{
+    background: var(--pink-color);
+}
+#slide-2{
+    background: var(--yellow-color)
+}
+#slide-3{
+    background: var(--purple-color)
+}
+#slide-4{
+    background: var(--light-blue-color)
+}
+
+.slideinright{
+    animation: slideinright 2s ease-in-out;
+}
+@keyframes slideinright {
+    from {
+      left: -100vw;
+    }
+  
+    to {
+      left: 100vw;
+    }
+}
