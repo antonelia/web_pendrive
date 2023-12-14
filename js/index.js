@@ -78,6 +78,10 @@ $('#juego-wallet').click(function () {
             $('#no-abrir').fadeIn();
         }, 2000);
     }
+
+    window.open(
+      './my-wallet.html', '_blank'
+  );
 });
 
 $('#no-abrir').click(function () {
