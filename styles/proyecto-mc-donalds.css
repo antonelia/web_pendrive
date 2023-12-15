@@ -220,7 +220,7 @@
 	  --grid-offset: calc(50% + 80px);
 	  --color: hsl(0 0% 6%);
 	  --bg: hsl(0 0% 96%);
-	  --color-alpha: hsl(0 0% 60%);
+	  --color-alpha: var(--dark-blue-color);
 	  --selection: hsl(0 0% 80%);
 	  --bg-size: 180px;
 	  --grid-line: hsl(0 0% 80%);
@@ -239,11 +239,11 @@
 		  --glint: black;
 		  --grid-accent: hsl(280 0% 80% / 0.1);
 		  --selection: hsl(0 0% 20%);
-		  --color: hsl(0 0% 98%);
+		  --color: var(--dark-blue-color);
 		  --bg: hsl(0 0% 6%);
-		  --color-alpha: hsl(0 0% 50%);
+		  --color-alpha: hsl(0, 0%, 100%);
 		  --grid-line: hsl(0 0% 12%);
-		  --input-bg: hsl(0 0% 0% / 0.2);
+		  --input-bg: hsla(0, 0%, 100%, 0.2);
 	  }
 	  :root:focus-within {
 		  --grid-accent: hsl(280 0% 80% / 0.35);
@@ -264,25 +264,13 @@ body {
 	font-family:  'Geist Mono', sans-serif, system-ui;
 	color: var(--color);
 	background: var(--bg);
+	background: url(../assets/img/section-bg-lightblue.svg);
+	background-size: cover;
+	background-position: center;
 /*	background: black;*/
 }
   
-  body::before {
-	  content: "";
-	  transition: background 0.2s;
-	  background:
-		  /*	How to create one square */
-		  linear-gradient(var(--grid-accent) 0 2px, transparent 2px calc(100% - 2px), var(--grid-accent) calc(100% - 2px)) calc((var(--grid-offset) - (var(--bg-size) * 2)) - 1px) calc((var(--grid-offset) - var(--bg-size)) - 1px) / calc(var(--bg-size) + 2px) calc(var(--bg-size) + 2px) no-repeat,
-		  linear-gradient(90deg, var(--grid-accent) 0 2px, transparent 2px calc(100% - 2px), var(--grid-accent) calc(100% - 2px)) calc((var(--grid-offset) - (var(--bg-size) * 2)) - 1px) calc((var(--grid-offset) - var(--bg-size)) - 1px) / calc(var(--bg-size) + 2px) calc(var(--bg-size) + 2px) no-repeat,
-		  linear-gradient(transparent calc(var(--bg-size) - 2px), var(--grid-line) calc(var(--bg-size) - 2px) var(--bg-size)) var(--grid-offset) var(--grid-offset) / 100% var(--bg-size),
-		  linear-gradient(90deg, transparent calc(var(--bg-size) - 2px), var(--grid-line) calc(var(--bg-size) - 2px) var(--bg-size)) var(--grid-offset) var(--grid-offset) / var(--bg-size) 100%, transparent;
-  /*	background: var(--bg);*/
-	  position: fixed;
-	  inset: 0;
-	  height: 100vh;
-	  width: 100vw;
-	  -webkit-mask: radial-gradient(circle at 0% 0%, hsl(0 0% 100% / 0.5), transparent);
-  }
+
   
   .form-group:focus-within label {
 	  color: var(--color);
@@ -302,7 +290,7 @@ body {
 	padding-right: 4rem;
 	  letter-spacing: 0.2ch;
 	  border-radius: 6px;
-	  color: var(--color-alpha);
+	  color: var(--dark-blue-color);
 	  border-color: var(--color-alpha);
 	  border-style: solid;
 	  background: var(--input-bg);
@@ -388,7 +376,7 @@ body {
 #seccion-mcdonalds span{
 	font-family: Lato-Bold;
 	font-size: xx-large;
-	color: var(--pink-color);
+	color: var(--purple-color);
 }
 
 .shake {
