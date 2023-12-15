@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="jqm/jquery.mobile-1.4.5.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="jqm/tema.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet"><title>Gastos</title>
+    <title>My Wallet</title>
+</head>
+
+<body>
+    <!--home-->
+    <div data-role="page" id="home" class="bg-purple-blue page">
+
+        <div data-role="header" class="fixedHeader header">
+            <h1 class="text-white">MyWallet</h1>
+        </div>
+
+        <div data-role="main" class="ui-content p0">
+            <div class="text-white text-center mt-4">
+                <h2 class="title">Balance</h2>
+                <p class="balance">$<span id="balance">00</span></p>
+            </div>
+
+            <div class="container">
+
+                <!--ingresos totales-->
+                <div class="d-flex justify-content-between">
+                    <div class="section-card w-100 me-2">
+                        <a href="#ingresos">
+                            <h3 class=""><i class="fa-solid fa-money-bill-wave me-2"></i>Ingresos</h3>
+                            <p class="section-number">$<span id="ingresos_totales_home">00</span></p>
+                        </a>
+                    </div>
+                    
+                    <div class="section-card">
+                        <a href="" data-iconpos="notext" class="add-entry agregarIngreso">
+                            <i class="fa-solid fa-plus"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!--gastos totales-->
+                <div class="d-flex justify-content-between mt-2">
+                    <div class="section-card w-100 me-2">
+                        <a href="#gastos">
+                            <h3 class=""><i class="fa-solid fa-receipt me-2"></i>Gastos</h3>
+                            <p class="section-number">$<span id="gastos_totales_home">00</span></p>
+                        </a>
+                    </div>
+                    
+                    <div class="section-card">
+                        <a href="" data-iconpos="notext" class="add-entry agregarGasto">
+                            <i class="fa-solid fa-plus"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!--deudas totales-->
+                <div class="d-flex justify-content-between mt-2">
+                    <div class="section-card w-100 me-2">
+                        <a href="#deudas">
+                            <h3 class=""><i class="fa-solid fa-hand-holding-dollar me-2"></i>Deudas</h3>
+                            <p class="section-number">$<span id="deudas_totales_home">00</span></p>
+                        </a>
+                    </div>
+                    
+                    <div class="section-card">
+                        <a href="" data-iconpos="notext" class="add-entry agregarDeuda">
+                            <i class="fa-solid fa-plus"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!--ahorros totales-->
+                <div class="d-flex justify-content-between mt-2">
+                    <div class="section-card w-100 me-2">
+                        <a href="#ahorros">
+                            <h3 class=""><i class="fa-solid fa-piggy-bank me-2"></i>Ahorros</h3>
+                            <p class="section-number">$<span id="ahorros_totales_home">00</span></p>
+                        </a>
+                    </div>
+                    
+                    <div class="section-card">
+                        <a href="" data-iconpos="notext" class="add-entry agregarAhorro">
+                            <i class="fa-solid fa-plus"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!--eliminar datos-->
+                <div class="d-flex eliminar_datos justify-content-center mt-3" data-role="button">
+                    <a id="eliminar_datos">
+                        <i class="fa-solid fa-trash-can me-2"></i>
+                        <p>Eliminar todos los datos</p>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        
+        
+        <div data-role="footer" id="menu">
+            <div data-role="navbar" class="shadow fixed_footer">
+                <ul class="d-flex justify-content-between">
+                    <li class="w-100"><a href="#home" data-role="button" class="active">
+                        <i class="fa-solid fa-house"></i>Home</a></li>
+                    <li class="w-100"><a href="#ingresos" data-role="button" class="">
+                        <i class="fa-solid fa-money-bill-wave"></i>Ingresos</a></li>
+                    <li class="w-100"><a href="#gastos" data-role="button" class="">
+                        <i class="fa-solid fa-receipt"></i>Gastos</a></li>
+                    <li class="w-100"><a href="#deudas" data-role="button" class="">
+                        <i class="fa-solid fa-hand-holding-dollar"></i>Deudas</a></li>
+                    <li class="w-100"><a href="#ahorros" data-role="button" class="">
+                        <i class="fa-solid fa-piggy-bank"></i>Ahorros</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--Ingresos-->
+    <div data-role="page" id="ingresos" class="bg-green page">
+
+        <div data-role="header" class="fixedHeader header">
+            <h1 class="text-white">MyWallet</h1>
+        </div>
+
+        <div data-role="main" class="ui-content p0 ingresos">
+            <div class="text-white text-center mt-4">
+                <h2 class="title">Ingresos totales</h2>
+                <p class="balance">$<span id="ingresos_totales">00</span></p>
+            </div>
+
+            <a href="" class="section-button mx-auto agregarIngreso">
+                <i class="fa-solid fa-plus text-purple me-2"></i>
+                <p class="text-purple">Agregar un Ingreso</p>
+            </a>
+           
+            <div class="container section-array-container mt-3">
+                <div class="d-flex flex-column align-items-center" id="ingresos-empty">
+                    <img src="img/coins-ingreso.png" alt="Imagen monedas" class="mt-3 img-fluid" width="120">
+                    <p class="text-purple text-center fw-semibold fs-4 mt-3">¡No agregaste ningún ingreso este mes!</p>
+                </div>
+
+                <div id="array_ingresos"></div>
+            </div>
+        </div>
+        <div data-role="footer" id="menu2">
+            <div data-role="navbar" class="shadow fixed_footer">
+                <ul class="d-flex justify-content-between">
+                    <li class="w-100"><a href="#home" data-role="button" class="">
+                        <i class="fa-solid fa-house"></i>Home</a></li>
+                    <li class="w-100"><a href="#ingresos" data-role="button" class="active">
+                        <i class="fa-solid fa-money-bill-wave"></i>Ingresos</a></li>
+                    <li class="w-100"><a href="#gastos" data-role="button" class="">
+                        <i class="fa-solid fa-receipt"></i>Gastos</a></li>
+                    <li class="w-100"><a href="#deudas" data-role="button" class="">
+                        <i class="fa-solid fa-hand-holding-dollar"></i>Deudas</a></li>
+                    <li class="w-100"><a href="#ahorros" data-role="button" class="">
+                        <i class="fa-solid fa-piggy-bank"></i>Ahorros</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--Gastos-->
+    <div data-role="page" id="gastos" class="bg-orange page">
+
+        <div data-role="header" class="fixedHeader header">
+            <h1 class="text-white">MyWallet</h1>
+        </div>
+
+        <div data-role="main" class="ui-content p0">
+            <div class="text-white text-center mt-4">
+                <h2 class="title">Gastos totales</h2>
+                <p class="balance">$<span id="gastos_totales">00</span></p>
+            </div>
+
+            <a href="" class="section-button mx-auto agregarGasto">
+                <i class="fa-solid fa-plus text-purple me-2"></i>
+                <p class="text-purple">Agregar un Gasto</p>
+            </a>
+           
+            <div class="container section-array-container mt-3">
+                <div class="d-flex flex-column align-items-center" id="gastos-empty">
+                    <img src="img/bags-gastos.png" alt="Imagen Bolsas" class="mt-3 img-fluid" width="100">
+                    <p class="text-purple text-center fw-semibold fs-4 mt-3">¡Todavía no tuviste ningún gasto este mes!</p>
+                </div>
+
+                <div id="array_gastos"></div>
+            </div>
+        </div>
+        <div data-role="footer" id="menu3">
+            <div data-role="navbar" class="shadow fixed_footer">
+                <ul class="d-flex justify-content-between">
+                    <li class="w-100"><a href="#home" data-role="button" class="">
+                        <i class="fa-solid fa-house"></i>Home</a></li>
+                    <li class="w-100"><a href="#ingresos" data-role="button" class="">
+                        <i class="fa-solid fa-money-bill-wave"></i>Ingresos</a></li>
+                    <li class="w-100"><a href="#gastos" data-role="button" class="active">
+                        <i class="fa-solid fa-receipt"></i>Gastos</a></li>
+                    <li class="w-100"><a href="#deudas" data-role="button" class="">
+                        <i class="fa-solid fa-hand-holding-dollar"></i>Deudas</a></li>
+                    <li class="w-100"><a href="#ahorros" data-role="button" class="">
+                        <i class="fa-solid fa-piggy-bank"></i>Ahorros</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--Deudas-->
+    <div data-role="page" id="deudas" class="bg-red page">
+
+        <div data-role="header" class="fixedHeader header">
+            <h1 class="text-white">MyWallet</h1>
+        </div>
+
+        <div data-role="main" class="ui-content p0">
+            <div class="text-white text-center mt-4">
+                <h2 class="title">Deudas totales</h2>
+                <p class="balance">$<span id="deudas_totales">00</span></p>
+            </div>
+
+            <a href="" class="section-button mx-auto agregarDeuda">
+                <i class="fa-solid fa-plus text-purple me-2"></i>
+                <p class="text-purple">Agregar una Deuda</p>
+            </a>
+           
+            <div class="container section-array-container mt-3">
+                <div class="d-flex flex-column align-items-center" id="deudas-empty">
+                    <img src="img/hands-deudas.png" alt="Imagen Manos" class="mt-3 img-fluid" width="100">
+                    <p class="text-purple text-center fw-semibold fs-4 mt-3">¡Todavía no tenes deudas este mes!</p>
+                </div>
+
+                <div id="array_deudas"></div>
+            </div>
+        </div>
+        <div data-role="footer" id="menu4">
+            <div data-role="navbar" class="shadow fixed_footer">
+                <ul class="d-flex justify-content-between">
+                    <li class="w-100"><a href="#home" data-role="button" class="">
+                        <i class="fa-solid fa-house"></i>Home</a></li>
+                    <li class="w-100"><a href="#ingresos" data-role="button" class="">
+                        <i class="fa-solid fa-money-bill-wave"></i>Ingresos</a></li>
+                    <li class="w-100"><a href="#gastos" data-role="button" class="">
+                        <i class="fa-solid fa-receipt"></i>Gastos</a></li>
+                    <li class="w-100"><a href="#deudas" data-role="button" class="active">
+                        <i class="fa-solid fa-hand-holding-dollar"></i>Deudas</a></li>
+                    <li class="w-100"><a href="#ahorros" data-role="button" class="">
+                        <i class="fa-solid fa-piggy-bank"></i>Ahorros</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--Ahorros-->
+    <div data-role="page" id="ahorros" class="bg-blue page">
+
+        <div data-role="header" class="fixedHeader header">
+            <h1 class="text-white">MyWallet</h1>
+        </div>
+
+        <div data-role="main" class="ui-content p0">
+            <div class="text-white text-center mt-4">
+                <h2 class="title">Ahorros totales</h2>
+                <p class="balance">$<span id="ahorros_totales">00</span></p>
+            </div>
+
+            <a href="" class="section-button mx-auto agregarAhorro">
+                <i class="fa-solid fa-plus text-purple me-2"></i>
+                <p class="text-purple">Agregar un Ahorro</p>
+            </a>
+           
+            <div class="container section-array-container mt-3">
+                <div class="d-flex flex-column align-items-center" id="ahorros-empty">
+                    <img src="img/chanchito-ahorros.png" alt="Imagen Alcancia" class="mt-3 img-fluid" width="100">
+                    <p class="text-purple text-center fw-semibold fs-4 mt-3">¡Todavía no ahorraste este mes!</p>
+                </div>
+
+                <div id="array_ahorros"></div>
+            </div>
+        </div>
+        <div data-role="footer" id="menu5">
+            <div data-role="navbar" class="shadow fixed_footer">
+                <ul class="d-flex justify-content-between">
+                    <li class="w-100"><a href="#home" data-role="button" class="">
+                        <i class="fa-solid fa-house"></i>Home</a></li>
+                    <li class="w-100"><a href="#ingresos" data-role="button" class="">
+                        <i class="fa-solid fa-money-bill-wave"></i>Ingresos</a></li>
+                    <li class="w-100"><a href="#gastos" data-role="button" class="">
+                        <i class="fa-solid fa-receipt"></i>Gastos</a></li>
+                    <li class="w-100"><a href="#deudas" data-role="button" class="">
+                        <i class="fa-solid fa-hand-holding-dollar"></i>Deudas</a></li>
+                    <li class="w-100"><a href="#ahorros" data-role="button" class="active">
+                        <i class="fa-solid fa-piggy-bank"></i>Ahorros</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--dialog ingresos-->
+    <div class="modal" tabindex="-1" id="dialog_ingreso">
+        <div class="modal-dialog add-entry-modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-purple text-center mx-auto fs-6 fw-semibold">Agregar ingreso</h5>
+              <button type="button" class="ms-0 btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form class="mx-3">
+                <!--<a href="#ingresos" class="no-border ui-btn ui-icon-delete ui-btn-icon-right ui-corner-all ui-shadow"></a>-->
+
+                <label class="form-label">Importe</label>
+                <input type="number" id="ingreso" class="form-control" placeholder="Ingresar importe" required>
+                <div class="ui-field-contain">
+                    <label class="form-label">Categoría</label>
+                    <select name="select-native-1" id="categoria_ingreso" class="form-select">
+                        <option value="Seleccione">Seleccione una categoría</option>
+                        <option value="Sueldo">Sueldo</option>
+                        <option value="Ingreso extra">Ingresos extras</option>
+                        <option value="Aguinaldo">Aguinaldo</option>
+                    </select>
+                </div>
+                <label class="form-label">Fecha</label>
+                <input type="date" id="fecha_ingreso" name="fecha_ingreso" min="2023-01-01"
+                    max="2023-12-31" class="form-control" required>
+            </form>
+            
+            <a href="" class="section-button secondary mx-auto my-3" id="agregar_ingreso">
+                <i class="fa-solid fa-plus me-2"></i>
+                <p class="">Agregar un Ingreso</p>
+            </a>
+          </div>
+        </div>
+    </div>
+
+    <!--dialog gastos-->
+    <div class="modal" tabindex="-1" id="dialog_gastos">
+        <div class="modal-dialog add-entry-modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-purple text-center mx-auto fs-6 fw-semibold">Agregar gasto</h5>
+              <button type="button" class="ms-0 btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form class="mx-3">
+                <!--<a href="#gastos" class="no-border ui-btn ui-icon-delete ui-btn-icon-right ui-corner-all ui-shadow"></a>-->
+
+                <label class="form-label">Importe</label>
+                <input type="number" id="gasto" class="form-control" placeholder="Ingresar importe" required>
+                <div class="ui-field-contain">
+                    <label class="form-label">Detalle</label>
+                    <input type="text" id="categoria_gasto" class="form-control" placeholder="Ingresar detalle de gasto">
+                </div>
+                <label class="form-label">Fecha</label>
+                <input type="date" id="fecha_gasto" name="fecha_gasto" min="2023-01-01"
+                    max="2023-12-31" class="form-control" required>
+            </form>
+            
+            <a href="" class="section-button secondary mx-auto my-3" id="agregar_gastos">
+                <i class="fa-solid fa-plus me-2"></i>
+                <p class="">Agregar un gasto</p>
+            </a>
+          </div>
+        </div>
+    </div>
+
+    <!--dialog deudas-->
+    <div class="modal" tabindex="-1" id="dialog_deudas">
+        <div class="modal-dialog add-entry-modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-purple text-center mx-auto fs-6 fw-semibold">Agregar deuda</h5>
+              <button type="button" class="ms-0 btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form class="mx-3">
+                <!--<a href="#deudas" class="no-border ui-btn ui-icon-delete ui-btn-icon-right ui-corner-all ui-shadow"></a>-->
+
+                <label class="form-label">Importe</label>
+                <input type="number" id="deuda" class="form-control" placeholder="Ingresar importe" required>
+                <div class="ui-field-contain">
+                    <label class="form-label">Detalle</label>
+                    <input type="text" id="categoria_deuda" class="form-control" placeholder="Ingresar detalle de deuda">
+                </div>
+                <label class="form-label">Fecha</label>
+                <input type="date" id="fecha_deuda" name="fecha_gasto" min="2023-01-01"
+                    max="2023-12-31" class="form-control" required>
+            </form>
+            
+            <a href="" class="section-button secondary mx-auto my-3" id="agregar_deudas">
+                <i class="fa-solid fa-plus me-2"></i>
+                <p class="">Agregar deuda</p>
+            </a>
+          </div>
+        </div>
+    </div>
+
+    <!--dialog ahorros-->
+    <div class="modal" tabindex="-1" id="dialog_ahorros">
+        <div class="modal-dialog add-entry-modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title text-purple text-center mx-auto fs-6 fw-semibold">Agregar ahorro</h5>
+              <button type="button" class="ms-0 btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form class="mx-3">
+                <!--<a href="#ahorros" class="no-border ui-btn ui-icon-delete ui-btn-icon-right ui-corner-all ui-shadow"></a>-->
+
+                <label class="form-label">Importe</label>
+                <input type="number" id="ahorro" class="form-control" placeholder="Ingresar importe" required>
+                <div class="ui-field-contain">
+                    <label class="form-label">Detalle</label>
+                    <input type="text" id="categoria_ahorro" class="form-control" placeholder="Ingresar detalle de ahorro">
+                </div>
+                <label class="form-label">Fecha</label>
+                <input type="date" id="fecha_ahorro" name="fecha_gasto" min="2023-01-01"
+                    max="2023-12-31" class="form-control" required>
+            </form>
+            
+            <a href="" class="section-button secondary mx-auto my-3" id="agregar_ahorros">
+                <i class="fa-solid fa-plus me-2"></i>
+                <p class="">Agregar ahorro</p>
+            </a>
+          </div>
+        </div>
+    </div>
+
+
+    <!--Javascript-->
+    <script src="jqm/jquery-1.12.3.min.js"></script>
+    <script src="jqm/bootstrap.min.js"></script>
+    <script src="jqm/jquery.mobile-1.4.5.js"></script>
+    <script src="https://kit.fontawesome.com/a1c6ec28f2.js" crossorigin="anonymous"></script>
+    <script>
+        //VAR
+        var balance = $("#balance");
+        var gastos = $(".boton_gastos");
+        var valor_balance = 0;
+        var gastos_totales = 0;
+        var deudas_totales = 0;
+        var ahorros_totales = 0;
+        var array_ingresos = [];
+        var array_gastos = [];
+        var array_deudas = [];
+        var array_ahorros = [];
+
+        //DIALOGS
+
+        $(".btn-close").click(function(){
+                $(".modal").modal('hide');
+        });
+
+        $(".agregarIngreso").click(function(){
+                $("#dialog_ingreso").modal('toggle');
+        });
+
+        $(".agregarGasto").click(function(){
+                $("#dialog_gastos").modal('toggle');
+        });
+
+        $(".agregarDeuda").click(function(){
+                $("#dialog_deudas").modal('toggle');
+        });
+
+        $(".agregarAhorro").click(function(){
+                $("#dialog_ahorros").modal('toggle');
+        });
+
+        //INGRESOS
+        $("#agregar_ingreso").click(function () {
+            var ingreso = $('#ingreso').val();
+            var categoria = $('#categoria_ingreso').val();
+            var fecha = $('#fecha_ingreso').val();
+            fecha_inversa = fecha.split("-");
+            fecha = fecha_inversa[2] + "/" + fecha_inversa[1] + "/" + fecha_inversa[0];
+
+            $('form').each(function () {
+                this.reset();
+            });
+
+            ingreso = parseFloat(ingreso);
+
+
+            if (ingreso > 0) {
+
+                array_ingresos.push(ingreso);
+                var ingreso_maximo = Math.max.apply(null, array_ingresos);
+                $("#ingreso_maximo").text("Tu mayor ingreso es de $" + ingreso_maximo);
+                valor_balance = valor_balance + ingreso;
+                balance.text(valor_balance);
+                localStorage.setItem("valor_balance", valor_balance);
+                localStorage.setItem("array_ingresos", array_ingresos);
+
+                var suma_ingreso = 0
+                for (var i = 0; i < array_ingresos.length; i++) {
+                    suma_ingreso += array_ingresos[i];
+                }
+
+                localStorage.setItem("ingresos_totales", suma_ingreso);
+                $("#ingresos_totales").text(suma_ingreso);
+                $("#ingresos_totales_home").text(suma_ingreso);
+
+                var nuevo_div = $('<div></div>')
+
+                var contenido = "<strong>" + categoria + "</strong><br>$<span>" + ingreso +
+                    "</span><br>Fecha:" + fecha +
+                    "</span>";
+                nuevo_div.html(contenido);
+
+                $("#array_ingresos").append(nuevo_div);
+                nuevo_div.attr("class", "bloque_dato");
+
+                guardaringresos();
+
+            } else {
+                alert("Valor no válido");
+            }
+            
+            
+            if (array_ingresos !== '' && array_ingresos !== null){
+                $("#ingresos-empty").addClass("d-none");
+            }else{
+                $("#ingresos-empty").removeClass("d-none");
+            }
+            
+
+        });
+
+        //GASTOS
+        $("#agregar_gastos").click(function () {
+            var gasto = $('#gasto').val();
+            var categoria = $('#categoria_gasto').val();
+            var fecha = $('#fecha_gasto').val();
+            fecha_inversa = fecha.split("-");
+            fecha = fecha_inversa[2] + "/" + fecha_inversa[1] + "/" + fecha_inversa[0];
+
+            $('form').each(function () {
+                this.reset();
+            });
+
+            gasto = parseFloat(gasto);
+            if (gasto > 0) {
+
+
+                function funcionGasto(){
+                    valor_balance = valor_balance - gasto;
+                    balance.text(valor_balance);
+
+                        localStorage.setItem("valor_balance", valor_balance);
+                        gastos_totales = gastos_totales + gasto;
+                        gastos_totales = Math.abs(gastos_totales);
+                        localStorage.setItem("gastos_totales", gastos_totales);
+                        $("#gastos_totales").text(gastos_totales);
+                        $("#gastos_totales_home").text(gastos_totales);
+        
+                        var nuevo_div = $('<div></div>');
+        
+                        var contenido = "<strong>" + categoria + "</strong><br>$" + gasto + "<br>Fecha:" + fecha +
+                            "</span>";
+        
+                        nuevo_div.html(contenido);
+        
+                        $("#array_gastos").append(nuevo_div);
+                        nuevo_div.attr("class", "bloque_dato");
+        
+                        guardargastos();
+                }
+
+
+                if ((valor_balance - gasto) < 0) {
+
+                    if(confirm("Con este gasto quedas en negativo 😱 ¿Queres realizarlo de todas maneras?")){
+                        funcionGasto();
+                    }else{
+                        alert("Gasto cancelado!")
+                    }
+
+                } else{
+                    funcionGasto();
+                };
+               
+            } else {
+                alert("Valor no válido")
+            };
+
+            if (array_gastos !== '' && array_gastos !== null){
+                $("#gastos-empty").addClass("d-none");
+            }else{
+                $("#gastos-empty").removeClass("d-none");
+            }
+
+        });
+
+        //DEUDAS
+        $("#agregar_deudas").click(function () {
+            var deuda = $('#deuda').val();
+            //localStorage.setItem("deuda", deuda);
+            var categoria = $('#categoria_deuda').val();
+            var fecha = $('#fecha_deuda').val();
+            fecha_inversa = fecha.split("-");
+            fecha = fecha_inversa[2] + "/" + fecha_inversa[1] + "/" + fecha_inversa[0];
+
+            $('form').each(function () {
+                this.reset();
+            });
+
+            deuda = parseFloat(deuda);
+
+            if (deuda > 0) {
+              
+                function funcionDeuda(){
+                    valor_balance = valor_balance - deuda;
+                    balance.text(valor_balance);
+                    localStorage.setItem("valor_balance", valor_balance);
+                    deudas_totales = deudas_totales + deuda;
+                    deudas_totales = Math.abs(deudas_totales);
+                    localStorage.setItem("deudas_totales", deudas_totales);
+                    $("#deudas_totales").text(deudas_totales);
+                    $("#deudas_totales_home").text(deudas_totales);
+        
+                    var nuevo_div = $('<div></div>')
+        
+                    var contenido = "<strong>" + categoria + "</strong><br>$" + deuda + "<br>Fecha:" + fecha +
+                        "</span>";
+                    nuevo_div.html(contenido);
+        
+                    $("#array_deudas").append(nuevo_div);
+                    nuevo_div.attr("class", "bloque_dato");
+        
+                    guardardeudas();
+                }
+
+
+
+                if ((valor_balance - gasto) < 0) {
+
+                    if(confirm("Con esta deuda quedas en negativo 😱 ¿Queres realizarla de todas maneras?")){
+                        funcionDeuda();
+                    }else{
+                        alert("Gasto cancelado!")
+                    }
+
+                    } else{
+                    funcionDeuda();
+                    };
+
+                
+
+            } else {
+                alert("Valor no válido")
+            };
+
+            if (array_deudas !== '' && array_deudas !== null){
+                $("#deudas-empty").removeClass("d-none");
+            }else{
+                $("#deudas-empty").addClass("d-none");
+            }
+
+
+        });
+
+        //AHORROS
+        $("#agregar_ahorros").click(function () {
+            var ahorro = $('#ahorro').val();
+            var categoria = $('#categoria_ahorro').val();
+            var fecha = $('#fecha_ahorro').val();
+            fecha_inversa = fecha.split("-");
+            fecha = fecha_inversa[2] + "/" + fecha_inversa[1] + "/" + fecha_inversa[0];
+
+            $('form').each(function () {
+                this.reset();
+            });
+
+            ahorro = parseFloat(ahorro);
+            if (ahorro > valor_balance) {
+                alert("No podes ahorrar lo que no tenés 😓");
+            };
+            if (ahorro < valor_balance) {
+                valor_balance = valor_balance - ahorro;
+                balance.text(valor_balance);
+                localStorage.setItem("valor_balance", valor_balance);
+                ahorros_totales = ahorros_totales + ahorro;
+                ahorros_totales = Math.abs(ahorros_totales);
+                localStorage.setItem("ahorros_totales", ahorros_totales);
+                $("#ahorros_totales").text(ahorros_totales);
+                $("#ahorros_totales_home").text(ahorros_totales);
+
+                var nuevo_div = $('<div></div>')
+
+                var contenido = "<strong>" + categoria + "</strong><br>$" + ahorro + "<br>Fecha:" + fecha +
+                    "</span>";
+                nuevo_div.html(contenido);
+
+                $("#array_ahorros").append(nuevo_div);
+                nuevo_div.attr("class", "bloque_dato");
+
+                guardarahorros();
+            };
+
+            if (ahorro < 0 || ahorro === 0) {
+                alert("Valor no válido");
+            };
+
+            if (array_ahorros !== '' && array_ahorros !== null){
+                $("#ahorros-empty").removeClass("d-none");
+            }else{
+                $("#ahorros-empty").addClass("d-none");
+            }
+
+        });
+
+        function guardaringresos() {
+
+            var ingresos_actuales = new Array();
+
+            $('#array_ingresos div').each(function () {
+                ingresos_actuales.push($(this).html());
+
+            });
+            
+            ingresosguardados = JSON.stringify(ingresos_actuales);
+            localStorage.setItem('ingresosguardados', ingresosguardados);
+        }
+
+        $('#array_ingresos').on('taphold', 'div', function () {
+            if (confirm("¿Queres eliminar este ingreso?")) {
+                var index = $(this).index();
+                console.log(index); 
+                var splice = array_ingresos.splice(index); 
+                $(this).remove(); 
+                $(this).addClass("eliminar"); 
+                ingresos_totales = ingresos_totales - $(this);
+            } else {
+                alert("no funca");
+            };
+
+        });
+
+
+        //RESETEAR DATOS
+        $('#eliminar_datos').on('click', function () {
+
+            var eliminarTodo = confirm(
+                "¿Estás seguro que querés elimimar todos los datos cargados? (Esta acción no se puede deshacer)"
+            );
+            if (eliminarTodo) {
+                window.localStorage.clear()
+                valor_balance = 0;
+                ingresos_totales = 0;
+                gastos_totales = 0;
+                deudas_totales = 0;
+                ahorros_totales = 0;
+                ingreso_maximo = 0;
+                var array_ingresos = [];
+                var array_gastos = [];
+                var array_deudas = [];
+                var array_ahorros = [];
+
+                balance.text("00");
+                $('#ingresos_totales_home').text("00");
+                $('#gastos_totales_home').text("00");
+                $('#deudas_totales_home').text("00");
+                $('#ahorros_totales_home').text("00");
+
+                $('#ingresos_totales').text("00");
+                $('#gastos_totales').text("00");
+                $('#deudas_totales').text("00");
+                $('#ahorros_totales').text("00");
+
+                $('#array_ingresos div').remove();
+                $('#array_gastos div').remove();
+                $('#array_deudas div').remove();
+                $('#array_ahorros div').remove();
+
+                location.reload();
+
+            }
+        });
+
+
+        //Eliminar Datos
+
+        $('#array_gastos').on('taphold', 'div', function () {
+            var eliminaruno = confirm("¿Querés eliminar este gasto?");
+
+            if (eliminaruno) {
+                $(this).addClass("eliminar");
+                $(this).remove();
+            }
+
+        });
+
+        $('#array_ahorros').on('taphold', 'div', function () {
+            var eliminaruno = confirm("¿Querés eliminar este ahorro?");
+
+            if (eliminaruno) {
+                $(this).addClass("eliminar");
+                $(this).remove();
+            }
+
+        });
+
+        $('#array_gastos').on('taphold', 'div', function () {
+            var eliminaruno = confirm("¿Querés eliminar este dato?");
+
+            if (eliminaruno) {
+                $(this).addClass("eliminar");
+                $(this).remove();
+            }
+
+        });
+
+
+
+        //Guardar Balance 
+
+        $(document).on('ready', function () {
+
+            var valor_balance_recuperado = localStorage.getItem("valor_balance");
+
+            if (valor_balance_recuperado != null && valor_balance_recuperado != undefined &&
+                valor_balance_recuperado != '') {
+                $("#balance").text(valor_balance_recuperado);
+            }
+
+        });
+
+        //Guardar ingresos
+
+        $(document).on('ready', function () {
+
+            var item_guardado = window.localStorage.getItem("ingresos");
+
+            if (item_guardado != "undefined" && item_guardado != null && item_guardado != "") {
+
+
+
+                var ingresos = JSON.parse(item_guardado);
+
+
+                $.each(ingresos, function (indice, valor) {
+
+                    var nuevo_div = $('<div></div>');
+
+                    nuevo_div.html(valor);
+
+                    $("#array_ingresos").append(nuevo_div);
+
+                    nuevo_div.attr("class", "bloque_dato");
+                });
+            }
+
+            var ingresos_totales_recuperado = localStorage.getItem("ingresos_totales");
+
+            if (ingresos_totales_recuperado != null && ingresos_totales_recuperado != undefined &&
+                ingresos_totales_recuperado != '') {
+                $("#ingresos_totales").text(ingresos_totales_recuperado);
+            }
+
+            var ingresos_totales_home_recuperado = localStorage.getItem("ingresos_totales");
+
+            if (ingresos_totales_home_recuperado != null && ingresos_totales_home_recuperado != undefined &&
+                ingresos_totales_home_recuperado != '') {
+                $("#ingresos_totales_home").text(ingresos_totales_home_recuperado);
+            }
+        });
+
+        //Guardar gastos
+
+        function guardargastos() {
+
+            var gastos_actuales = new Array();
+
+            $('#array_gastos div').each(function () {
+
+                gastos_actuales.push($(this).html());
+
+            });
+
+            var gastosguardados = JSON.stringify(gastos_actuales);
+
+            localStorage.setItem('gastos', gastosguardados);
+
+        }
+
+        $(document).on('ready', function () {
+
+
+
+            var item_guardado = window.localStorage.getItem("gastos");
+
+
+
+            if (item_guardado != "undefined" && item_guardado != null && item_guardado != "") {
+
+
+
+                var gastos = JSON.parse(item_guardado);
+
+
+                $.each(gastos, function (indice, valor) {
+
+                    var nuevo_div = $('<div></div>');
+
+                    nuevo_div.html(valor);
+
+                    $("#array_gastos").append(nuevo_div);
+
+                    nuevo_div.attr("class", "bloque_dato");
+                });
+            }
+
+            var gastos_totales_recuperado = localStorage.getItem("gastos_totales");
+
+            if (gastos_totales_recuperado != null && gastos_totales_recuperado != undefined &&
+                gastos_totales_recuperado != '') {
+                $("#gastos_totales").text(gastos_totales_recuperado);
+            }
+
+            var gastos_totales_home_recuperado = localStorage.getItem("gastos_totales");
+
+            if (gastos_totales_home_recuperado != null && gastos_totales_home_recuperado != undefined &&
+                gastos_totales_home_recuperado != '') {
+                $("#gastos_totales_home").text(gastos_totales_home_recuperado);
+            }
+        });
+
+        //Guardar deudas
+
+        function guardardeudas() {
+
+            var deudas_actuales = new Array();
+
+            $('#array_deudas div').each(function () {
+
+                deudas_actuales.push($(this).html());
+
+            });
+
+            var deudasguardados = JSON.stringify(deudas_actuales);
+
+            localStorage.setItem('deudas', deudasguardados);
+
+        }
+
+        $(document).on('ready', function () {
+
+
+
+            var item_guardado = window.localStorage.getItem("deudas");
+
+
+
+            if (item_guardado != "undefined" && item_guardado != null && item_guardado != "") {
+
+
+
+                var deudas = JSON.parse(item_guardado);
+
+
+                $.each(deudas, function (indice, valor) {
+
+                    var nuevo_div = $('<div></div>');
+
+                    nuevo_div.html(valor);
+
+                    $("#array_deudas").append(nuevo_div);
+
+                    nuevo_div.attr("class", "bloque_dato");
+                });
+            }
+
+            var deudas_totales_recuperado = localStorage.getItem("deudas_totales");
+
+            if (deudas_totales_recuperado != null && deudas_totales_recuperado != undefined &&
+                deudas_totales_recuperado != '') {
+                $("#deudas_totales").text(deudas_totales_recuperado);
+            }
+
+            var deudas_totales_home_recuperado = localStorage.getItem("deudas_totales");
+
+            if (deudas_totales_home_recuperado != null && deudas_totales_home_recuperado != undefined &&
+                deudas_totales_home_recuperado != '') {
+                $("#deudas_totales_home").text(deudas_totales_home_recuperado);
+            }
+        });
+
+        //Guardar ahorros
+
+        function guardarahorros() {
+
+            var ahorros_actuales = new Array();
+
+            $('#array_ahorros div').each(function () {
+
+                ahorros_actuales.push($(this).html());
+
+            });
+
+            var ahorrosguardados = JSON.stringify(ahorros_actuales);
+
+            localStorage.setItem('ahorros', ahorrosguardados);
+
+        }
+
+        $(document).on('ready', function () {
+
+
+
+            var item_guardado = window.localStorage.getItem("ahorros");
+
+
+
+            if (item_guardado != "undefined" && item_guardado != null && item_guardado != "") {
+
+
+
+                var ahorros = JSON.parse(item_guardado);
+
+
+                $.each(ahorros, function (indice, valor) {
+
+                    var nuevo_div = $('<div></div>');
+
+                    nuevo_div.html(valor);
+
+                    $("#array_ahorros").append(nuevo_div);
+
+                    nuevo_div.attr("class", "bloque_dato");
+                });
+            }
+
+            var ahorros_totales_recuperado = localStorage.getItem("ahorros_totales");
+
+            if (ahorros_totales_recuperado != null && ahorros_totales_recuperado != undefined &&
+                ahorros_totales_recuperado != '') {
+                $("#ahorros_totales").text(ahorros_totales_recuperado);
+            }
+
+            var ahorros_totales_home_recuperado = localStorage.getItem("ahorros_totales");
+
+            if (ahorros_totales_home_recuperado != null && ahorros_totales_home_recuperado != undefined &&
+                ahorros_totales_home_recuperado != '') {
+                $("#ahorros_totales_home").text(ahorros_totales_home_recuperado);
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Experiencia Rabanito | Webs</title>
+    <title>My Wallet</title>
     
     <!--Favicon-->
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
@@ -23,9 +23,10 @@
     <link rel="stylesheet" href="styles/my-wallet.css">
 </head>
 <body>
+    <div id="loader"></div>
     <section class="">
         <div class="figma-embed">
-            <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FuIYwzBD61UJZE8VMLp1XSG%2FMy-Wallet-%257C-Redesign%3Ftype%3Ddesign%26node-id%3D8-228%26t%3Da3uFN9OuAeUyYR6O-1%26scaling%3Dmin-zoom%26page-id%3D0%253A1%26mode%3Ddesign" allowfullscreen></iframe>
+            <iframe src="./My-Wallet/index.html" allowfullscreen></iframe>
         </div>
     </section>
     <!--JS-->
@@ -39,5 +40,9 @@
     </script>
     <!-- Mock iframe lib -->
     <script src="lib/mockframe-js/script.js"></script>
+    <script src="js/loader.js"></script>
+    <script>
+        newMockFrame();
+    </script>
 </body>
 </html>

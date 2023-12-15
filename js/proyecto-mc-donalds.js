@@ -1,4 +1,4 @@
-// Script password
+//Script password
 var password = 'hola mundo';
 var input = $('#password-input');
 
@@ -24,6 +24,7 @@ $('#password-input').keyup(function(e) {
     if (event.key === "Enter"){
         if(input.val().toLowerCase()==password){
             $('#password-container').addClass('d-none');
+			$("body").addClass('white');
             $('#mcdonalds-container').fadeIn(1500);
             $('#siguiente').removeClass('d-none');
         }else if(input.val()==""){
@@ -40,7 +41,7 @@ $("#password-input").on( "focus", function() {
 });
 
 $("#password-input").focusout(function(){
-    $( ".input-group").css("box-shadow", "0 0 0 0");
+   $( ".input-group").css("box-shadow", "0 0 0 0");
 });
 
 document.addEventListener('DOMContentLoaded', () => {

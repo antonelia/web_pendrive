@@ -12,7 +12,7 @@ iframe {
 .window {
     border-radius: 9px;
     background-color: white;
-    width: 100%;
+    width: 340px !important;
     min-height: 100%;
     box-shadow: 0 0px 1.2px rgba(0, 0, 0, 0.021), 0 0px 2.7px rgba(0, 0, 0, 0.031),
       0 0px 4.6px rgba(0, 0, 0, 0.038), 0 0px 6.9px rgba(0, 0, 0, 0.044),
@@ -53,4 +53,41 @@ iframe {
 
 .embed_documentation_footer--documentationFooter--pnTqy{
     display: none !important;
+}
+
+iframe{
+    width: 340px !important;
+    height: 703px !important;
+}
+
+body, .ui-mobile-viewport{
+    overflow: hidden;
+}
+.header{
+    display: none;
+}
+section{
+    display: flex;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+@media(max-width: 1366px){
+    .window{
+        transform: scale(0.8);
+        margin-top: -40px;
+    }
+}
+
+body{
+    background: url(./../assets/img/fondo-wallet.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#loader{
+    background: url(./../assets/img/splash-wallet.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
