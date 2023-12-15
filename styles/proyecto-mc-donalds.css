@@ -355,7 +355,7 @@ body {
 .section{
 	width: 100vw;
 }
-.btn{
+#password-container .btn{
 	color: white;
 	position: relative;
 	left: -54px;
@@ -373,7 +373,7 @@ body {
 #password-button i{
 	color: #808080
 }
-.btn:hover{
+#password-container .btn:hover{
 	background-color: rgba(255, 255, 255, 0.24);
 }
 .white{
