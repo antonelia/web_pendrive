@@ -382,6 +382,31 @@ body {
 .white:before{
 	background: var(--light-blue-color);
 }
+#seccion-mcdonalds h2{
+	font-family: Lato-Regular;
+}
+#seccion-mcdonalds span{
+	font-family: Lato-Bold;
+	font-size: xx-large;
+	color: var(--pink-color);
+}
 
+.shake {
+	animation: shake-animation 2s ease;
+	animation-iteration-count: 1;
+	border-color: red;
+}
+
+@keyframes shake-animation {
+	0%{
+		background-color:rgba(255, 0, 0, 0);
+	}
+	50%{
+		background-color:rgba(255, 0, 0, 0.473);
+	}
+	100%{
+		background-color:rgba(255, 0, 0, 0);
+	}
+ }
 
 

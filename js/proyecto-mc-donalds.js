@@ -15,7 +15,9 @@ $('#password-button').click(function(){
     }else if(input.val()==""){
         alert('Ingresa una contraseña');
     }else{
-        alert('Contraseña incorrecta');
+        setTimeout(function() {
+			$("#password-input").removeClass("shake");
+		}, 1500); 
     }
 });
 
@@ -30,7 +32,10 @@ $('#password-input').keyup(function(e) {
         }else if(input.val()==""){
                 alert('Ingresa una contraseña');
         }else{
-                alert('Contraseña incorrecta');
+                $("#password-input").addClass("shake");
+				setTimeout(function() {
+					$("#password-input").removeClass("shake");
+				}, 1500); 
         }
     }
 
