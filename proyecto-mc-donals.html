@@ -28,15 +28,7 @@
     <link rel="stylesheet" href="styles/proyecto-mc-donals.css">
 </head>
 <body>
-    <!-- Precarga -->
-    <div id="loader">
-        <div id="spinner" class="spinner">
-            <div class="spinWrap">
-                <p class="spinnerImage"></p>
-                <p class="loader"></p>
-            </div>
-        </div>
-    </div> <!-- end precarga -->
+    
     <!-- Password -->
     <section class="section" id="seccion-mcdonalds">
         <article class="text-center my-auto" id="password-container">
@@ -51,16 +43,21 @@
             </div>
         </article>
         <article class="container-fluid text-center my-auto" id="mcdonalds-container">
-            <video id="player" playsinline controls data-poster="./assets/img/videocaso-thumbnail.png">
+            <video id="player" playsinline controls data-poster="./assets/img/videocaso-thumbnail.jpg">
                 <source src="./assets/vid/videocaso_mcdonalds.mp4" type="video/mp4" />
             </video>
         </article>
     </section>
     <section class="section align-items-center d-none" id="siguiente">
         <article class="container text-center my-auto" id="mcdonalds-container">
-            <h2 class="wow fadeInDown">Ya queda poco!</h2>
-            <h3 class="wow fadeInDown" data-wow-delay="1s">Ahora veamos algunas de nuestras webs</h3>
-            <a class="wow fadeInDown btn btn-primary mt-3" id="navegar-manifiesto"  data-wow-delay="2s" role="button" href="webs.html">Avanzar</a>
+                <h2 class="wow fadeInDown">Ya queda poco!</h2>
+               <a class="wow fadeInDown btn btn-primary mt-3" id="navegar-manifiesto"  data-wow-delay="2s" role="button" href="webs.html">Avanzar</a>
+               <div class="home">
+                    <a href="#">
+                        <span>play</span>
+                    </a>
+                    <span class="ok">play</span>
+              </div>
         </article>
     </section>
 
@@ -69,6 +66,9 @@
     <script src="lib/bootstrap-5.2.3/dist/js/bootstrap.bundle.js"></script>
     <script src="lib/jQuery-3.6.4/jquery-3.6.4.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/three.js/r79/three.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js'></script>
+
 
     <script>
         new WOW().init();
