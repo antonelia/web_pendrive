@@ -8,149 +8,23 @@
     --cap: hsl(0, 0%, calc((40 + (var(--on) * 30)) * 1%));
     --filament: hsl(45, calc(var(--on) * 80%), calc((25 + (var(--on) * 75)) * 1%));
 }
-
-html, body {
-    height: 100%;
-    background: white;
-    /* background: #eee; */
-}
-
-body {
-    overflow: hidden;
-}
-
 #loader{
     background: var(--bg);
 }
 
-.scroll-animations-example {
-    > .scrollsection {
-        padding: 10vh 10vh 10vh 10vmax;
-        min-width: 650vh;
-    }
-
-    > .scrollsection > .item {
-        display: inline-block;
-        /* position: relative; */
-        margin: 0 20vh 0 3vh;
-    }
-
-    > .scrollsection > .item::before {
-        content: '';
-        display: inline-block;
-        vertical-align: middle;
-        height: 100%;
-    }
-
-    > .scrollsection > .item.-big {
-        height: 60vh;
-        width: 140vh;
-    }
-
-    > .scrollsection > .item.-big.-horizontal {
-        height: 60vh;
-        width: 80vh;
-    }
-
-    > .scrollsection > .item.-normal {
-        height: 60vh;
-        width: 45vh;
-        z-index: 1;
-    }
-
-    > .scrollsection > .item.-normal.-horizontal {
-        height: 45vh;
-        width: 60vh;
-    }
-
-    > .scrollsection > .item.-normal:nth-of-type(3n) {
-        bottom: 5vh;
-    }
-
-    > .scrollsection > .item.-normal:nth-of-type(4n) {
-        bottom: -5vh;
-    }
-
-    > .scrollsection > .item.-small {
-        height: 40vh;
-        width: 30vh;
-        z-index: 2;
-    }
-
-    > .scrollsection > .item.-small.-horizontal {
-        height: 30vh;
-        width: 40vh;
-    }
-
-    > .scrollsection > .item.-small:nth-of-type(3n) {
-        bottom: 13vh;
-    }
-
-    > .scrollsection > .item.-small:nth-of-type(4n) {
-        bottom: -13vh;
-    }
-
-    > .scrollsection > .item > .image {
-        max-height: 100%;
-        /*position: absolute;*/
-        top: 0;
-        left: 0;
-        pointer-events: none;
-        transform: translateX(0) translateY(0) scale(1);
-    }
-
-    > .scrollsection > .item:nth-of-type(4n) > .image {
-        transform: translateX(-30vh) translateY(-30vh) scale(.8);
-        transition-delay: 0;
-    }
-
-    > .scrollsection > .item:nth-of-type(4n - 1) > .image {
-        transform: translateX(30vh) translateY(30vh) scale(.8);
-        transition-delay: .05s;
-    }
-
-    > .scrollsection > .item:nth-of-type(4n - 2) > .image {
-        transform: translateX(-30vh) translateY(30vh) scale(.8);
-        transition-delay: .1s;
-    }
-
-    > .scrollsection > .item:nth-of-type(4n - 3) > .image {
-        transform: translateX(-30vh) translateY(-30vh) scale(.8);
-        transition-delay: .15s;
-    }
-
-    > .scrollsection > .item > .image.-active {
-        transform: translateX(0) translateY(0) scale(1);
-        pointer-events: auto;
-    }
-
-    > .scrollsection > .item > .image.-clicked {
-        transform: translateX(0) translateY(0) scale(5);
-        opacity: 0;
-        pointer-events: auto;
-    }
-
-    > .scrollsection > .item > .image.-active:hover {
-        /*position: absolute;*/
-        top: 0;
-        left: 0;
-        opacity: 1;
-        cursor: pointer;
-    }
-}
 .indar img,
 .sonrisanas img,
 .ventanas img,
 .rompecabezas img{
     z-index: 100;
 }
+
 .rompecabezas{
-    position: absolute;
-    top: -47vh;
+    text-align: center;
 }
+
 .rompecabezas h2,
 .rompecabezas p{
-    width: 786px;
     text-align: center;
 }
 .rompecabezas h2{
@@ -161,9 +35,6 @@ body {
 }
 
 .mensaje{
-    position: absolute;
-    top: -35vh;
-    left: 450vh;
     text-align: center;
 }
 
@@ -177,147 +48,6 @@ body {
 .mensaje img{
     max-width: 180px;
     margin: 3rem 0;
-}
-
-/* Miscelaneas fondo */
-.miscelanea-onda-violeta{
-    position: absolute;
-    left: 130vh;
-    top: -28vh;
-}
-.purple-waves{
-    width: 250px;
-    height: 104px;
-}
-
-.miscelanea-puntos-amarillos{
-    position: absolute;
-    left: 110vh;
-    z-index: -10000;
-}
-
-.miscelanea-puntos-amarillos .dots-bg {
-    height: 50vh;
-    width: 50vh;
-    position: absolute;
-    background-image: radial-gradient(rgb(233, 223, 103) 3px, transparent 0);
-    background-size: 30px 30px;
-}
-
-.miscelanea-onda-amarilla{
-    position: absolute;
-    top: -50vh;
-    left: 350vh;
-    z-index: -10000;
-}
-.yellow-waves{
-    transform: rotate(90deg);
-}
-.miscelanea-onda-celeste{
-    position: absolute;
-    left: 413vh;
-    top: 38vh;
-}
-
-.miscelanea-cubo{
-    position: absolute;
-    left: 455vh;
-    top: -15vh;
-}
-
-.miscelanea-grilla-celeste{
-    position: absolute;
-    top: -60vh;
-    left: 5vh;
-    z-index: -10000;
-}
-
-.lightblue-grid{
-    background: url("../assets/img/grid-celeste.png") no-repeat;
-    background-size: contain;
-    height: 40vh;
-    width: 60vh;
-    position: absolute;
-}
-
-.miscelanea-cruz-violeta{
-    position: absolute;
-    top: -11vh;
-    left: 28vh;
-}
-
-.purple-cross-90{
-    background: url("../assets/img/cross_90.png") no-repeat;
-    background-size: contain;
-    height: 70px;
-    width: 70px;
-}
-
-.pink-circle{
-    width: 30px;
-    height: 30px;
-    background-color: var(--pink-color);
-    border-radius: 50%;
-}
-.miscelanea-circulo-rosa{
-    position: absolute;
-    bottom: 5vh;
-    left: 55vh;
-}
-
-.yellow-grid{
-    background: url("../assets/img/grid-amarillo.png") no-repeat;
-    background-size: contain;
-    height: 40vh;
-    width: 60vh;
-}
-.miscelanea-grilla-amarilla{
-    z-index: -10000;
-    position: absolute;
-    top: -15vh;
-    left: 180vh;
-}
-.miscelanea-semicirculo-violeta{
-    position: absolute;
-    top: 71vh;
-    left: 262vh;
-    z-index: -10000;
-}
-.purple-semicircle{
-    background: url("../assets/img/semicircle_outline_purple.png") no-repeat;
-    background-size: contain;
-    height: 120px;
-    width: 240px;
-}
-.miscelanea-triangulo-celeste-fill{
-    position: absolute;
-    top: 5vh;
-    left: 210vh;
-}
-
-.lightblue-triangle-fill{
-    background: url("../assets/img/triangle-lightblue-fill.svg") no-repeat;
-    background-size: contain;
-    height: 80px;
-    width: 80px;
-}
-.miscelanea-cruz-amarilla{
-    position: absolute;
-    top: 5vh;
-    left: 215vh;
-}
-
-.yellow-cross{
-    background: url("../assets/img/yellow-cross.svg") no-repeat;
-    background-size: contain;
-    height: 80px;
-    width: 80px;
-}
-
-.miscelanea-cubo-3d{
-    position: absolute;
-    top: 45vh;
-    left: 315vh;
 }
 
 .modal-body{
@@ -505,4 +235,47 @@ iframe {
     to {
       left: 100vw;
     }
+}
+
+.img-fluid{
+    max-width: 50%;
+    cursor: pointer;
+}
+#bg1{
+    background: url(../assets/img/waves-violetas.png) no-repeat;
+    background-size: 50%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    /* backdrop-filter: blur(1px); */
+
+}
+#bg2{
+    background: url(../assets/img/waves-amarillas.png) no-repeat 0 0;
+    background-size: 50%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    backdrop-filter: blur(2px);
+}
+#bg3{
+    background: url(../assets/img/cube-01.svg) no-repeat 0 0;
+    background-size: 50%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -3;
+    filter: blur(0.5);
+}
+.purple-wave{
+    background: url(../assets/img/waves-violetas.png) no-repeat;
+    width: 150px;
+    height: 80px;
+    /* position: relative; */
+    left: -100px;
 }

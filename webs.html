@@ -16,7 +16,7 @@
     <!-- Animaciones lib - for wow library -->
     <link rel="stylesheet" href="lib/animate.css/animate.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="./lib/skrollr/fixed-positioning.css">
     
     <!-- Custom styles -->
     <link rel="stylesheet" href="styles/styles.css">
@@ -87,72 +87,33 @@
     <div class="slide l--100" id="slide-2"></div>
     <div class="slide l--100" id="slide-3"></div>
     <div class="slide l--100" id="slide-4"></div>
+    <!-- <div id="bg1" data-0="background-position:0px 0px;" data-end="background-position:0px -1000px;" class="skrollable skrollable-between"></div>
+    <div id="bg2" data-0="background-position:0px 0px;" data-end="background-position:0px -800px;" class="skrollable skrollable-between"></div>
+    <div id="bg3" data-0="background-position:0px 0px;" data-end="background-position:0px -400px;" class="skrollable skrollable-between"></div> -->
 
-    <link rel='stylesheet' href='https://unpkg.com/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.css' />
-    <script src='https://unpkg.com/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.js'></script>
-
-    <div class='scroll-animations-example' data-scroll-container>
-        <div class='scrollsection' data-scroll-section>
-            <div class='item -big indar' data-scroll data-scroll-speed="2" >
-                <img class='image' src='assets/img/web-indar.png' id="web-indar">
-            </div>
-            <div class='item -big sonrisanas' data-scroll data-scroll-speed="1">
-                <img class='image' src='assets/img/web-sonrisanas.png' id="web-sonrisanas">
-            </div>
-            <div class='item -big ventanas' data-scroll data-scroll-speed="4">
-                <img class='image' src='assets/img/web-renueva-tus-ventanas.png' id="web-ventanas">
-            </div>
-            <div class='item -big rompecabezas' data-scroll data-scroll-speed="2">
-                <h2>Que bueno, sos curiosx como nosotras</h2>
-                <p>No te estamos vigilando pero sabemos que visitaste nuestras webs, asi que como premio desbloqueamos<br>un juego para que te sigas divirtiendo.</p>
-                <img class='image' src='assets/img/web-rompecabezas.png'  id="puzzle-image">
-            </div>
-            <div class='item -big mensaje' data-scroll data-scroll-speed="2" id="mensaje">
-                <h2>Llegaste hasta acá sin navegar todas las webs?</h2>
-                <img src="./assets/img/alert.gif" alt="">
-                <p>Bueno, ya dijimos que la curiosidad mató al gato<br>
-                    Pero por suerte sos humanx así que volve cuando las hayas probado</p>
-            </div>
-            <!-- Miscelaneas -->
-            <div class='item -normal -horizontal miscelanea-puntos-amarillos' data-scroll data-scroll-speed="1">
-                <div class="dots-bg"></div>
-            </div>
-            <div class='item -small -horizontal miscelanea-onda-violeta' data-scroll data-scroll-speed="3">
-                <div class="purple-waves"></div>
-            </div>
-            <div class='item -big miscelanea-onda-amarilla' data-scroll data-scroll-speed="1">
-                <div class="yellow-waves"></div>
-            </div>
-            <div class='item -normal -horizontal miscelanea-cubo' data-scroll data-scroll-speed="2">
-                <div class="cubo-3d"></div>
-            </div>
-            <div class='item -normal -horizontal miscelanea-onda-celeste' data-scroll data-scroll-speed="1">
-                <div class="lightblue-waves"></div>
-            </div>
-            <div class='item -big miscelanea-grilla-celeste' data-scroll data-scroll-speed="4">
-                <div class="lightblue-grid"></div>
-            </div>
-            <div class='item -small miscelanea-cruz-violeta' data-scroll data-scroll-speed="3">
-                <div class="purple-cross-90"></div>
-            </div>
-            <div class='item -horizontal miscelanea-circulo-rosa' data-scroll data-scroll-speed="2">
-                <div class="pink-circle"></div>
-            </div>
-            <div class='item -horizontal miscelanea-grilla-amarilla' data-scroll data-scroll-speed="4">
-                <div class="yellow-grid"></div>
-            </div>
-            <div class='item miscelanea-semicirculo-violeta' data-scroll data-scroll-speed="2">
-                <div class="purple-semicircle"></div>
-            </div>
-            <div class='item miscelanea-triangulo-celeste-fill' data-scroll data-scroll-speed="1">
-                <div class="lightblue-triangle-fill"></div>
-            </div>
-            <div class='item miscelanea-cruz-amarilla' data-scroll data-scroll-speed="3">
-                <div class="yellow-cross"></div>
-            </div>
-            <div class='item miscelanea-cubo-3d' data-scroll data-scroll-speed="1">
-                <div class="cubo-3d"></div>
-            </div>
+    <div class="container-fluid" id="skrollr-body">
+        <div>
+          <div class='section indar d-flex align-items-center justify-content-center'>
+            <!-- <div class="purple-wave skrollable skrollable-between" data-0="bottom: 50%" data-100="bottom: 70%"></div> -->
+            <img class='image img-fluid' src='assets/img/web-indar.png' id="web-indar">
+          </div>
+          <div class='section sonrisanas d-flex align-items-center justify-content-center'>
+            <img class='image img-fluid' src='assets/img/web-sonrisanas.png' id="web-sonrisanas">
+          </div>  
+          <div class='section ventanas  d-flex align-items-center justify-content-center'>
+            <img class='image img-fluid' src='assets/img/web-renueva-tus-ventanas.png' id="web-ventanas">
+          </div>
+          <div class='section rompecabezas'>
+            <h2>Que bueno, sos curiosx como nosotras</h2>
+            <p>No te estamos vigilando pero sabemos que visitaste nuestras webs, asi que como premio desbloqueamos<br>un juego para que te sigas divirtiendo.</p>
+            <img class='img-fluid' src='assets/img/web-rompecabezas.png'  id="puzzle-image">
+          </div>
+          <div class='section mensaje 'id="mensaje">
+            <h2>Llegaste hasta acá sin navegar todas las webs?</h2>
+            <img src="./assets/img/alert.gif" alt="">
+            <p>Bueno, ya dijimos que la curiosidad mató al gato<br>
+            Pero por suerte sos humanx así que volve cuando las hayas probado</p>
+          </div>  
         </div>
     </div>
 
@@ -200,6 +161,15 @@
     <!-- Inicializar wow library -->
     <script>
         new WOW().init();
+    </script>
+
+    <script src="./lib/skrollr/skrollr.min.js"></script>
+    <!-- <script type="text/javascript">
+      var s = skrollr.init();
+      </script> -->
+      <script>
+        var mobile= 768;
+        var plugin=skrollr.init({forceHeight:false,render:function(data){console.log(data.curTop);}});$(window).resize(function(){redimensionar();});redimensionar();function redimensionar(){var anchoVentana=$(window).width();if(anchoVentana<=mobile-17||screen.width<=mobile){skrollr.init().destroy();}else{var plugin=skrollr.init({forceHeight: false,render: function(data) {console.log(data.curTop);}});}}
     </script>
 
     <!-- Lamparita -->
