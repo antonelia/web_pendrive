@@ -62,6 +62,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+$('#navegar-webs').click(function(){
+  window.location.href="webs.html"
+});
+
 // button
 
 

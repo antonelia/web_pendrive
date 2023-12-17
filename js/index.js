@@ -32,7 +32,7 @@ $(window).on('load', function(){
   setTimeout(function() {
     $('#bajar').fadeIn();
     $("html").css("overflow", "auto");
-}, 11000);
+}, 14000);
 });
 
 $(document).ready(function(){

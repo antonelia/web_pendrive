@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Experiencia Rabanito</title>
+    <title>Experiencia Rabanito | Campañas publicitarias</title>
     
     <!--Favicon-->
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
@@ -30,6 +30,7 @@
     <link rel="stylesheet" href="styles/proyecto-mc-donalds.css">
 </head>
 <body>
+    <div id="loader"></div>
     <section class="section" id="seccion-mcdonalds">
         <article class="text-center my-auto" id="password-container">
           <h2 class="mb-3 wow fadeInDown">Tomate el tiempo necesario para ingresar la clave que viste antes</h2>
@@ -45,11 +46,9 @@
     </section>
     <section class="section align-items-center d-none" id="siguiente">
         <article class="container text-center my-auto" id="mcdonalds-container">
-                <h2 class="wow fadeInDown">Ya queda poco!</h2>
-               <a class="wow fadeInDown btn btn-primary mt-3" id="navegar-manifiesto"  data-wow-delay="2s" role="button" href="webs.html">Avanzar</a>
                <div class="home">
-                    <a href="#">
-                        <span>play</span>
+                    <a href="webs.html">
+                        <span id="navegar-webs" >play</span>
                     </a>
                     <span class="ok">play</span>
               </div>
@@ -72,7 +71,7 @@
     <!-- Plyr lib -->
 	<script src="https://cdn.plyr.io/3.7.8/plyr.js"></script>
 
-    <script src="js/proyecto-mc-donaldSs.js"></script>
+    <script src="js/proyecto-mc-donalds.js"></script>
     <script src="js/loader.js"></script>
 </body>
 </html>
