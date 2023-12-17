@@ -24,9 +24,9 @@
 </head>
 
 <body>
-  <div id="loader">
+  <!--<div id="loader">
         
-  </div>
+  </div>-->
 
   <div class="container">
     <div id="intro">
@@ -53,7 +53,7 @@
         </div>
       </section>
 
-  </div>
+  </div> 
 
 
     <section id="section1" class="d-none">
@@ -61,6 +61,11 @@
 
       <!--Pregunta 1-->
       <div id="pregunta1" class="">
+        <div class="purple-waves wow fadeInUp" data-wow-delay="1.5s"></div>
+        <div class="lightblue-waves wow fadeInUp" data-wow-delay="1.5s"></div>
+        <div class="cubo-3d wow fadeInUp" data-wow-delay="1.5s"></div>
+        <div class="yellow-waves wow fadeInUp" data-wow-delay="1.5s"></div>
+        
         <h3 class="mb-5 wow fadeInUp bold" data-wow-delay="0.5s">¿Con qué color te sentis mas identificado?</h3>
         <div class="row" style="justify-content: center;">
 
@@ -79,6 +84,10 @@
 
        <!--Pregunta 2-->
        <div id="pregunta2" class="d-none">
+        <div class="purple-waves wow fadeInUp" data-wow-delay="1.4s"></div>
+        <div class="lightblue-waves wow fadeInUp" data-wow-delay="1.4s"></div>
+        <div class="cubo-3d wow fadeInUp" data-wow-delay="1.4s"></div>
+        <div class="yellow-waves wow fadeInUp" data-wow-delay="1.4s"></div>
         
         <h3 class="mb-5 wow fadeInUp bold" data-wow-delay="0.5s">¿Qué figura te llama más la atención?</h3>
         <div class="row" style="justify-content: center;">
@@ -105,6 +114,10 @@
 
        <!--Pregunta 3-->
        <div id="pregunta3" class="d-none">
+        <div class="purple-waves wow fadeInUp" data-wow-delay="1.2s"></div>
+        <div class="lightblue-waves wow fadeInUp" data-wow-delay="1.2s"></div>
+        <div class="cubo-3d wow fadeInUp" data-wow-delay="1.2s"></div>
+        <div class="yellow-waves wow fadeInUp" data-wow-delay="1.2s"></div>
         <h3 class="mb-5 wow fadeInUp bold" data-wow-delay="0.5s">¿Qué momento del dia preferis?</h3>
         <div class="row" style="justify-content: center;">
 
@@ -125,12 +138,30 @@
     </section>
 
     <section id="section2" class="d-none cierreIA">
-      <div>
+      <div id="spinner">
         <h3 class="mb-5 wow fadeInUp bold" data-wow-delay="0.5s">Estamos preparando tu plano</h3>
-        <div id="spinner" class="spinner-border text-primary" role="status">
-          <span class="visually-hidden">Loading...</span>
+        <div class="loader-container wow fadeInUp" data-wow-delay="1s">
+          <div class="cube-loader">
+            <div class="cube-face cube-face-front"></div>
+            <div class="cube-face cube-face-back"></div>
+            <div class="cube-face cube-face-left"></div>
+            <div class="cube-face cube-face-right"></div>
+            <div class="cube-face cube-face-bottom"></div>
+            <div class="cube-face cube-face-top"></div>
+          </div>
         </div>
-        <img class="img" src="" id="img" />
+      </div>
+      <div id="img" class="d-none">
+        <div class="purple-waves wow fadeInUp" data-wow-delay="1.2s"></div>
+        <div class="lightblue-waves wow fadeInUp" data-wow-delay="1.2s"></div>
+        <div class="cubo-3d wow fadeInUp" data-wow-delay="1.2s"></div>
+        <div class="yellow-waves wow fadeInUp" data-wow-delay="1.2s"></div>
+        <h3 class="mb-5 wow fadeInUp bold" data-wow-delay="0.5s">Estamos preparando tu plano</h3>
+        <div class="reveal-box enter animate wow fadeInUp "  data-wow-delay="1s">
+          <div class="reveal-box__inner">
+            <img class="reveal-box__image" src="assets/img/img-EB5PmzZ6lkcwJDYeW24NNKN3.png" >
+          </div>
+        </div>
       </div>
     </section>
 

@@ -76,10 +76,32 @@ function nextStep4(selectedTimeOfDay) {
   generateImage();
 }
 
-function generateImage() {
-  // Lógica para generar la imagen
-  const img = document.querySelector("#img");
+// ...
 
+// quiz logic...
+// quiz logic...
+function generateImage() {
+  const img = document.querySelector(".reveal-box__image");
+
+  // Show the spinner while the image is loading
+  $("#spinner").removeClass("d-none");
+
+  // Load event to handle image loading completion
+  img.addEventListener("load", function () {
+    // Hide the spinner once the image is loaded
+    $("#spinner").addClass("d-none");
+
+    // Remove the 'd-none' class to make the image visible
+    $("#img").removeClass("d-none");
+
+    // Add the reveal animation to the image only when the URL is loaded
+    img.classList.add('reveal-box__image-animation');
+
+    // Remove the event listener to prevent multiple calls
+    img.removeEventListener("load", arguments.callee);
+  });
+
+  // Fetch image data and set the image source
   fetch("https://api.openai.com/v1/images/generations", {
     method: "POST",
     body: JSON.stringify({
@@ -90,25 +112,25 @@ function generateImage() {
     }),
     headers: {
       "Content-Type": "application/json",
-      Authorization: "apikey",
+      Authorization: "KEY ACA",
     },
   })
     .then((res) => res.json())
     .then((data) => {
       console.log(data);
 
-      // Ocultar el spinner una vez que la imagen se ha cargado
-      $("#spinner").addClass("d-none");
-
+      // Set the image source
       img.src = data.data[0].url;
     })
     .catch((error) => {
       console.error("Error generating image:", error);
 
-      // En caso de error, también ocultar el spinner
+      // Hide the spinner in case of an error
       $("#spinner").addClass("d-none");
     });
 }
+
+// ...
 
 // Eventos clic para las opciones "day" y "night"
 document.querySelector("#dia").addEventListener("click", function () {
@@ -117,4 +139,21 @@ document.querySelector("#dia").addEventListener("click", function () {
 
 document.querySelector("#noche").addEventListener("click", function () {
   nextStep4("night");
+});
+
+//img
+document.addEventListener('DOMContentLoaded', function () {
+  let revealBox = document.querySelector('.reveal-box');
+
+  // Add a 2-second delay before triggering the initial animation
+  setTimeout(function () {
+    // Add the 'enter' class to trigger the initial animation
+    revealBox.classList.add('enter');
+  }, 2000);
+
+  // Add an event listener for the animation end event
+  revealBox.addEventListener('animationend', function () {
+    // Remove the 'enter' class to prevent further animations
+    revealBox.classList.remove('leave');
+  });
 });

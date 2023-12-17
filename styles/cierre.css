@@ -158,3 +158,226 @@ section{
   }
 }
 
+/*Spinner*/
+
+.loader-container {
+  z-index: 10;
+  position: relative;
+  transition: 0.3s;
+  top: 10vh;
+  height: 150px;
+  width: 150px;
+}
+
+.cube-loader {
+  width: 80px;
+  height: 80px;
+  line-height: 80px;
+  text-align: center;
+  font-size: 50px;
+  transform-style: preserve-3d;
+  transition: transform 0.5s 0.1s;
+  perspective: 9999px;
+  color: #333;
+  margin: -40px 0 0 -40px;
+  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  margin-left: -37px;
+  /*top: 50%;*/
+  z-index: 11;
+  animation: rotate 4s infinite forwards;
+  margin-top: -50px;
+
+  .cube-face {
+    box-shadow: inset 0 0 2px 1px #fff, 0 0 1px 1px #fff;
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    background-color: #121212e0;
+    color: #fff;
+  }
+}
+
+.cube-loader .cube-face-front {
+  transform: translate3d(0, 0, 40px);
+  background-color: var(--light-blue-color);
+}
+
+.cube-loader .cube-face-back {
+  transform: rotateY(180deg) translate3d(0, 0, 40px);
+  background-color: var(--dark-blue-color);
+}
+
+.cube-loader .cube-face-left {
+  transform: rotateY(-90deg) translate3d(0, 0, 40px);
+  background-color: var(--dark-text-color);
+}
+
+.cube-loader .cube-face-right {
+  transform: rotateY(90deg) translate3d(0, 0, 40px);
+  background-color: var(--pink-color);
+}
+
+.cube-loader .cube-face-top {
+  transform: rotateX(90deg) translate3d(0, 0, 40px);
+  background-color: var(--purple-color);
+}
+
+.cube-loader .cube-face-bottom {
+  transform: rotateX(-90deg) translate3d(0, 0, 40px);
+  background-color: var(--yellow-color);
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateY(0deg) rotateZ(0deg);
+  }
+
+  20% {
+    transform: rotateY(90deg) rotateZ(0deg);
+  }
+
+  40% {
+    transform: rotateX(45deg) rotateZ(45deg);
+  }
+
+  60% {
+    transform: rotateX(90deg) rotateY(180deg) rotateX(90deg);
+  }
+
+  80% {
+    transform: rotateX(310deg) rotateZ(230deg);
+  }
+
+  100% {
+    transform: rotateX(360deg) rotateZ(360deg);
+  }
+}
+
+/*img*/
+.reveal-box {
+  position: relative;
+  height: calc(100vh - 48px);
+  max-height: 700px;
+  /* width: calc((100vh - 48px) * 0.66); */
+  max-width: 1400px;
+  overflow: hidden;
+}
+
+.reveal-box__inner {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.reveal-box__inner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../assets/img/fondo-violeta-seccion-3d.png);
+  border-radius: 20px;
+}
+
+.reveal-box__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.enter .reveal-box__inner {
+  animation: 1.5s cubic-bezier(0.76, 0, 0.24, 1) 1s both paused slide-in-right;
+}
+.enter .reveal-box__inner::after {
+  animation: 1.5s cubic-bezier(0.76, 0, 0.24, 1) 1.6s both paused slide-out-right;
+}
+.enter .reveal-box__image {
+  animation: 1.5s cubic-bezier(0.76, 0, 0.24, 1) 1.3s both paused scale-in-down;
+}
+
+.leave .reveal-box__inner {
+  animation: 1.5s cubic-bezier(0.76, 0, 0.24, 1) 1s both paused slide-out-right;
+}
+.leave .reveal-box__inner::after {
+  animation: 1.5s cubic-bezier(0.76, 0, 0.24, 1) 1s both paused slide-in-left;
+}
+.leave .reveal-box__image {
+  animation: 1.5s cubic-bezier(0.76, 0, 0.24, 1) 1s both paused slide-out-left;
+}
+
+.animate .reveal-box__inner {
+  animation-play-state: running;
+}
+.animate .reveal-box__inner::after {
+  animation-play-state: running;
+}
+.animate .reveal-box__image {
+  animation-play-state: running;
+}
+
+@keyframes slide-in-right {
+  0% {
+    transform: translate3D(-100%, 0, 0);
+  }
+  100% {
+    transform: translate3D(0, 0, 0);
+  }
+}
+@keyframes slide-out-right {
+  0% {
+    transform: translate3D(0, 0, 0);
+  }
+  100% {
+    transform: translate3D(100%, 0, 0);
+  }
+}
+@keyframes slide-in-left {
+  0% {
+    transform: translate3D(100%, 0, 0);
+  }
+  100% {
+    transform: translate3D(0, 0, 0);
+  }
+}
+@keyframes slide-out-left {
+  0% {
+    transform: translate3D(0, 0, 0);
+  }
+  100% {
+    transform: translate3D(-100%, 0, 0);
+  }
+}
+@keyframes scale-in-down {
+  0% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Miscelaneas */
+.purple-waves{
+  top: 10vh;
+  right: 0px;
+  width: 250px;
+}
+
+.lightblue-waves{
+  top: 80vh;
+  right: 0px;
+}
+
+.yellow-waves{
+  top: 5vh;
+  left: -10px;
+  width: 200px;
+}
+
+.cubo-3d{
+  top: 75vh;
+  left: -6px;
+}
+
