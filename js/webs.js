@@ -4,10 +4,10 @@ var webSonrisanas = false;
 var webPuzzle = false;
 
 $(window).on('load', function(){
-$("#intro").hide();
+// $("#intro").hide();
 
     $(".lamparita").hide();
-    $(".scroll-animations-example").hide();
+    $(".container").hide();
 
     $(".rompecabezas").hide();
     $('#loader').fadeOut();
@@ -170,7 +170,7 @@ const {
             setTimeout(function() {
                 $("#slide-4").addClass("slideinright");
                 $('#intro').hide();
-                $(".scroll-animations-example").show();
+                $(".container").show();
             }, 2000);
 
             // setTimeout(function() {
