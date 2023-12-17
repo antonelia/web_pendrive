@@ -2,6 +2,7 @@ $("#qr-reel").hide();
 
 $(document).ready(function() {
   $("#intro-modal").modal('show');
+  $("#qr-reel").hide();
 
   setTimeout(function () {
     $("#intro-modal").fadeOut();
