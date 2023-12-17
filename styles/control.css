@@ -1,0 +1,30 @@
+
+body{
+    background: url(../assets/img/fondo-wallet.jpg);
+    background-size: contain;
+    /* background-position: center; */
+}
+.boton-activo{
+    background: var(--pink-color);
+    color: white;
+    border: solid 2px var(--pink-color);
+}
+
+.boton-inactivo{
+    background: transparent;
+    border: solid 2px var(--pink-color);
+    color: var(--pink-color);
+}
+
+.btn{
+    font-family: Lato-bold;
+}
+
+.btn:hover{
+    background: #fd7c94;
+    color: white;
+}
+
+#onButton{
+    margin-right: 1rem;
+}
