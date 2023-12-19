@@ -1,6 +1,7 @@
 window.onload = init();
  
 function init() {
+    $('#loader').fadeOut();
     
     $(".mensaje-completado").hide();
     // funcion que devuelve n numeros aleatorios sin repetirse
@@ -20,6 +21,7 @@ function init() {
     });
  
     puzzle();
+    
 }
  
 function puzzle() {
@@ -123,13 +125,32 @@ function puzzle() {
                 $('.mensaje-completado').fadeIn();
                 $("#img-carta").addClass("spin");
                 $(".reverso-carta").addClass("spin-reverse");
-            }, 500);
+            }, 1000);
             setTimeout(function() {
-                window.location.href="./motion.html";
-            }, 3500);
-            
-            
-            
+                $(".col-transition-1").removeClass("top100");
+                $(".col-transition-1").addClass("col-transition");
+                $(".col-transition-1").addClass("top0");
+                
+            }, 3700);
+            setTimeout(function() {
+                $(".col-transition-2").removeClass("top100");
+                $(".col-transition-2").addClass("col-transition");
+                $(".col-transition-2").addClass("top0");
+            }, 3900);
+            setTimeout(function() {
+                $(".col-transition-3").removeClass("top100");
+                $(".col-transition-3").addClass("col-transition");
+                $(".col-transition-3").addClass("top0");
+            }, 4100);
+            setTimeout(function() {
+                $(".col-transition-4").removeClass("top100");
+                $(".col-transition-4").addClass("col-transition");
+                $(".col-transition-4").addClass("top0");
+            }, 4300);
+            setTimeout(function() {
+                window.location.href ="motion.html";
+            }, 4400);
+
         }
     }
 }

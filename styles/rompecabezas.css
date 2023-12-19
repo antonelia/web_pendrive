@@ -227,3 +227,49 @@ body{
         width: 50%;
     }
 }
+
+.transition{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    display: flex;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .transition div{
+    height: 100%;
+    width: 25%;
+    position: relative;
+  }
+  .col-transition-1{
+    background: var(--pink-color);
+  }
+  .col-transition-2{
+    background: var(--light-blue-color);
+  }
+  .col-transition-3{
+    background: var(--purple-color);
+  }
+  .col-transition-4{
+    background: var(--yellow-color);
+  }
+  .top0{
+    top: 0;
+  }
+  .top100{
+    top: 100vh;
+  }
+  .col-transition{
+    animation: col-transition 1s ease-in-out;
+  }
+  @keyframes col-transition {
+    from{
+      top: 100vh;
+    }
+    to{
+      top: 0vh;
+    }
+    
+  }

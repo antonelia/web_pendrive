@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const player = new Plyr('#player', {
     title: 'Example Title',
     fullscreen: {
-      enabled: true
+      enabled: false
     }
   });
 

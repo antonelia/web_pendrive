@@ -400,3 +400,10 @@ span{
       transform: translateY(100vh);
   }
 }
+
+.plyr--video .plyr__controls{
+    background: transparent;
+}
+.plyr__video-wrapper {
+    background: transparent;
+}

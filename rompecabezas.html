@@ -15,8 +15,6 @@
     <link rel="stylesheet" href="lib/bootstrap-5.2.3/dist/css/bootstrap.css">
     <!-- Animaciones lib - for wow library -->
     <link rel="stylesheet" href="lib/animate.css/animate.css">
-    <!-- Font awesome lib -->
-    <script src="https://kit.fontawesome.com/a1c6ec28f2.js" crossorigin="anonymous"></script>
     
     <!-- Custom styles -->
     <link rel="stylesheet" href="styles/styles.css">
@@ -24,22 +22,20 @@
 </head>
 <body class="overflow-h">
     <!-- Precarga -->
-    <div id="loader">
-    </div> <!-- end precarga -->
+    <div id="loader"></div>
+
     <section id="puzzle-modal" class="section">
         <div class="col-texto">
             <h3 class="wow fadeInLeft" data-wow-delay="2s">Sabías qué resolver rompecabezas mejora</h5>
-            <h3 class="wow fadeInLeft" data-wow-delay="3s">la capacidad visual de los diseñadores?</h3>
+            <h3 class="wow fadeInLeft" data-wow-delay="3s">la capacidad visual de lxs diseñadores?</h3>
             <h3 class="wow fadeInLeft" data-wow-delay="4s">Eso nos ayuda a crear diseños más precisos y detallados</h3>
             <h5 class="wow fadeInLeft" data-wow-delay="6s">Bueno, nosotras no lo sabemos, pero lo cierto es que son 100% divertidos</h5>
             <div class="pista">
-                <h5 class="wow fadeInLeft" data-wow-delay="9s">Querés saber como armar este rompecabezas?</h5>
-                <h5 class="wow fadeInLeft" data-wow-delay="10s">Abrí el paquete con este símbolo <i class="yellow-star"></i></h5>
+                <h5 class="wow fadeInLeft" data-wow-delay="9s">Querés ver la imágen para armar este rompecabezas?</h5>
+                <h5 class="wow fadeInLeft" data-wow-delay="10s">Encontrala en el paquete con este símbolo <i class="yellow-star"></i></h5>
             </div>
-            
-
         </div>
-        <div class="row wow fadeInDown col-puzzle" data-wow-delay="1s">
+        <div class="row wow fadeInRight col-puzzle" data-wow-delay="1s">
             <div class="col" id="imagenes"></div>
             <div class="col" id="contenedor">
                 <div></div>
@@ -50,13 +46,19 @@
                 <div></div>
             </div>
         </div>
-
     </section>
 
     <div class="mensaje-completado">
         <img id="img-carta" class="" src="./assets/img/comodin-carta.png" alt="Comodin Rabanito">
         <img class="reverso-carta" src="./assets/img/dorso-carta.png" alt="">
 
+    </div>
+    <!-- Transicion -->
+    <div class="transition">
+        <div class="col-transition-1 top100"></div>
+        <div class="col-transition-2 top100"></div>
+        <div class="col-transition-3 top100"></div>
+        <div class="col-transition-4 top100"></div>
     </div>
 
     <!--JS-->
@@ -69,6 +71,6 @@
     </script>
     <script src="lib/slick/slick.min.js"></script>
     <script src="js/puzzle.js"></script>
-    <script src="js/loader.js"></script>
+    <!-- <script src="js/loader.js"></script> -->
 </body>
 </html>
