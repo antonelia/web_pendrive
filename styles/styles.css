@@ -407,3 +407,6 @@ span{
 .plyr__video-wrapper {
     background: transparent;
 }
+.plyr--video .plyr__progress__buffer{
+  color: #bfbfbf;
+}
