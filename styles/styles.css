@@ -9,20 +9,21 @@
 }
 
 /*Custom scrollbar*/
-body::-webkit-scrollbar {
+::-webkit-scrollbar {
   width: 7px;
+  position: absolute;
 }
 
-body::-webkit-scrollbar-track {
+::-webkit-scrollbar-track {
   background: transparent; 
 }
  
-body::-webkit-scrollbar-thumb {
+::-webkit-scrollbar-thumb {
   background: linear-gradient(180deg, rgba(109, 194, 196, 0) 20%, rgba(109, 194, 196, 1) 80%, rgba(109, 194, 196, 0) 100%);
   border-radius: 6px;
 }
 
-body::-webkit-scrollbar-thumb:hover {
+::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(180deg, rgba(109, 194, 196, 0) 20%, rgba(116, 69, 147, 1) 80%, rgba(109, 194, 196, 0) 100%);
   transition: background 0.3s ease;
 }
