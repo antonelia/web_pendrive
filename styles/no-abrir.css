@@ -205,3 +205,17 @@ a {
   top: 45vh;
   right: 9px;
 }
+
+.cross-pink{
+  background: url(../assets/img/cross_pink.svg) no-repeat center;
+  background-size: contain;
+  height: 4vw;
+  width: 4vw;
+  margin-left: 1rem;
+}
+.icon-div{
+  display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}

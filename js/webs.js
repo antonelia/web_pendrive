@@ -2,8 +2,8 @@ var webIndar = false;
 var webVentanas = false;
 var webSonrisanas = false;
 var webPuzzle = false;
-
-$(window).on('load', function(){
+$( document ).ready(function() {
+// $(window).on('load', function(){
 // $("#intro").hide();
 
     $(".lamparita").hide();
@@ -111,7 +111,7 @@ const {
       set(document.documentElement, { '--on': STATE.ON ? 1 : 0 });
       set([DUMMY, HIT], { display: 'none' });
       set(CORDS[0], { display: 'block' });
-      AUDIO.CLICK.play();
+      // AUDIO.CLICK.play();
     },
     onComplete: () => {
       set([DUMMY, HIT], { display: 'block' });

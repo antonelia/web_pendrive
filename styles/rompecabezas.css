@@ -1,13 +1,30 @@
+#loader{
+    background: white;
+}
+body{
+    background: url(../assets/img/bg-rompecabezas.png) no-repeat center;
+    background-size: cover;
+}
 #puzzle-modal{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
+    align-items: center;
+    padding: 6rem;
+}
+
+.col-texto{
+    max-width: 40%;
+}
+.col-puzzle{
+    max-width: 60%;
 }
 
 #puzzle-modal h3{
     font-family: Lato-Bold;
-    width: 75%;
-    margin: auto;
+    font-size: 2rem;
+    /* width: 75%;
+    margin: auto; */
 
 }
 
@@ -188,4 +205,25 @@
 	to{
         transform:rotateY(900deg);
     }	
+}
+
+.pista h5{
+    display: flex;
+}
+
+.yellow-star{
+    width: 2rem;
+    height: 2rem;
+    background: url(../assets/img/yellow-star.png) no-repeat center;
+    background-size: contain;
+    margin-bottom: 3px;
+    margin-left: 3px;
+}
+@media(max-width: 1440px){
+    #puzzle-modal{
+        padding: 2rem;
+    }
+    .col-texto{
+        width: 50%;
+    }
 }
