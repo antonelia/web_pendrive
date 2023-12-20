@@ -212,6 +212,8 @@ a {
   height: 4vw;
   width: 4vw;
   margin-left: 1rem;
+  -webkit-transform: rotate(45deg);
+
 }
 .icon-div{
   display: flex;
