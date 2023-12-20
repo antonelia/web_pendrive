@@ -1,0 +1,69 @@
+.cube-loader {
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    font-size: 50px;
+    transform-style: preserve-3d;
+    transition: transform 0.5s 0.1s;
+    perspective: 9999px;
+    color: #333;
+    margin: 0 auto;
+    left: 50%;
+    z-index: 11;
+    margin: 30px;
+    transform: rotateX(68deg) rotateZ(45deg);
+    .cube-face {
+      box-shadow: inset 0 0 2px 1px #fff, 0 0 1px 1px #fff;
+      width: inherit;
+      height: inherit;
+      position: absolute;
+      background-color: #121212e0;
+      color: #fff;
+      opacity: 0.4;
+    }
+}
+  
+.cube-loader .cara-celeste {
+    transform: translate3d(0, 0, 40px);
+    background-color: var(--light-blue-color);
+}
+   
+.cube-loader .cara-roja {
+    transform: rotateY(90deg) translate3d(0, 0, 40px);
+    background-color: var(--pink-color);
+}
+    
+.cube-loader .cara-amarilla {
+    transform: rotateX(-90deg) translate3d(0, 0, 40px);
+    background-color: var(--yellow-color);
+}
+.cube-loader .cube-face:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+.pointers-none{
+    pointer-events: none;
+}
+
+/* No se ven */
+
+.cube-loader .cube-face-top {
+    transform: rotateX(90deg) translate3d(0, 0, 40px);
+    background-color: transparent;
+    pointer-events: none;
+}
+
+.cube-loader .cube-face-left {
+    transform: rotateY(-90deg) translate3d(0, 0, 40px);
+    background-color: transparent;
+    pointer-events: none;
+}
+.cube-loader .cube-face-back {
+    transform: rotateY(180deg) translate3d(0, 0, 40px);
+    background-color: transparent;
+    pointer-events: none;
+}
+.opacity-1{
+    opacity: 1!important;
+}
