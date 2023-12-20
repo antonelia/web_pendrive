@@ -60,6 +60,9 @@ fs.collection("config_options").doc("options").onSnapshot(function (querySnapsho
     if(puntoDeControlActivado == true){
         $(".mensaje-avanzar").removeClass("d-none");
         $(".mensaje-avanzar").fadeIn();
+        setTimeout(function () {
+            window.location.href="ver-reel.html"
+          }, 2000);
     }else{
         $(".mensaje-avanzar").addClass("d-none");
     }

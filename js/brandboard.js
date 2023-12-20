@@ -37,7 +37,6 @@ $(document).ready(function() {
   }, 3500);
 });
 
-
 document.addEventListener('DOMContentLoaded', () => {
   const player = new Plyr('#player', {
     title: 'Example Title',
@@ -49,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   player.on('ended', function () {
     setTimeout(function () {
-      window.location.href="ver-reel.html"
+      window.location.href="punto-de-control.html"
     }, 1500);
   });
 });
