@@ -14,10 +14,10 @@ $( document ).ready(function() {
     
     setTimeout(function() {
         $('#intro-text').fadeOut();
-    }, 7000);
+    }, 12000);
     setTimeout(function() {
         $('.lamparita').fadeIn();
-    }, 7200);
+    }, 12200);
 
 });
 

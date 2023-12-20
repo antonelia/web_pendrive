@@ -114,6 +114,9 @@ function puzzle() {
         console.log("chequeando si se completo");
  
         const imgs=document.querySelectorAll("#contenedor img");
+        if (imgs.length==1) {
+            $(".indicaciones").fadeOut();
+        }
         if (imgs.length!=6) {
             console.log("entro en primer if");
             return false;
