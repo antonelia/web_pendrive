@@ -16,21 +16,20 @@ const fs = firebase.firestore();
 var configOptions = fs.collection('config_options');
 var options = fs.collection('config_options').doc("options");
 
-fs.collection("config_options").doc("options").onSnapshot(function (querySnapshot) {
-  var settingsObj = querySnapshot.data();
-  var cierreActivado = settingsObj.verCierre;
-  console.log(cierreActivado);
+// fs.collection("config_options").doc("options").onSnapshot(function (querySnapshot) {
+//   var settingsObj = querySnapshot.data();
+//   var cierreActivado = settingsObj.verCierre;
+//   console.log(cierreActivado);
 
-  if(cierreActivado == true){
-      window.location.href="cierre.html"
-  }
-});
+//   if(cierreActivado == true){
+//       window.location.href="cierre.html"
+//   }
+// });
 
 $("#qr-reel").hide();
 
 $(document).ready(function() {
   $("#intro-modal").modal('show');
-  $("#qr-reel").hide();
 
   setTimeout(function () {
     $("#intro-modal").fadeOut();
@@ -50,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   player.on('ended', function () {
     setTimeout(function () {
-      $("#qr-reel").fadeIn();
+      window.location.href="ver-reel.html"
     }, 1500);
   });
 });

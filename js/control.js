@@ -16,10 +16,6 @@ const fs = firebase.firestore();
 var configOptions = fs.collection('config_options');
 var options = fs.collection('config_options').doc("options");
 
-configOptions.doc("options").update({
-    verCierre: true
-})
-
 fs.collection("config_options").doc("options").onSnapshot(function (querySnapshot) {
     var settingsObj = querySnapshot.data();
     var cierreActivado = settingsObj.verCierre;
