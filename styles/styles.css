@@ -410,3 +410,17 @@ span{
 .plyr--video .plyr__progress__buffer{
   color: #bfbfbf;
 }
+
+.plyr__menu__container .plyr__control{
+  border-radius: 5px;
+
+}
+.plyr__menu__container .plyr__control:hover{
+  background: #b1b1b19c;
+
+}
+.plyr__menu__container .plyr__control>span,
+.plyr__menu__container .plyr__menu__value{
+  border-radius: 5px;
+  font-size: 1rem !important;
+}
