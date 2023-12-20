@@ -144,3 +144,24 @@ h3{
   }
   
 }
+
+/*Misc*/
+.lightblue-waves{
+  left: -2vw;
+  top: 125vh;
+}
+
+.yellow-waves{
+  right: -50px;
+  top: 180vh;
+}
+
+.cubo-3d{
+  right: 20px;
+  top: 111vh;
+}
+
+.cubo-3d.abajo{
+  top: 180vh;
+  left: 100px;
+}
