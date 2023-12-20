@@ -46,6 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
       enabled: false
     }
   });
+  player.volume = 0.3;
 
   player.on('ended', function () {
     setTimeout(function () {
