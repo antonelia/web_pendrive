@@ -112,7 +112,7 @@ function generateImage() {
     }),
     headers: {
       "Content-Type": "application/json",
-      Authorization: "Bearer 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",
+      Authorization: "KEY ACA",
     },
   })
     .then((res) => res.json())
