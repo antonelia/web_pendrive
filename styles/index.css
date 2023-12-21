@@ -180,12 +180,12 @@
 .scroll {
 	width: 60px;
 	height: 60px;
-	border: 2px solid var(--pink-color);
+	/*border: 2px solid var(--pink-color);*/
 	border-radius: 50%;
 	position: relative;
 	animation: down 1.5s infinite;
 	-webkit-animation: down 1.5s infinite;
-    background: var(--pink-color);
+    /*background: var(--pink-color);*/
 	&::before {
 		content: '';
 		position: absolute;
