@@ -31,26 +31,38 @@
 </head>
 <body>
     <section class="section d-flex flex-column align-items-center justify-content-center">
-        <h2>Ya casi, estamos llegando al final</h2>
-        <p>Esperemos que lleguen todos para continuar juntxs</p>
-        <p>Presiona un lado del cubo para saber que llegaste</p>
+        <div class="lightblue-waves wow fadeInDown" data-wow-delay="1s"></div>
+        <div class="yellow-waves wow fadeInDown" data-wow-delay="1s"></div>
+        <div class="puntos-celestes wow fadeInDown" data-wow-delay="1s"></div>
 
-        <div class="cube-loader">
-            <div class="cube-face cara-roja"></div>
-            <div class="cube-face cube-face-back"></div>
-            <div class="cube-face cube-face-left"></div>
-            <div class="cube-face cara-celeste"></div>
-            <div class="cube-face cara-amarilla"></div>
-            <div class="cube-face cube-face-top"></div>
-          </div>
-          <div class="mensaje-avanzar d-none">
-            <p>Ya estamos todxs! Veamos lo que sigue</p>
-          </div>
 
+        <h3 class="mb-3 wow fadeInDown" data-wow-delay="2s"><b>Estamos llegando al final 🥺 ...</b></h3>
+        <p class="wow fadeInDown" data-wow-delay="3s">¿Por qué no esperamos a los demás y lo vemos todos juntos?</p>
+        <p class="wow fadeInDown" data-wow-delay="3s">Presioná un lado del cubo para avisar que ya estás acá 👇</p>
+
+        <div class="wow fadeInDown" data-wow-delay="4s" style="margin-top: 50px;">
+            <div class="cube-loader">
+                <div class="cube-face cara-roja"></div>
+                <div class="cube-face cube-face-back"></div>
+                <div class="cube-face cube-face-left"></div>
+                <div class="cube-face cara-celeste"></div>
+                <div class="cube-face cara-amarilla"></div>
+                <div class="cube-face cube-face-top"></div>
+            </div>
+            <div class="mensaje-avanzar d-none">
+                <p>Ya estamos todxs! Veamos lo que sigue</p>
+            </div>
+        </div>
     </section>
     <!--JS-->
     <script src="lib/bootstrap-5.2.3/dist/js/bootstrap.bundle.js"></script>
     <script src="lib/jQuery-3.6.4/jquery-3.6.4.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+     <!-- Inicializar wow library -->
+     <script>
+        new WOW().init();
+    </script>
+
     <script src="js/punto-de-control.js"></script>
 </body>
 </html>
