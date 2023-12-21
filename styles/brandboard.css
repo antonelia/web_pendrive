@@ -203,7 +203,7 @@ g{
 	background-color: white;
 	min-width: 350px;
 	position: absolute; 
-	left: 35vw; 
+	left: calc(50vw - 125px);
 	top: 33%; 
 	z-index: 100;
 	display: flex;
