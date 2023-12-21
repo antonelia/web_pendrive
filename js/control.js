@@ -63,7 +63,7 @@ $('#onButton').on('click', function(){
     });
 });
 
-$('#offButtonPuntoDeControl').on('click', function(){
+$('#offButton').on('click', function(){
     configOptions.doc("options").update({
         verCierre: false
     });
