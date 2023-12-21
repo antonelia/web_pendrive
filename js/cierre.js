@@ -2,45 +2,11 @@
 $(window).on('load', function(){
   $("html").css("overflow", "hidden");
   $('#loader').fadeOut();
-  setTimeout(function() {
-      $('.linea-1').removeClass("inicio-animacion");
-       $('.linea-1').addClass("empezar-animacion");
-   }, 600);
-
-   setTimeout(function() {
-      $('.linea-1').fadeOut();
-   }, 5000);
-
-   setTimeout(function() {
-      $('.linea-2').removeClass("inicio-animacion");
-      $('.linea-2').addClass("empezar-animacion");
-  }, 5000);
-
-  setTimeout(function() {
-      $('.linea-2').fadeOut();
-   }, 10000);
-
-  setTimeout(function() {
-      $('.linea-3').removeClass("inicio-animacion");
-      $('.linea-3').addClass("empezar-animacion");
-  }, 10000);
-
-  setTimeout(function() {
-    $('.linea-3').fadeOut();
- }, 15000);
-
-  setTimeout(function() {
-    $('.linea-4').removeClass("inicio-animacion");
-    $('.linea-4').addClass("empezar-animacion");
-  }, 15000);
-
-  //Despues de la intro empiezan a pasar estas cosas para que empiece la seccion
-  setTimeout(function() {
-    $("#intro").fadeOut();
-    $("html").css("overflow", "auto");
-    $("#section1").removeClass("d-none");
-  }, 20000);
 });
+$(".gift").on("click", function(){
+  $("#intro").fadeOut();
+  $("#section1").removeClass("d-none");
+})
 
 
 //quiz
@@ -157,3 +123,6 @@ document.addEventListener('DOMContentLoaded', function () {
     revealBox.classList.remove('leave');
   });
 });
+
+
+
