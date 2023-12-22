@@ -30,17 +30,18 @@
     <link rel="stylesheet" href="styles/punto-de-control.css">
 </head>
 <body>
-    <section class="section d-flex flex-column align-items-center justify-content-center">
+    <!-- <div id="loader"></div> -->
+    <section class="section d-flex flex-column align-items-center justify-content-start">
         <div class="lightblue-waves wow fadeInDown" data-wow-delay="1s"></div>
         <div class="yellow-waves wow fadeInDown" data-wow-delay="1s"></div>
         <div class="puntos-celestes wow fadeInDown" data-wow-delay="1s"></div>
 
 
-        <h3 class="mb-3 wow fadeInDown" data-wow-delay="2s"><b>Estamos llegando al final 🥺 ...</b></h3>
-        <p class="wow fadeInDown" data-wow-delay="3s">Por qué no esperamos a los demás y lo vemos todos juntos?</p>
-        <p class="wow fadeInDown" data-wow-delay="3s">Presioná un lado del cubo para avisar que ya estás acá 👇</p>
+        <h3 class="mb-3 wow fadeInDown mt-5" data-wow-delay="2s"><b>Estamos llegando al final 🥺 ...</b></h3>
+        <p class="wow fadeInDown" data-wow-delay="4s">Por qué no esperamos a los demás para verlo juntxs?</p>
+        <p class="wow fadeInDown" data-wow-delay="6s">Presioná un lado del cubo para avisar que ya estás acá 👇</p>
 
-        <div class="mt-4 wow fadeInDown" data-wow-delay="4s" style="text-align: -webkit-center;">
+        <div class="mt-4 wow fadeInDown cube-container" data-wow-delay="7.5s" style="text-align: -webkit-center;">
             <div class="cube-loader mb-3">
                 <div class="cube-face cara-roja"></div>
                 <div class="cube-face cube-face-back"></div>
@@ -51,7 +52,11 @@
             </div>
             <div class="mensaje-avanzar d-none wow fadeInDown">
                 <p>Ya estamos todxs! Veamos lo que sigue</p>
-            </div>
+            </div> 
+        </div>
+        <div class="juego mt-3">
+            <h6 class="mt-4 text-center wow fadeInDown">Te estás aburriendo? Tranqui, te dejamos un juego</h6>
+            <canvas class="wow fadeInDown" data-wow-delay="1s" height="100" width="520" id="stage"></canvas>
         </div>
     </section>
     <!--JS-->
@@ -64,5 +69,6 @@
     </script>
 
     <script src="js/punto-de-control.js"></script>
+    <script src="js/snake.js"></script>
 </body>
 </html>

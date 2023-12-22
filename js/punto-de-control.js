@@ -58,6 +58,7 @@ fs.collection("config_options").doc("options").onSnapshot(function (querySnapsho
     }
 
     if(puntoDeControlActivado == true){
+        $(".juego").fadeOut();
         $(".mensaje-avanzar").removeClass("d-none");
         $(".mensaje-avanzar").fadeIn();
         setTimeout(function () {
