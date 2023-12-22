@@ -96,9 +96,9 @@ $('#password-input').keyup(function(e) {
 });
 
 $("#password-input").on( "focus", function() {
-    $( ".input-group").css("box-shadow", "0 0 0 0.2rem var(--purple-color)");
+    $( ".input-group").css("box-shadow", "none");
 });
 
 $("#password-input").focusout(function(){
-   $( ".input-group").css("box-shadow", "0 0 0 0");
+   $( ".input-group").css("box-shadow", "none");
 });
