@@ -31,19 +31,30 @@
 </head>
 <body>
     <div id="loader"></div>
-    <section class="section" id="seccion-mcdonalds">
+    <section class="section d-flex" id="seccion-mcdonalds">
         <article class="text-center my-auto" id="password-container">
-          <h2 class="mb-3 wow fadeInDown" data-wow-delay="2s">Tomate el tiempo necesario para ingresar la clave que viste antes</h2>
-          <h2 class="mb-5 wow fadeInDown" data-wow-delay="4s">Tranqui, que en esta experiencia <span> vamos a tu ritmo</span></h2>
-          <input class="wow fadeInDown" data-wow-delay="6s" type="text" class="" placeholder="Ingresá la password" aria-describedby="password-button" id="password-input" autocomplete="off">
-          <button class="btn btn-outline-secondary wow fadeInDown" data-wow-delay="6s" type="button" id="password-button"><i class="fa-solid fa-arrow-right"></i></button>
+                <h2 class="wow fadeInDown" data-wow-delay="2s">Tomate el tiempo necesario para ingresar la clave que viste antes</h2>
+                <h2 class="mb-5 wow fadeInDown" data-wow-delay="4s">Tranqui, que en esta experiencia <span> vamos a tu ritmo</span></h2>
+                
+                <div class="input-group">
+                    <input type="text" class="wow fadeInDown mb-0" data-wow-delay="6s" type="text" class="" placeholder="Ingresá la password" aria-describedby="password-button" id="password-input" autocomplete="off">
+
+                    <div class="wow fadeInDown input-group-append" data-wow-delay="6s" type="button" id="password-button">
+                      <span class="input-group-text"><i class="fa-solid fa-arrow-right"></i></span>
+                    </div>
+                  </div>
+                
+
         </article>
+
         <article class="container-fluid text-center my-auto" id="mcdonalds-container">
             <video id="player" playsinline controls data-poster="./assets/img/videocaso-thumbnail.jpg">
                 <source src="./assets/vid/videocaso_mcdonalds.mp4" type="video/mp4" />
             </video>
         </article>
     </section>
+
+
     <section class="section t100" id="siguiente"> 
         <div class="lightblue-waves"></div>
             <div class="yellow-waves"></div>

@@ -71,6 +71,7 @@ $('#password-button').click(function(){
     }else{
         setTimeout(function() {
 			$("#password-input").removeClass("shake");
+      $("#password-button").removeClass("shake");
 		}, 1500); 
     }
 });
@@ -87,8 +88,10 @@ $('#password-input').keyup(function(e) {
                 alert('Ingresa una contraseña');
         }else{
                 $("#password-input").addClass("shake");
+                $("#password-button").addClass("shake");
 				setTimeout(function() {
 					$("#password-input").removeClass("shake");
+          $("#password-button").removeClass("shake");
 				}, 1500); 
         }
     }
@@ -96,9 +99,9 @@ $('#password-input').keyup(function(e) {
 });
 
 $("#password-input").on( "focus", function() {
-    $( ".input-group").css("box-shadow", "0 0 0 0.2rem var(--purple-color)");
+    $( ".input-group").css("box-shadow", "none");
 });
 
 $("#password-input").focusout(function(){
-   $( ".input-group").css("box-shadow", "0 0 0 0");
+   $( ".input-group").css("box-shadow", "none");
 });
