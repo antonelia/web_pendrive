@@ -100,9 +100,27 @@ p {
   }
 
   .mensaje-avanzar {
-    position: absolute;
-    bottom: 20vh;
     /* top: 50%; */
-    left: 50%;
-    transform: translate(-50%, -50%);
+    margin-top: 100px;
+
+}
+.mensaje-avanzar p{
+    font-family: Lato-Bold;
+    color: var(--pink-color);
+    font-size: 1.5rem;
+}
+
+canvas {
+    border: 2px solid var(--light-blue-color);
+    /* margin-top: 1rem; */
+    /* height: 150px;
+    width:520px; */
+}
+@media(max-width: 1440px){
+    .cube-container{
+        /* transform: scale(0.7); */
+    }
+}
+h6{
+    color: var(--dark-blue-color);
 }
