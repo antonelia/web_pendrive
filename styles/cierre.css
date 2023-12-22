@@ -270,6 +270,13 @@ section{
   overflow: hidden;
   border-radius: 25px;
 }
+@media(max-width: 1440px){
+  .reveal-box{
+    height: calc(70vh - 48px);
+    width: 62vh;
+
+  }
+}
 
 .reveal-box__inner {
   width: 100%;
@@ -691,4 +698,7 @@ section{
   height: 80px;
   width: 80px;
   z-index: 1;
+}
+.gracias{
+  color: var(--pink-color);
 }
