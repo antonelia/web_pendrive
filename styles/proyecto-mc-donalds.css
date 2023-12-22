@@ -321,7 +321,7 @@ input::placeholder{
 .shake {
 	animation: shake-animation 2s ease;
 	animation-iteration-count: 1;
-	border-color: red;
+	border-color: red!important;
 }
 
 #ver-manifiesto {
@@ -350,4 +350,9 @@ input::placeholder{
 .cubo-3d.abajo{
     top: 80vh;
     left: 100px;
+}
+#password-input:focus-visible{
+	outline: transparent;
+    border: 2px solid var(--purple-color);
+    border-right: 0;
 }
