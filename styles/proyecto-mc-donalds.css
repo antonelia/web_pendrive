@@ -321,7 +321,8 @@ input::placeholder{
 .shake {
 	animation: shake-animation 2s ease;
 	animation-iteration-count: 1;
-	border-color: red!important;
+	/* border-color: red!important; */
+	background: rgba(255, 0, 0, 0.2);
 }
 
 #ver-manifiesto {
@@ -355,4 +356,7 @@ input::placeholder{
 	outline: transparent;
     border: 2px solid var(--purple-color);
     border-right: 0;
+}
+.input-group > :not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback){
+	margin-left: 0;
 }

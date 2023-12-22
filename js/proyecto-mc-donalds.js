@@ -71,6 +71,7 @@ $('#password-button').click(function(){
     }else{
         setTimeout(function() {
 			$("#password-input").removeClass("shake");
+      $("#password-button").removeClass("shake");
 		}, 1500); 
     }
 });
@@ -87,8 +88,10 @@ $('#password-input').keyup(function(e) {
                 alert('Ingresa una contraseña');
         }else{
                 $("#password-input").addClass("shake");
+                $("#password-button").addClass("shake");
 				setTimeout(function() {
 					$("#password-input").removeClass("shake");
+          $("#password-button").removeClass("shake");
 				}, 1500); 
         }
     }
